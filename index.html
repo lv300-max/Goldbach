@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Goldbach Workbench</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="app">
+  <div class="workspace">
+    <div class="disc-wrap">
+      <canvas id="disc" width="900" height="900"></canvas>
+      <div class="readout readout-left">
+        <span>E</span><strong id="readout-e">—</strong>
+        <span>C</span><strong id="readout-c">—</strong>
+      </div>
+      <div class="readout readout-right">
+        <span>Lane</span><strong id="lane-id">—</strong>
+        <span>Key</span><strong id="key-signature">—</strong>
+        <span>Chord</span><strong id="chord-name">—</strong>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <header>
+      <h1>Goldbach<br>Workbench</h1>
+      <p>Mirror desert pressure tester</p>
+    </header>
+
+    <div class="controls">
+      <label>Even integer E
+        <input id="even-input" type="number" value="1000000" step="2" min="4" />
+      </label>
+      <label>Stack end E
+        <input id="end-input" type="number" value="1001000" step="2" min="4" />
+      </label>
+      <label>Search window W
+        <input id="window-input" type="number" value="500" min="1" />
+      </label>
+      <label>Obstruction limit (prime)
+        <input id="obstruction-limit-input" type="number" value="13" min="3" max="97" />
+      </label>
+      <label>Survivor K
+        <input id="survivor-k-input" type="number" value="4" min="1" max="20" />
+      </label>
+      <label>Stack rows
+        <input id="stack-rows-input" type="number" value="200" min="10" max="2000" />
+      </label>
+      <label>Bridge ring limit
+        <input id="bridge-ring-limit-input" type="number" value="8" min="1" max="30" />
+      </label>
+
+      <div class="button-row">
+        <button id="test-button">Test E</button>
+        <button id="scan-button">Scan</button>
+        <button id="proof-button">Proof</button>
+        <button id="obstruction-button">Obstruction</button>
+        <button id="stack-button">Stack</button>
+        <button id="octave-button">Octave</button>
+        <button id="theory-button">Theory</button>
+        <button id="lane-button">Lane</button>
+        <button id="bridge-button">Bridge</button>
+        <button id="bridge-multi-button">Bridge Multi</button>
+        <button id="all-dark-button">All Dark</button>
+        <button id="export-weird-button">Export Weird</button>
+      </div>
+    </div>
+
+    <div class="metrics">
+      <div><span>Status</span><strong id="status">—</strong></div>
+      <div><span>First pair</span><strong id="first-pair">—</strong></div>
+      <div><span>First gap</span><strong id="first-gap">—</strong></div>
+      <div><span>Pair count</span><strong id="pair-count">—</strong></div>
+      <div><span>Density</span><strong id="density">—</strong></div>
+      <div><span>Compression</span><strong id="compression">—</strong></div>
+      <div><span>Gravity score</span><strong id="gravity-score">—</strong></div>
+      <div><span>Dead zone</span><strong id="dead-zone">—</strong></div>
+      <div><span>Survivor count</span><strong id="survivor-count">—</strong></div>
+      <div><span>Log success</span><strong id="log-success">—</strong></div>
+      <div><span>Prime weather</span><strong id="prime-weather">—</strong></div>
+      <div><span>Certificate</span><strong id="certificate-status">—</strong></div>
+    </div>
+
+    <div class="report">
+      <h2>Report</h2>
+      <pre id="report-output"></pre>
+    </div>
+
+    <div class="proof-panel">
+      <h2>Proof output</h2>
+      <div class="proof-grid">
+        <div><span>Obstruction status</span><strong id="obstruction-status">—</strong></div>
+      </div>
+      <pre id="proof-output"></pre>
+    </div>
+
+    <div class="weird-panel">
+      <div class="section-head">
+        <h2>Weird numbers</h2>
+      </div>
+      <pre id="weird-output"></pre>
+    </div>
+
+    <div style="margin-top:18px;border-top:1px solid var(--line);padding-top:10px;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:12px;color:var(--muted);">
+        <div>Bridge status: <strong id="bridge-status">—</strong></div>
+        <div>Bridge hash: <strong id="bridge-hash">—</strong></div>
+        <div>Bridge jackpots: <strong id="bridge-jackpot-count">—</strong></div>
+        <div>Bridge survivors: <strong id="bridge-survivor-count">—</strong></div>
+        <div>Bridge common factor: <strong id="bridge-common-factor">—</strong></div>
+      </div>
+    </div>
+
+    <div style="margin-top:14px;border-top:1px solid var(--line);padding-top:10px;font-size:12px;color:var(--muted);">
+      <div>Fingerprint heatmap</div>
+      <div class="heatmap" id="fingerprint-heatmap"></div>
+    </div>
+
+    <div style="margin-top:14px;">
+      <pre id="log-window" style="max-height:200px;overflow-y:auto;"></pre>
+    </div>
+
+    <!-- Residue Piano Octave Engine -->
+    <div class="residue-piano-section">
+      <h2>Residue Piano Octave</h2>
+      <p class="residue-piano-note">Mirror residue lane analysis</p>
+      <div class="residue-piano-controls">
+        <label>E input
+          <input id="rpo-e-input" type="number" value="1000000" step="2" min="4" />
+        </label>
+        <label>W (window)
+          <input id="rpo-w-input" type="number" value="500" min="1" />
+        </label>
+        <label>Octaves
+          <input id="rpo-octaves-input" type="number" value="7" min="1" max="16" />
+        </label>
+        <label>Modulus M
+          <select id="rpo-m-select">
+            <option value="30">30</option>
+            <option value="210" selected>210</option>
+            <option value="2310">2310</option>
+          </select>
+        </label>
+        <label>Mode
+          <select id="rpo-mode-select">
+            <option value="standard">Standard</option>
+            <option value="deep">Deep</option>
+          </select>
+        </label>
+      </div>
+      <div class="residue-piano-button-row">
+        <button id="rpo-run-button">Run RPO</button>
+        <button id="rpo-export-json-button">Export JSON</button>
+        <button id="rpo-export-md-button">Export MD</button>
+      </div>
+      <div class="residue-piano-metrics">
+        <div>Ringing families<strong id="rpo-ringing-families">—</strong></div>
+        <div>Muted families<strong id="rpo-muted-families">—</strong></div>
+        <div>Survivor families<strong id="rpo-survivor-families">—</strong></div>
+        <div>Pressure lanes<strong id="rpo-pressure-lanes">—</strong></div>
+        <div>All die<strong id="rpo-all-die-status">—</strong></div>
+        <div>Hash<strong id="rpo-hash">—</strong></div>
+      </div>
+      <div id="residuePianoOctaveOut"><pre id="rpo-output"></pre></div>
+    </div>
+
+  </div><!-- end .panel -->
+</div><!-- end .app -->
+
+<script src="app.js"></script>
+
+<script>
+(function(){
+  // Deterministic BigInt Miller-Rabin
+  function _modpow(b,e,m){let r=1n;b=b%m;while(e>0n){if(e%2n===1n)r=r*b%m;e=e/2n;b=b*b%m;}return r;}
+  const _MR=[2n,3n,5n,7n,11n,13n,17n,19n,23n,29n,31n,37n];
+  function _isPrimeBig(n){if(n<2n)return false;if(n===2n||n===3n)return true;if(n%2n===0n)return false;let d=n-1n,r=0n;while(d%2n===0n){d=d/2n;r=r+1n;}outer:for(const a of _MR){if(a>=n)continue;let x=_modpow(a,d,n);if(x===1n||x===n-1n)continue;for(let i=0n;i<r-1n;i++){x=x*x%n;if(x===n-1n)continue outer;}return false;}return true;}
+  function isPrime(n){return _isPrimeBig(BigInt(Math.round(n)));}
+  function makeLCG(s){s=(s^0x9e3779b9)>>>0;return()=>{s=(Math.imul(1664525,s)+1013904223)>>>0;return s/0x100000000;};}
+  function pct(sorted,p){if(!sorted.length)return 0;return sorted[Math.min(sorted.length-1,Math.floor(p*sorted.length))];}
+
+  function runMirrorDesertRawNumbers(){
+    const settings={K:8.25,modLane:210,bands:[
+      {label:"10^5-10^6",minE:100000,maxE:1000000,rows:300,maxG:50000},
+      {label:"10^6-10^7",minE:1000000,maxE:10000000,rows:300,maxG:75000},
+      {label:"10^7-10^8",minE:10000000,maxE:100000000,rows:200,maxG:100000},
+      {label:"10^8-10^9",minE:100000000,maxE:1000000000,rows:100,maxG:150000},
+      {label:"10^9-10^10",minE:1000000000,maxE:10000000000,rows:50,maxG:250000}
+    ]};
+    const K=settings.K;
+
+    function scanRow(E,maxG){
+      const C=E/2,logC=Math.log(C),logC2=logC*logC,W=Math.floor(K*logC2);
+      const scanLimit=Math.min(maxG,Math.max(W,1000));
+      let firstBothG=null,longestRun=0,curRun=0,hitsInsideW=0,halfs=0,foes=0,lane210=null,sameLane=false;
+      for(let g=0;g<=scanLimit;g++){
+        const L=C-g,R=C+g;if(L<2)break;
+        const Lp=isPrime(L),Rp=isPrime(R);
+        if(Lp&&Rp){
+          if(firstBothG===null){firstBothG=g;lane210=g%210;sameLane=(L%210)===(R%210);if(curRun>longestRun)longestRun=curRun;curRun=0;}
+          if(g<=W)hitsInsideW++;curRun=0;
+        }else{
+          curRun++;if(curRun>longestRun)longestRun=curRun;
+          if(firstBothG===null){if(Lp||Rp)halfs++;else foes++;}
+        }
+      }
+      const missed=firstBothG===null;
+      const firstBothK=firstBothG!==null?firstBothG/logC2:null;
+      const sparkRate=firstBothG!==null?halfs/Math.max(1,firstBothG):0;
+      const foeRate=firstBothG!==null?foes/Math.max(1,firstBothG):0;
+      const density=hitsInsideW/Math.max(1,W+1);
+      return{E,C,W,scanLimit,missed,firstBothG,firstBothK,longestNoBothRun:longestRun,halfHitsBeforeRescue:halfs,foesBeforeRescue:foes,sparkRate,foeRate,lane210,sameLane,bothHitDensityInsideW:density};
+    }
+
+    function agg(bandDef,rows){
+      const found=rows.filter(r=>!r.missed);
+      const sortedG=found.map(r=>r.firstBothG).sort((a,b)=>a-b);
+      const sortedK=found.map(r=>r.firstBothK).sort((a,b)=>a-b);
+      const sortedRun=rows.map(r=>r.longestNoBothRun).sort((a,b)=>a-b);
+      const n=rows.length,nf=found.length;
+      const avg=arr=>arr.length?arr.reduce((s,v)=>s+v,0)/arr.length:0;
+      const laneCounts={};
+      for(const r of found)if(r.lane210!==null)laneCounts[r.lane210]=(laneCounts[r.lane210]||0)+1;
+      const uniqueLanes=Object.keys(laneCounts).length;
+      const topLanes=Object.entries(laneCounts).sort((a,b)=>b[1]-a[1]).slice(0,5).map(([l,c])=>({lane:+l,count:c}));
+      const topConc=nf>0&&topLanes.length?topLanes[0].count/nf:0;
+      const sameLaneCount=found.filter(r=>r.sameLane).length;
+      const withSpark=rows.filter(r=>r.halfHitsBeforeRescue>0).length;
+      const worst10=rows.slice().sort((a,b)=>{
+        if(a.missed!==b.missed)return b.missed-a.missed;
+        const ka=a.firstBothK??Infinity,kb=b.firstBothK??Infinity;
+        if(kb!==ka)return kb-ka;
+        return(b.firstBothG??Infinity)-(a.firstBothG??Infinity);
+      }).slice(0,10).map(r=>({E:r.E,firstBothG:r.firstBothG,firstBothK:r.firstBothK,longestNoBothRun:r.longestNoBothRun,missed:r.missed}));
+      return{
+        label:bandDef.label,tested:n,found:nf,missed:n-nf,missRate:+((n-nf)/n).toFixed(6),
+        maxFirstBothG:sortedG.length?sortedG[sortedG.length-1]:null,
+        avgFirstBothG:+avg(sortedG).toFixed(2),medianFirstBothG:pct(sortedG,0.5),
+        p95FirstBothG:pct(sortedG,0.95),p99FirstBothG:pct(sortedG,0.99),
+        maxFirstBothK:sortedK.length?+sortedK[sortedK.length-1].toFixed(6):null,
+        avgFirstBothK:+avg(sortedK).toFixed(6),medianFirstBothK:+pct(sortedK,0.5).toFixed(6),
+        p95FirstBothK:+pct(sortedK,0.95).toFixed(6),p99FirstBothK:+pct(sortedK,0.99).toFixed(6),
+        maxLongestNoBothRun:sortedRun[sortedRun.length-1],
+        avgLongestNoBothRun:+avg(sortedRun).toFixed(2),
+        p95LongestNoBothRun:+pct(sortedRun,0.95).toFixed(2),
+        avgHalfHitsBeforeRescue:+avg(rows.map(r=>r.halfHitsBeforeRescue)).toFixed(2),
+        maxHalfHitsBeforeRescue:Math.max(...rows.map(r=>r.halfHitsBeforeRescue)),
+        avgFoesBeforeRescue:+avg(rows.map(r=>r.foesBeforeRescue)).toFixed(2),
+        maxFoesBeforeRescue:Math.max(...rows.map(r=>r.foesBeforeRescue)),
+        avgSparkRate:+avg(rows.map(r=>r.sparkRate)).toFixed(6),
+        avgFoeRate:+avg(rows.map(r=>r.foeRate)).toFixed(6),
+        percentRowsWithSpark:+(withSpark/n).toFixed(4),
+        aboveK1:found.filter(r=>r.firstBothK>1).length,
+        aboveK2:found.filter(r=>r.firstBothK>2).length,
+        aboveK4:found.filter(r=>r.firstBothK>4).length,
+        aboveK6:found.filter(r=>r.firstBothK>6).length,
+        aboveK825:found.filter(r=>r.firstBothK>8.25).length,
+        uniqueFirstRescueLanes210:uniqueLanes,
+        uniqueFirstRescueLaneRate:+(uniqueLanes/Math.max(1,nf)).toFixed(4),
+        topFirstRescueLanes210:topLanes,topLaneConcentration:+topConc.toFixed(4),
+        sameLaneRate:+(sameLaneCount/Math.max(1,nf)).toFixed(4),
+        worstDesertsTop10:worst10
+      };
+    }
+
+    const bandResults=[],allRows=[];
+    for(const bandDef of settings.bands){
+      const rng=makeLCG(bandDef.minE^0xf00dcafe);
+      const range=bandDef.maxE-bandDef.minE;
+      const rows=[];
+      for(let i=0;i<bandDef.rows;i++){
+        let E=bandDef.minE+Math.floor(rng()*range);
+        if(E%2!==0)E++;if(E<4)E=4;
+        rows.push(scanRow(E,bandDef.maxG));
+      }
+      bandResults.push(agg(bandDef,rows));
+      allRows.push(...rows);
+    }
+
+    const missedByBand=bandResults.map(b=>b.missed);
+    const maxFirstBothKByBand=bandResults.map(b=>b.maxFirstBothK);
+    const p95FirstBothKByBand=bandResults.map(b=>b.p95FirstBothK);
+    const maxLongestNoBothRunByBand=bandResults.map(b=>b.maxLongestNoBothRun);
+    const p95LongestNoBothRunByBand=bandResults.map(b=>b.p95LongestNoBothRun);
+    const avgSparkRateByBand=bandResults.map(b=>b.avgSparkRate);
+    const uniqueLaneRateByBand=bandResults.map(b=>b.uniqueFirstRescueLaneRate);
+
+    const worst10=allRows.slice().sort((a,b)=>{
+      if(a.missed!==b.missed)return b.missed-a.missed;
+      const ka=a.firstBothK??Infinity,kb=b.firstBothK??Infinity;
+      return kb-ka;
+    }).slice(0,10).map(r=>({E:r.E,firstBothG:r.firstBothG,firstBothK:r.firstBothK,longestNoBothRun:r.longestNoBothRun,missed:r.missed}));
+
+    const strongestPatterns=[],weakestSignals=[];
+    if(missedByBand.every(m=>m===0))strongestPatterns.push("No missed first BOTH-hit in tested bands");
+    else weakestSignals.push("Missed BOTH-hits found in some bands");
+    if(bandResults.every(b=>b.aboveK825===0))strongestPatterns.push("K=8.25 envelope held in all bands");
+    else weakestSignals.push("K=8.25 breach detected");
+    if(bandResults.every(b=>b.p95FirstBothK<2))strongestPatterns.push("P95 firstBothK under 2 in all bands");
+    else weakestSignals.push("P95 firstBothK exceeded 2 in some bands");
+    if(bandResults.every(b=>b.percentRowsWithSpark>=0.40))strongestPatterns.push("Spark rate >=40% in all bands");
+    else weakestSignals.push("Spark rate <40% in some bands");
+    if(bandResults.every(b=>b.uniqueFirstRescueLaneRate>0.10))strongestPatterns.push("Lane diversity >10% in all bands");
+    else weakestSignals.push("Low lane diversity in some bands");
+    weakestSignals.push("Analytic proof still missing");
+
+    const crossBandSummary={missedByBand,maxFirstBothKByBand,p95FirstBothKByBand,maxLongestNoBothRunByBand,p95LongestNoBothRunByBand,avgSparkRateByBand,uniqueLaneRateByBand,worstOverallTop10:worst10,strongestPatterns,weakestSignals};
+    const result={settings,bandResults,crossBandSummary,worstOverallTop10:worst10,strongestPatterns,weakestSignals};
+    console.log("RAW_NUMBERS_ONLY",result);
+    window.RAW_NUMBERS_ONLY=result;
+    return result;
+  }
+
+  window.runMirrorDesertRawNumbers=runMirrorDesertRawNumbers;
+  setTimeout(()=>runMirrorDesertRawNumbers(),500);
+})();
+</script>
+</body>
+</html>
