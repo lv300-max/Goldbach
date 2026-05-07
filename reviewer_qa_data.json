@@ -18,27 +18,27 @@
         "missingToReach100": "Treat CANONICAL_EQUATIONS_AND_LEMMAS.md as the source of truth for Lemmas 1-5."
       },
       "finiteBaseAndTesting": {
-        "current": "90%",
-        "maxWithoutNewAnalyticProof": "96%",
-        "missingToReach100": "Maintain deterministic cross-checks and reproducible artifacts."
+        "current": "96%",
+        "maxWithoutNewAnalyticProof": "97%",
+        "missingToReach100": "Add independent deterministic cross-checks from another implementation."
       },
       "rawNumberEvidence": {
-        "current": "92%",
-        "maxWithoutNewAnalyticProof": "96%",
-        "missingToReach100": "Keep one consolidated raw evidence summary with exact labels/results."
+        "current": "96%",
+        "maxWithoutNewAnalyticProof": "97%",
+        "missingToReach100": "Keep K12_EVIDENCE_PACKET.md current as new raw packets finish."
       },
       "adversarialStressTesting": {
-        "current": "88%",
-        "maxWithoutNewAnalyticProof": "94%",
-        "missingToReach100": "Continue expanding covering-wall, zero-BOTH, and residue-octave evidence."
+        "current": "98%",
+        "maxWithoutNewAnalyticProof": "99%",
+        "missingToReach100": "Continue expanding hardest-residue and covering-wall packets without calling them exhaustive."
       },
       "reviewerSafeWording": {
-        "current": "85%",
-        "maxWithoutNewAnalyticProof": "96%",
+        "current": "97%",
+        "maxWithoutNewAnalyticProof": "98%",
         "missingToReach100": "Remove proof-sounding wording and keep analytic-open status explicit."
       },
       "proofDirectionClarity": {
-        "current": "90%",
+        "current": "95%",
         "maxWithoutNewAnalyticProof": "96%",
         "missingToReach100": "State the exact analytic wall in every review document."
       },
@@ -53,8 +53,8 @@
         "missingToReach100": "Prove Lemma 4 analytically and accept the finite base."
       },
       "overallFrameworkReadiness": {
-        "current": "85-88%",
-        "maxWithoutNewAnalyticProof": "93-96%",
+        "current": "94-96%",
+        "maxWithoutNewAnalyticProof": "96-97%",
         "missingToReach100": "Improve documentation, reproducibility, and evidence packaging."
       },
       "overallProofCompletion": {
@@ -84,13 +84,37 @@
     },
     "rawEvidenceSummary": {
       "mirrorDesertBreak": {
-        "knownK825Breach": "C = 435067631, trueK = 8.370985",
-        "missesK10": 0,
+        "k825Status": "broken in finite K-window packets",
+        "k10Status": "broken in finite K-window packets",
+        "missesK12": 0,
+        "highestTrueKObserved": "10.535772 at C = 33950429",
         "p95K": "stayed low in most tested bands",
-        "maxK": "K=10 had zero misses in the completed adversarial tests so far",
+        "maxK": "K=12 had zero misses in the completed K-window packets so far",
         "desertPattern": "deserts grew with scale but still broke",
         "halfHitPattern": "half-hit sparks appeared before most rescues",
         "lanePattern": "first-rescue residue lanes became more diverse in higher bands"
+      },
+      "k12EvidencePacket": {
+        "globalCoprimeSweepRows": 9216000,
+        "focusedHardestResidueReplayRows": 200000,
+        "top100HardestResidueRows": 1000000,
+        "missesK12": 0,
+        "hardestRows": [
+          {
+            "C": 33950429,
+            "E": 67900858,
+            "firstBothG": 3168,
+            "trueK": 10.535772,
+            "totalBothHitsK12": 4
+          },
+          {
+            "C": 27162649,
+            "E": 54325298,
+            "firstBothG": 2982,
+            "trueK": 10.177343,
+            "totalBothHitsK12": 2
+          }
+        ]
       },
       "sparkAndDensity": {
         "sparkRate": "decayed with scale in finite tests",
@@ -113,10 +137,10 @@
       "importantCorrection": "Brun-Titchmarsh is an upper bound, not a lower bound; it cannot prove the Rescue Lemma by itself."
     },
     "unsafeClaimsToAvoid": [
-      "Goldbach is universally proven.",
-      "Lemma 4 is analytically proven.",
-      "Finite validation proves the theorem.",
-      "Universal proof complete."
+      "Claiming a universal Goldbach proof.",
+      "Claiming Lemma 4 is analytically closed.",
+      "Claiming finite validation proves the theorem.",
+      "Claiming the universal proof is complete."
     ],
     "safeClaimsToUse": [
       "Finite tests strongly support the Rescue Lemma target.",

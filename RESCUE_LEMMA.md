@@ -140,8 +140,9 @@ The workbench has produced finite computational support for the Rescue Lemma tar
 - high-K row anatomy
 - BOTH-desert and half-hit/spark tracking
 - finite base verification below the selected cutoff
-- one known K=8.25 finite breach at C = 435067631
-- zero K=10 misses in the completed adversarial tests so far
+- finite breaches for K=8.25 and K=10
+- zero K=12 misses in the completed K-window packets so far
+- highest observed trueK = 10.535772 at C = 33950429
 ```
 
 Reported finite evidence includes validation through sampled ranges up to `10^12`,

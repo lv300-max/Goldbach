@@ -55,10 +55,11 @@ There exist constants K > 0 and C0 such that, for every C >= C0,
 S(C, floor(K log^2(C))) >= 1.
 
 Finite tests strongly support this target. The current finite raw packet records
-one known `K=8.25` breach at `C = 435067631`, while `K=10` had zero misses in
-the completed adversarial tests so far. Small-prime covering walls did not fully
-cover the tested windows, and BOTH-hit density thinned with scale but stayed
-positive in the tested samples.
+that `K=8.25` and `K=10` both have finite breaches, while `K=12` had zero misses
+across the completed global coprime sweep, focused hardest-residue replay, and
+top-100 hardest-residue replay. Small-prime covering walls did not fully cover
+the tested windows, and BOTH-hit density thinned with scale but stayed positive
+in the tested samples.
 
 The proof is not complete. Brun-Titchmarsh cannot prove the Rescue Lemma
 because it is an upper-bound tool, while the framework needs a lower bound.
@@ -90,6 +91,7 @@ The current workbench evidence suggests:
 |---|---|
 | `CURRENT_STATUS.md` | Current readiness percentages, proof gap, and reproducibility artifacts |
 | `CANONICAL_EQUATIONS_AND_LEMMAS.md` | Standard notation and Lemmas 1-5 in one canonical packet |
+| `K12_EVIDENCE_PACKET.md` | Consolidated finite raw K12 packet and hardest rows |
 | `THEOREM_STACK.md` | The lemma-by-lemma framework |
 | `WHAT_REMAINS.md` | The exact missing universal proof step |
 | `ANALYTIC_PROOF_FRONTIER.md` | Strongest current analytic proof attempt and why it remains open |

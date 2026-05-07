@@ -129,8 +129,8 @@ None of these is currently completed in this repository.
 Finite raw-number tests support the target:
 
 - direct zero-BOTH hunting found `zeroBothRows = 0` in earlier broad tested samples
-- later danger replay found one zero-BOTH row for `K=8.25` at `C = 435067631`
-- `K=10` had zero misses in the completed adversarial packet so far
+- later K-window packets found finite breaches for `K=8.25` and `K=10`
+- `K=12` had zero misses in the completed K-window packets so far
 - BOTH-hit density tests found average BOTH-hits around `16-17` in tested windows
 - adversarial small-prime covering tests found no full covering wall
 - hardest small-prime walls still left survivor gaps and BOTH-hits

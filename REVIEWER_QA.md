@@ -36,7 +36,8 @@ Short direct answer: It should not be assumed; this is the open theorem.
 
 Status: ANALYTIC OPEN.
 
-Data support: completed finite `K=10` adversarial tests had zero misses so far.
+Data support: completed finite K-window packets found breaches for `K=8.25`
+and `K=10`, while `K=12` had zero misses so far.
 
 Missing: a uniform analytic bound independent of samples.
 
@@ -63,12 +64,14 @@ Missing: an error term small enough to force `S(C,W) >= 1`.
 
 ### 6. What is the exact value of `K`, and is it fixed or fitted?
 
-Short direct answer: `K=10` is the current finite evidence ceiling after one
-known `K=8.25` breach at `C = 435067631`; no analytic `K` is proven.
+Short direct answer: `K=12` is the current finite candidate ceiling after
+finite breaches for `K=8.25` and `K=10`; no analytic `K` is proven.
 
 Status: FINITE EVIDENCE.
 
-Data support: completed adversarial packet had zero `K=10` misses so far.
+Data support: the completed global coprime sweep, hardest-residue replay, and
+top-100 hardest-residue hunter all had zero `K=12` misses. The highest observed
+`trueK` was `10.535772`.
 
 Missing: a theorem establishing a fixed `K`.
 
@@ -216,8 +219,8 @@ Missing: proof handling all local obstructions.
 
 ### 19. What happens in very bad residue classes?
 
-Short direct answer: adversarial tests found dark rows and one `K=8.25` breach,
-but no completed `K=10` miss so far.
+Short direct answer: adversarial tests found dark rows and finite breaches for
+`K=8.25` and `K=10`, but no completed `K=12` miss so far.
 
 Status: FINITE EVIDENCE.
 
@@ -231,8 +234,8 @@ Short direct answer: no; this is the central analytic wall.
 
 Status: ANALYTIC OPEN.
 
-Data support: finite small-prime wall tests did not produce a completed `K=10`
-failure.
+Data support: finite small-prime wall and K-window tests did not produce a
+completed `K=12` failure.
 
 Missing: prove that survivor gaps left after local congruence obstructions
 contain at least one true BOTH-prime hit inside a `K log^2(C)` mirror window.
@@ -331,7 +334,9 @@ Short direct answer: The target is the Rescue Lemma, not a completed proof of Go
 
 Status: ANALYTIC OPEN.
 
-Data support: finite tests found many mirror rescues, and the current K-window packet records one known `K=8.25` breach but zero `K=10` misses in the completed adversarial tests so far.
+Data support: finite tests found many mirror rescues, and the current K-window
+packet records finite breaches for `K=8.25` and `K=10` but zero `K=12` misses
+in the completed packets so far.
 
 Missing: A proof that `S(C,W) > 0` for every sufficiently large `C`, where `S(C,W) = sum_{0 <= g <= W} 1_prime(C-g) * 1_prime(C+g)`.
 
@@ -351,7 +356,8 @@ Short direct answer: It should not be assumed; proving this for every large `C` 
 
 Status: ANALYTIC OPEN.
 
-Data support: Sampled and adversarial tests found one known `K=8.25` breach at `C = 435067631`; `K=10` had zero misses in the completed adversarial packet so far.
+Data support: sampled and adversarial tests found finite breaches for `K=8.25`
+and `K=10`; `K=12` had zero misses in the completed K-window packets so far.
 
 Missing: A uniform analytic bound independent of sampling.
 
@@ -377,11 +383,15 @@ Missing: An explicit theorem with error smaller than the main term.
 
 ### 6. What is the exact value of `K`, and is it fixed forever or adjusted after testing?
 
-Short direct answer: `K = 10` is the current finite evidence ceiling after one known `K=8.25` breach; a proof would need a fixed `K` established analytically.
+Short direct answer: `K = 12` is the current finite candidate ceiling after
+finite breaches for `K=8.25` and `K=10`; a proof would need a fixed `K`
+established analytically.
 
 Status: FINITE EVIDENCE.
 
-Data support: The exact known breach has `C = 435067631`, `firstBothG = 3312`, and `trueK = 8.370985`; completed adversarial tests had zero misses at `K=10`.
+Data support: The hardest completed K-window row has `C = 33950429`,
+`firstBothG = 3168`, and `trueK = 10.535772`; it passed `K=12` with
+`S(C, floor(12 log^2(C))) = 4`.
 
 Missing: A non-data-fitted analytic constant.
 

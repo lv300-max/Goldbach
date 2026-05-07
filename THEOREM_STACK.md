@@ -166,8 +166,10 @@ Therefore all even E = 2C >= 4 are covered.
 The current finite raw evidence records:
 
 ```text
-K = 8.25 had one known finite breach at C = 435067631.
-K = 10 had zero misses in the completed adversarial tests so far.
+K = 8.25 is too small in the completed finite K-window packets.
+K = 10 is too small in the completed finite K-window packets.
+K = 12 had zero misses in the completed K-window packets so far.
+Highest observed trueK = 10.535772 at C = 33950429.
 ```
 
 This does not set the final analytic constant. A proof must establish a fixed

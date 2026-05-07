@@ -5,7 +5,7 @@
 - Structural 3. Why should the bound hold universally? — It should not be assumed; proving that is the analytic open gap.
 - Structural 4. What theorem proves nearby mirror primes? — No current theorem in the repo proves it.
 - Structural 5. Is the prime-pair heuristic used as proof? — No, it is evidence/model only.
-- Structural 6. What is `K`? — `K = 10` is the current finite evidence ceiling after one known `K=8.25` breach, not an analytically proven constant.
+- Structural 6. What is `K`? — `K = 12` is the current finite candidate ceiling after finite `K=8.25` and `K=10` breaches, not an analytically proven constant.
 - Structural 7. What is `C0`? — The working finite-base cutoff is `C0 = 10^5`.
 - Structural 8. Is finite base exhaustive? — It is intended to cover every integer center `2 <= C < 100000`.
 - Structural 9. Are high bands exhaustive? — No, high bands are sampled and adversarial finite tests.

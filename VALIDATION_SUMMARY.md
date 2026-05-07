@@ -14,8 +14,10 @@ Recorded evidence from the workbench includes:
 
 ```text
 Tested mirror-prime rescue patterns across bands up to 10^12.
-Known K=8.25 breach: C = 435067631.
-K=10 misses in the completed adversarial packet: 0.
+K=8.25 finite status: broken.
+K=10 finite status: broken.
+K=12 misses in the completed K-window packets: 0.
+Highest observed trueK: 10.535772 at C = 33950429.
 Finite base check below the selected cutoff passed in the local test run.
 ```
 

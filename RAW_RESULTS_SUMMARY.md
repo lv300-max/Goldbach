@@ -59,8 +59,9 @@ Reported cross-band result:
 ```text
 Average first-rescue gap grows with scale.
 K = g / log^2(C) did not explode in tested bands.
-One known K=8.25 breach was later found at C = 435067631.
-K=10 had zero misses in the completed adversarial packet so far.
+K=8.25 and K=10 were both broken in later K-window packets.
+K=12 had zero misses in the completed K-window packets so far.
+Highest observed trueK was 10.535772 at C = 33950429.
 P95 K stayed much lower than the selected ceiling.
 ```
 

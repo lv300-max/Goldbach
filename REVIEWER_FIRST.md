@@ -24,8 +24,8 @@ Universal analytic proof: open
    open analytic theorem.
 4. **Current analytic theorem proving it:** none in this repository.
 5. **Hardy-Littlewood use:** evidence/model only, not proof.
-6. **Current `K`:** `K=10` is the finite evidence ceiling after one known
-   `K=8.25` breach; no analytic `K` is proven.
+6. **Current `K`:** `K=12` is the finite candidate ceiling after finite
+   breaches for `K=8.25` and `K=10`; no analytic `K` is proven.
 7. **Current `C0`:** working finite-base cutoff is `C0 = 100000`.
 8. **Finite base scope:** exhaustive for every integer center
    `2 <= C < 100000` in the reported local run.
@@ -46,8 +46,8 @@ Universal analytic proof: open
 17. **Residue-lane diversity:** finite evidence only; not yet a lower bound.
 18. **Small-prime obstructions:** finite wheels are tested; a proof must handle
     all local obstructions.
-19. **Bad residue classes:** adversarial tests found dark rows and one
-    `K=8.25` breach, but no completed `K=10` miss so far.
+19. **Bad residue classes:** adversarial tests found dark rows and finite
+    `K=8.25`/`K=10` breaches, but no completed `K=12` miss so far.
 20. **Can local obstructions be proven harmless:** not yet; this is the
     central analytic wall.
 
@@ -125,9 +125,10 @@ Reported scale-validation summary:
 
 ```text
 Sampled bands: 10^5 through 10^12
-Known K=8.25 breach: C = 435067631
-Known trueK for breach: 8.370985
-K=10 misses in completed adversarial packet: 0
+K=8.25 finite status: broken
+K=10 finite status: broken
+K=12 misses in completed K-window packets: 0
+Highest observed trueK: 10.535772 at C = 33950429
 ```
 
 These are finite computations only. They support the target but do not prove it universally.

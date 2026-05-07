@@ -25,8 +25,10 @@ S(C, floor(K log^2(C))) >= 1.
 Current working finite status:
 
 ```text
-Finite evidence ceiling: K = 10
-Known K=8.25 breach: C = 435067631
+Finite candidate ceiling: K = 12
+K=8.25 finite status: broken
+K=10 finite status: broken
+Highest observed trueK in completed K-window packets: 10.535772
 C0 = 100000
 ```
 
@@ -36,14 +38,14 @@ C0 = 100000
 |---|---:|---:|---|
 | Equation setup | 99% | 99% | Keep `E=2C`, `L_C(g)`, `R_C(g)`, `BOTH_C(g)`, and `S(C,W)` identical across new docs and engines |
 | Lemma structure | 99% | 99% | Treat `CANONICAL_EQUATIONS_AND_LEMMAS.md` as the source of truth for Lemmas 1-5 |
-| Finite base / finite testing | 90% | 96% | Add independent deterministic cross-checks and preserve reproducible output artifacts |
-| Raw-number evidence | 92% | 96% | Keep one consolidated raw evidence summary with exact labels and saved outputs |
-| Adversarial stress testing | 88% | 94% | Continue expanding covering-wall, zero-BOTH, and residue-octave replay summaries |
-| Reviewer-safe wording | 85% | 96% | Keep proof-sounding claims out of reviewer-facing docs |
-| Proof-direction clarity | 90% | 96% | State the exact analytic wall in every review document |
+| Finite base / finite testing | 96% | 97% | Add independent deterministic cross-checks from another implementation |
+| Raw-number evidence | 96% | 97% | Keep `K12_EVIDENCE_PACKET.md` current as new raw packets finish |
+| Adversarial stress testing | 98% | 99% | Continue expanding hardest-residue and covering-wall packets without calling them exhaustive |
+| Reviewer-safe wording | 97% | 98% | Keep proof-sounding claims out of reviewer-facing docs |
+| Proof-direction clarity | 95% | 96% | State the exact analytic wall in every review document |
 | Analytic Rescue Lemma proof | 5-10% | 5-10% | Prove a real lower-bound theorem for `S(C,W)` |
 | Universal Goldbach proof | OPEN | OPEN | Opens only if Lemma 4 is proven analytically and the finite base is accepted |
-| Overall framework readiness | 85-88% | 93-96% | Documentation, reproducibility, and evidence packaging |
+| Overall framework readiness | 94-96% | 96-97% | Documentation, reproducibility, and evidence packaging |
 | Overall proof completion | 5-10% | 5-10% | Requires analytic proof of Lemma 4 |
 
 ## Current Evidence Snapshot
@@ -97,10 +99,24 @@ Adversarial evidence:
 
 ```text
 Direct zero-BOTH hunter: zeroBothRows = 0 in tested samples
-Known K=8.25 breach: C = 435067631, trueK = 8.370985
-K=10 misses in completed adversarial packet: 0
+K=8.25 finite status: broken
+K=10 finite status: broken
+K=12 misses in completed K-window packets: 0
+Highest observed trueK: 10.535772 at C = 33950429
 Covering-wall search: anyFullCoverWall = false in reported summary
 BOTH-hit density: thinned with scale but stayed positive in tested windows
+```
+
+K12 evidence packet:
+
+```text
+Artifact: K12_EVIDENCE_PACKET.md
+Global coprime sweep: 9,216,000 rows, missK12 = 0
+Focused hardest-residue replay: 200,000 rows, missK12 = 0
+Top-100 hardest-residue hunter: 1,000,000 rows, missK12 = 0
+Lower-bound pressure probe: 4,500 rows, zeroBothRows = 0, min S(C,W) = 5
+Current finite candidate ceiling: K = 12
+Universal proof status: open
 ```
 
 ## Proof Gap
