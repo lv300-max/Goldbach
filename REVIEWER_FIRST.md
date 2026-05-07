@@ -14,6 +14,45 @@ Universal analytic proof: open
 
 ---
 
+## Immediate Reviewer Answers
+
+1. **New theorem being tested:** the Rescue Lemma,
+   `S(C, floor(K log^2(C))) >= 1` for all sufficiently large `C`.
+2. **Relation to Goldbach:** stronger than plain Goldbach because it requires
+   a bounded `log^2(C)` mirror rescue, not just any prime pair.
+3. **Why `g <= K log^2(C)` universally:** not assumed; this is exactly the
+   open analytic theorem.
+4. **Current analytic theorem proving it:** none in this repository.
+5. **Hardy-Littlewood use:** evidence/model only, not proof.
+6. **Current `K`:** `K=10` is the finite evidence ceiling after one known
+   `K=8.25` breach; no analytic `K` is proven.
+7. **Current `C0`:** working finite-base cutoff is `C0 = 100000`.
+8. **Finite base scope:** exhaustive for every integer center
+   `2 <= C < 100000` in the reported local run.
+9. **Large-scale scope:** random and adversarial samples, not exhaustive.
+10. **Primality safety:** deterministic checks where possible, BigInt-safe
+    Miller-Rabin in app tests, reproducible outputs, and independent scripts.
+11. **Computation-free statement:** yes, the Rescue Lemma is a clean analytic
+    statement using `S(C,W)`.
+12. **Sieve strength:** the pointwise `K log^2(C)` mirror-pair bound appears
+    stronger than current sieve methods prove.
+13. **Circle-method blocker:** the window is extremely short and needs uniform
+    pointwise control for every center.
+14. **Counting mode:** engines track first hits and total `S(C,W)`.
+15. **Expected count:** heuristically
+    `SingularSeries(2C) * W / log^2(C)`, about `SingularSeries(2C) * K`.
+16. **Local correction:** approximate Goldbach-style singular-series factors
+    in raw tests; not a completed theorem.
+17. **Residue-lane diversity:** finite evidence only; not yet a lower bound.
+18. **Small-prime obstructions:** finite wheels are tested; a proof must handle
+    all local obstructions.
+19. **Bad residue classes:** adversarial tests found dark rows and one
+    `K=8.25` breach, but no completed `K=10` miss so far.
+20. **Can local obstructions be proven harmless:** not yet; this is the
+    central analytic wall.
+
+---
+
 ## Main theorem target
 
 Goldbach's conjecture says:
@@ -36,6 +75,13 @@ E = (C - g) + (C + g)
 
 A Goldbach pair is found when both `C - g` and `C + g` are prime.
 
+Canonical count:
+
+```text
+BOTH_C(g) = 1_prime(C-g) * 1_prime(C+g)
+S(C,W) = sum_{0 <= g <= W} BOTH_C(g)
+```
+
 ---
 
 ## Central open lemma
@@ -44,11 +90,7 @@ A Goldbach pair is found when both `C - g` and `C + g` are prime.
 Rescue Lemma
 
 There exist constants K > 0 and C0 such that for every C >= C0,
-there exists an integer g with
-
-0 <= g <= K log^2(C)
-
-such that C - g and C + g are both prime.
+S(C, floor(K log^2(C))) >= 1.
 ```
 
 If the Rescue Lemma is proven analytically, then all sufficiently large even numbers are covered. All smaller centers can be handled by finite verification.
@@ -83,9 +125,9 @@ Reported scale-validation summary:
 
 ```text
 Sampled bands: 10^5 through 10^12
-Observed failures: 0 in reported runs
-Max observed K: 6.327 in reported scale validation
-Selected test ceiling: around K = 8.0 to 8.25
+Known K=8.25 breach: C = 435067631
+Known trueK for breach: 8.370985
+K=10 misses in completed adversarial packet: 0
 ```
 
 These are finite computations only. They support the target but do not prove it universally.

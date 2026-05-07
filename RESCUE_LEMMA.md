@@ -68,7 +68,13 @@ A BOTH-hit is also called a mirror-prime rescue.
 
 ## Rescue Lemma
 
-There exist constants `K > 0` and `C0` such that for every center `C >= C0`, there exists an integer `g` satisfying:
+There exist constants `K > 0` and `C0` such that for every center `C >= C0`,
+
+```text
+S(C, floor(K log^2(C))) >= 1.
+```
+
+Equivalently, there exists an integer `g` satisfying:
 
 ```text
 0 <= g <= K log^2(C)
@@ -134,10 +140,12 @@ The workbench has produced finite computational support for the Rescue Lemma tar
 - high-K row anatomy
 - BOTH-desert and half-hit/spark tracking
 - finite base verification below the selected cutoff
-- no observed breach of the selected K ceiling in reported runs
+- one known K=8.25 finite breach at C = 435067631
+- zero K=10 misses in the completed adversarial tests so far
 ```
 
-Reported finite evidence includes validation through sampled ranges up to `10^12`, with zero observed failures in the reported runs.
+Reported finite evidence includes validation through sampled ranges up to `10^12`,
+with no universal proof claim.
 
 ---
 
@@ -183,9 +191,9 @@ Finite tests strongly support it, but a universal proof remains open.
 Do not claim:
 
 ```text
-Goldbach is universally proven.
-The Rescue Lemma is analytically proven.
-Finite validation alone proves the theorem.
+"Goldbach is universally proven."
+"The Rescue Lemma is analytically proven."
+"Finite validation alone proves the theorem."
 ```
 
 Use instead:

@@ -4,69 +4,49 @@ FINITE BASE VERIFICATION: Goldbach's Conjecture for C < 10⁵
 ===========================================================
 
 Complete exhaustive verification of all even numbers E < 2×10⁵
-using the 5-lemma proof framework.
+using the mirror-gap framework.
 
-This is the final step to prove Goldbach's conjecture universally:
-- Lemma 4 (Rescue Bound) covers C ≥ 10⁵
-- This script covers C < 10⁵ (remaining finite base)
-- Together: universal proof for all C ≥ 4
+This is a finite base check only:
+- Lemma 4 is computationally supported, analytic open
+- This script covers C < 10⁵ for the selected finite base
+- Universal proof remains open until Lemma 4 is proven analytically
 
-Timing: ~25 million primality tests, 1-2 hours on standard hardware
+Timing: usually under a minute for this finite range on standard hardware
 """
 
 import time
-import random
 import math
 from datetime import datetime, timedelta
 
 
 # ============================================================================
-# MILLER-RABIN PRIMALITY TEST (40 rounds for error ≤ 2⁻⁸⁰)
+# DETERMINISTIC PRIMALITY TEST FOR THE FINITE BASE RANGE
 # ============================================================================
 
 def miller_rabin(n, rounds=40):
     """
-    Miller-Rabin primality test with 40 rounds.
-    Error probability: ≤ 2⁻⁸⁰ (extremely reliable)
+    Deterministic primality test for the finite base range.
+
+    The function name is retained so the rest of the checker remains stable.
+    For C < 10^5 and the searched mirror windows, trial division is exact and
+    fast enough.
     
     Args:
         n: Integer to test
-        rounds: Number of rounds (40 is cryptographically secure)
+        rounds: Ignored; retained for compatibility
     
     Returns:
-        True if n is (very likely) prime, False if definitely composite
+        True if n is prime, False otherwise
     """
     if n < 2:
         return False
-    if n == 2 or n == 3:
-        return True
     if n % 2 == 0:
-        return False
-    
-    # Write n-1 as 2^r * d where d is odd
-    r, d = 0, n - 1
-    while d % 2 == 0:
-        r += 1
-        d //= 2
-    
-    # Witness loop
-    for _ in range(rounds):
-        a = random.randrange(2, n - 1)
-        x = pow(a, d, n)
-        
-        if x == 1 or x == n - 1:
-            continue
-        
-        composite = True
-        for _ in range(r - 1):
-            x = pow(x, 2, n)
-            if x == n - 1:
-                composite = False
-                break
-        
-        if composite:
+        return n == 2
+    divisor = 3
+    while divisor * divisor <= n:
+        if n % divisor == 0:
             return False
-    
+        divisor += 2
     return True
 
 
@@ -126,7 +106,7 @@ def verify_finite_base():
     print("=" * 90)
     print(f"\nStart time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print(f"Target: Verify all C from 2 to 99,999 (49,999 centers)")
-    print(f"Method: Miller-Rabin (40 rounds, error ≤ 2⁻⁸⁰)")
+    print(f"Method: deterministic trial division primality")
     print(f"Lemma 4 bound: K = 8, K·log²(C)")
     print()
     
@@ -243,11 +223,11 @@ def verify_finite_base():
     
     print("GOLDBACH'S CONJECTURE STATUS:")
     if total_failures == 0:
-        print("  ✅ FINITE BASE (C < 10⁵):    COMPLETE ✅")
-        print("  ✅ LEMMA 4 (C ≥ 10⁵):        PROVEN + VALIDATED 10¹²")
-        print("  ✅ UNIVERSAL PROOF:         GOLDBACH'S CONJECTURE PROVEN ✅")
+        print("  ✅ FINITE BASE (C < 10⁵):    finite base check passed")
+        print("  ⚠️  LEMMA 4 (C ≥ 10⁵):        computationally supported, analytic open")
+        print("  ⚠️  UNIVERSAL PROOF:          remains open")
     else:
-        print("  ⚠️  Finite base incomplete. Proof still pending.")
+        print("  ⚠️  Finite base incomplete. Universal proof remains open.")
     print()
     
     print("=" * 90)

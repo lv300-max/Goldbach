@@ -1,0 +1,12 @@
+{
+  "total_centers": 99998,
+  "total_found": 99998,
+  "total_within_bound": 99998,
+  "total_failures": 0,
+  "max_gap": 720,
+  "max_k_ratio": 5.804285512131998,
+  "avg_gap": 48.803396067921355,
+  "avg_k_ratio": 0.4352736205709645,
+  "elapsed_time": 2.9887070655822754,
+  "percent_within": 100.0
+}

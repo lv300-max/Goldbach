@@ -1,0 +1,22 @@
+# Reviewer Q&A Short
+
+- Structural 1. What is the theorem target? — The target is the Rescue Lemma, not a completed proof of Goldbach.
+- Structural 2. Is Rescue just Goldbach restated? — It is stronger because it requires a mirror-prime rescue within `K log^2(C)`.
+- Structural 3. Why should the bound hold universally? — It should not be assumed; proving that is the analytic open gap.
+- Structural 4. What theorem proves nearby mirror primes? — No current theorem in the repo proves it.
+- Structural 5. Is the prime-pair heuristic used as proof? — No, it is evidence/model only.
+- Structural 6. What is `K`? — `K = 10` is the current finite evidence ceiling after one known `K=8.25` breach, not an analytically proven constant.
+- Structural 7. What is `C0`? — The working finite-base cutoff is `C0 = 10^5`.
+- Structural 8. Is finite base exhaustive? — It is intended to cover every integer center `2 <= C < 100000`.
+- Structural 9. Are high bands exhaustive? — No, high bands are sampled and adversarial finite tests.
+- Structural 10. How are primality bugs avoided? — Use deterministic checks where possible, BigInt-safe code, reproducible seeds, and independent cross-checks.
+- Analytic 1. Can Rescue be stated without computation? — Yes, it is a pure constants-and-centers statement.
+- Analytic 2. Is `K log^2(C)` beyond current sieve reach? — Likely yes for every center in such a short window.
+- Analytic 3. Why is circle method hard here? — The interval is `K log^2(C)` and needs uniform pointwise control.
+- Analytic 4. First-hit or weighted count? — The app measures first hits and counts BOTH-hits; proof should use a weighted count.
+- Analytic 5. Expected count? — Heuristically about `SingularSeries(2C) * K`.
+- Analytic 6. Which singular series? — A precise mirror-pair singular series is still needed.
+- Analytic 7. Can lane diversity prove it? — Not yet; it is finite evidence only.
+- Analytic 8. Are small-prime obstructions modeled? — Tested wheels model them finitely, but a proof must handle all local factors.
+- Analytic 9. What about bad residue classes? — Covering-wall tests attack them finitely and still found survivor BOTH-hits.
+- Analytic 10. Can local obstructions erase all candidates? — No proof yet; finite adversarial tests did not find such erasure.

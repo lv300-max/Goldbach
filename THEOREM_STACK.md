@@ -1,87 +1,109 @@
 # Theorem Stack
 
-## Main theorem target
+This file follows the canonical notation in `CANONICAL_EQUATIONS_AND_LEMMAS.md`.
+It is a theorem-chain map, not a completed proof of Goldbach.
 
-For every even integer `E > 2`, there exist primes `p` and `q` such that:
+## Main Theorem Target
+
+Goldbach's conjecture says:
 
 ```text
-E = p + q
+For every even integer E >= 4, there exist primes p and q such that E = p + q.
 ```
 
-This is Goldbach's conjecture.
+## Canonical Setup
 
----
-
-## Setup
-
-Let:
+Write:
 
 ```text
 E = 2C
 ```
 
-For an integer mirror gap `g >= 0`, define:
+For a mirror gap `g >= 0`, define:
 
 ```text
-p = C - g
-q = C + g
+L_C(g) = C - g
+R_C(g) = C + g
 ```
 
 Then:
 
 ```text
-p + q = (C - g) + (C + g) = 2C = E
+L_C(g) + R_C(g) = (C - g) + (C + g) = 2C = E.
 ```
-
-So Goldbach holds for `E` exactly when some `g` makes both mirror numbers prime.
-
----
-
-## Lemma 1 — Mirror Identity
-
-For every even integer `E = 2C` and every integer `g`:
-
-```text
-(C - g) + (C + g) = E
-```
-
-**Status:** proven by algebra.
-
----
-
-## Lemma 2 — BOTH-Hit Definition
 
 Define:
 
 ```text
+BOTH_C(g) = 1_prime(C-g) * 1_prime(C+g)
+```
+
+and:
+
+```text
+S(C,W) = sum_{0 <= g <= W} BOTH_C(g).
+```
+
+Thus `S(C,W) >= 1` means at least one mirror Goldbach pair appears inside
+the window `0 <= g <= W`.
+
+## Lemma 1 — Mirror Identity
+
+For every even integer `E = 2C` and every integer `g`,
+
+```text
+(C - g) + (C + g) = E.
+```
+
+**Status:** PROVEN by algebra.
+
+## Lemma 2 — BOTH-Hit Definition
+
+For every center `C` and gap `g >= 0`,
+
+```text
 BOTH_C(g) = 1
 ```
 
-if both `C - g` and `C + g` are prime. Otherwise:
+if and only if `C-g` and `C+g` are both prime. Otherwise `BOTH_C(g)=0`.
+
+Equivalently:
 
 ```text
-BOTH_C(g) = 0
+BOTH_C(g) = 1_prime(C-g) * 1_prime(C+g).
 ```
 
-**Status:** definition.
+**Status:** DEFINITION.
 
----
+## Lemma 3 — Goldbach Equivalence
 
-## Lemma 3 — Goldbach Equivalence Lemma
-
-For an even integer `E = 2C`, Goldbach holds for `E` if and only if there exists some integer `g >= 0` such that:
+For an even integer `E = 2C`, Goldbach holds for `E` if and only if there
+exists an integer `g >= 0` such that:
 
 ```text
-BOTH_C(g) = 1
+BOTH_C(g) = 1.
 ```
 
-**Status:** follows from Lemma 1 and Lemma 2.
+Equivalently, Goldbach holds for `E` if and only if:
 
----
+```text
+S(C,W) >= 1
+```
+
+for some finite `W`.
+
+**Status:** PROVEN from Lemma 1 and Lemma 2.
 
 ## Lemma 4 — Rescue Lemma
 
-There exist constants `K > 0` and `C0` such that for every center `C >= C0`, there exists an integer `g` satisfying:
+There exist constants `K > 0` and `C0` such that for every `C >= C0`,
+
+```text
+S(C, floor(K log^2(C))) >= 1.
+```
+
+Equivalently, every sufficiently large center `C` has some integer `g`
+satisfying:
 
 ```text
 0 <= g <= K log^2(C)
@@ -90,54 +112,76 @@ There exist constants `K > 0` and `C0` such that for every center `C >= C0`, the
 and:
 
 ```text
-BOTH_C(g) = 1
+BOTH_C(g) = 1.
 ```
 
-**Status:** analytic open; computationally supported in tested ranges.
+**Status:** ANALYTIC OPEN; computationally supported.
 
 This is the central universal proof wall.
 
-Plain version: every large center `C` must be rescued by a prime mirror pair inside a bounded `log^2(C)` distance.
-
----
-
 ## Lemma 5 — Finite Base Lemma
 
-For every center `C` with `2 <= C < C0`, there exists an integer `g` such that:
+For the selected cutoff `C0`, every center `C` with:
 
 ```text
-BOTH_C(g) = 1
+2 <= C < C0
 ```
 
-**Status:** finite verified in the local test run.
+has some integer `g >= 0` such that:
+
+```text
+BOTH_C(g) = 1.
+```
+
+**Status:** FINITE VERIFIED in the local reported run.
 
 Recorded finite-base run:
 
 ```text
+Working cutoff: C0 = 100000
 Centers tested: 99,998
 Decompositions found: 99,998
 Failures: 0
 Max gap observed: 720
-Max K ratio: 5.804
+Max K ratio: 5.804285512131998
 ```
 
----
+## Conditional Theorem
 
-## Conditional theorem
+If Lemma 4 is proven analytically and Lemma 5 is verified for the chosen
+cutoff `C0`, then Goldbach follows for every even integer `E >= 4`.
 
-If Lemma 4 is proven analytically and Lemma 5 is verified computationally for the chosen cutoff `C0`, then Goldbach's conjecture follows for every even integer `E > 2`.
-
----
-
-## Final status
+Proof chain:
 
 ```text
-THEOREM STACK BUILT
+Lemma 1 + Lemma 2 -> mirror pair identity and BOTH-hit definition.
+Lemma 3 -> Goldbach is equivalent to existence of a BOTH-hit.
+Lemma 5 -> covers 2 <= C < C0.
+Lemma 4 -> covers C >= C0.
+Therefore all even E = 2C >= 4 are covered.
+```
+
+## Current Finite K Status
+
+The current finite raw evidence records:
+
+```text
+K = 8.25 had one known finite breach at C = 435067631.
+K = 10 had zero misses in the completed adversarial tests so far.
+```
+
+This does not set the final analytic constant. A proof must establish a fixed
+`K` by theorem, not by finite testing.
+
+## Final Status
+
+```text
+THEOREM STACK STANDARDIZED
 LEMMA 1: PROVEN
 LEMMA 2: DEFINITION
 LEMMA 3: PROVEN FROM DEFINITIONS
 LEMMA 4: ANALYTIC OPEN
-LEMMA 5: FINITE VERIFIED
+LEMMA 5: FINITE VERIFIED IN LOCAL RUN
 FINAL THEOREM: CONDITIONAL ON LEMMA 4
 UNIVERSAL PROOF STATUS: OPEN
 ```
