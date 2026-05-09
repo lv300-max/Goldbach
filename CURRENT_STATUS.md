@@ -1,196 +1,233 @@
 # Current Status
 
 ```text
-FRAMEWORK VALID
-FINITE EVIDENCE STRONG
-RESCUE LEMMA OPEN
-UNIVERSAL PROOF NOT CLAIMED
+GOLDBACH MIRROR WORKBENCH ACTIVE
+K12 AND K13 FINITE WINDOWS BROKEN
+K13.431 HELD IN CURRENT FINITE TESTING
+HOTEL CITY / DMV CLASSIFICATION SYSTEM ADDED
+UNIVERSAL RESCUE LEMMA STILL THE ANALYTIC TARGET
 ```
 
-## Central Proof Target
+## Core Setup
 
-For an even number `E = 2C`, mirror gap `g`, and window `W`, define:
+For an even number `E = 2C`, every mirror gap `g` gives:
 
 ```text
-S(C,W) = sum_{0 <= g <= W} 1_prime(C-g) * 1_prime(C+g)
+left  = C - g
+right = C + g
+E = (C - g) + (C + g) = 2C
 ```
 
-Rescue Lemma target:
+A BOTH hit occurs when:
 
 ```text
-There exist constants K > 0 and C0 such that, for every C >= C0,
-S(C, floor(K log^2(C))) >= 1.
+prime(C-g) AND prime(C+g)
 ```
 
-Current working finite status:
+The first such gap is:
 
 ```text
-Finite candidate ceiling: K = 12
-K=8.25 finite status: broken
-K=10 finite status: broken
-Highest observed trueK in completed K-window packets: 10.535772
-C0 = 100000
+firstBothG
 ```
 
-## Readiness Percentages
-
-| Area | Current | Max Without New Analytic Proof | Missing Item To Reach 100% |
-|---|---:|---:|---|
-| Equation setup | 99% | 99% | Keep `E=2C`, `L_C(g)`, `R_C(g)`, `BOTH_C(g)`, and `S(C,W)` identical across new docs and engines |
-| Lemma structure | 99% | 99% | Treat `CANONICAL_EQUATIONS_AND_LEMMAS.md` as the source of truth for Lemmas 1-5 |
-| Finite base / finite testing | 96% | 97% | Add independent deterministic cross-checks from another implementation |
-| Raw-number evidence | 96% | 97% | Keep `K12_EVIDENCE_PACKET.md` current as new raw packets finish |
-| Adversarial stress testing | 98% | 99% | Continue expanding hardest-residue and covering-wall packets without calling them exhaustive |
-| Reviewer-safe wording | 97% | 98% | Keep proof-sounding claims out of reviewer-facing docs |
-| Proof-direction clarity | 95% | 96% | State the exact analytic wall in every review document |
-| Analytic Rescue Lemma proof | 5-10% | 5-10% | Prove a real lower-bound theorem for `S(C,W)` |
-| Universal Goldbach proof | OPEN | OPEN | Opens only if Lemma 4 is proven analytically and the finite base is accepted |
-| Overall framework readiness | 94-96% | 96-97% | Documentation, reproducibility, and evidence packaging |
-| Overall proof completion | 5-10% | 5-10% | Requires analytic proof of Lemma 4 |
-
-## Current Evidence Snapshot
-
-Finite base:
+The normalized pressure score is:
 
 ```text
-Artifact: finite_base_run_latest.txt
-JSON: finite_base_results.json
-Method: deterministic trial division primality
-Centers tested: 99,998
-Decompositions found: 99,998
-Failures: 0
-Within K log^2(C): 99,998
-Max gap observed: 720
-Max K ratio: 5.804285512131998
+trueK = firstBothG / log(C)^2
 ```
 
-Reviewer data:
+The full door-to-door spacing is:
 
 ```text
-Artifact: reviewer_qa_data.json
-Command: python3 scripts/generate_reviewer_qa_data.py > reviewer_qa_data.json
-Status: JSON validates
+D = 2 * firstBothG
 ```
 
-Lemma 4 proof-pressure:
+## Current Boss Row
 
 ```text
-Artifact: lemma4_sieve_bound_latest.txt
-Command: python3 lemma4_sieve_bound.py > lemma4_sieve_bound_latest.txt
-Sampled centers: 35
-Min E[R]: 7.25
-Min actual R: 6
-Min admissible: 73
-Near misses: none found
-Proof status: open
+C = 3,889,129,261,038,184
+E = 7,778,258,522,076,368
+firstBothG = 17,307
+D = 34,614
+trueK = 13.4309400510447
+D mod 30 = 24
+pairStart = 3|5
+P29 survivors = 582
+S17 survivors = 757
+tail1/tail2/tail4 = 6 / 16 / 28
 ```
 
-Proof roadmap:
+Current finite wall around the boss:
 
 ```text
-Artifact: proof_pressure_roadmap_latest.txt
-JSON: proof_pressure_roadmap.json
-Command: python3 goldbach_proof_lab.py --proof-roadmap --case-limit 12 --max-e 1000000 --K 8.25 --prime-limit 13 --json proof_pressure_roadmap.json > proof_pressure_roadmap_latest.txt
-Next proof target: survivor gaps left after local congruence obstructions must contain a true BOTH-prime hit
-Proof status: open
+K13.430 = MISS
+K13.431 = HIT at boundary
+13.430 < current finite wall <= 13.431
 ```
 
-Adversarial evidence:
+## Superseded Older Status
+
+Older repository notes treated `K=12` as the strongest finite ceiling. That is now superseded.
+
+Current status:
 
 ```text
-Direct zero-BOTH hunter: zeroBothRows = 0 in tested samples
-K=8.25 finite status: broken
-K=10 finite status: broken
-K=12 misses in completed K-window packets: 0
-Highest observed trueK: 10.535772 at C = 33950429
-Covering-wall search: anyFullCoverWall = false in reported summary
-BOTH-hit density: thinned with scale but stayed positive in tested windows
+K12 = broken
+K13 = broken
+K13.431 = held in current finite testing
 ```
 
-K12 evidence packet:
+## Recent Finite Evidence Snapshot
+
+### 5-minute unique sweep
 
 ```text
-Artifact: K12_EVIDENCE_PACKET.md
-Global coprime sweep: 9,216,000 rows, missK12 = 0
-Focused hardest-residue replay: 200,000 rows, missK12 = 0
-Top-100 hardest-residue hunter: 1,000,000 rows, missK12 = 0
-Lower-bound pressure probe: 4,500 rows, zeroBothRows = 0, min S(C,W) = 5
-Current finite candidate ceiling: K = 12
-Universal proof status: open
+runtime = 300.006s
+unique rows = 4,022,759
+K13.431 misses = 0
+max trueK = 13.4309400510447
+best C = 3,889,129,261,038,184
+verdict = K13_431_HELD_FINITE_IN_5MIN_UNIQUE_SWEEP
 ```
 
-## Proof Gap
-
-Brun-Titchmarsh cannot prove the Rescue Lemma because it is an upper-bound
-tool, while the framework needs a lower bound for:
+### 6-test / 2-minute / 10-core suite
 
 ```text
-S(C,W) = sum_{0 <= g <= W} 1_prime(C-g) * 1_prime(C+g)
+unique rows = 9,229,532
+K13.431 misses = 0
+trueK >= 13 rows = 0 outside boss context
+tail1-zero danger rows = 0
+global max trueK = 10.323590888035527 at C = 3,209,851,851,697,528
+final finite verdict = LARGE_PRIME_FULL_COVER_FOUND_FINITE
 ```
 
-The remaining analytic wall is:
+Important rows from that suite:
 
 ```text
-Prove that the survivor gaps left after local congruence obstructions contain
-at least one true BOTH-prime hit inside a K log^2(C) mirror window.
+hot row:
+C = 3,209,851,851,697,528
+firstBothG = 13,161
+trueK = 10.323590888035527
+pairStart = 3|17
+P29 = 441
+
+fullCover / baby-boss row:
+C = 3,194,349,700,443,064
+firstBothG = 12,225
+trueK = 9.591986184281602
+pairStart = 3|5
+P29 = 417
+
+corridor row:
+C = 3,912,698,353,475,078
+firstBothG = 12,915
+trueK = 10.019195344119744
+pairStart = L|3
+P29 = 457
+
+tailWeak row:
+C = 3,889,134,139,471,741
+firstBothG = 12,030
+trueK = 9.335771509911405
+pairStart = L|L
+P29 = 405
 ```
 
-Equivalently:
+## Current Working Interpretation
+
+The older `K12/K13 always works` idea is dead.
+
+The active mechanism now being studied is:
 
 ```text
-S(C, floor(K log^2(C))) >= 1
+P29 survivor mass + tail rescue + state-specific DMV identity
 ```
 
-for every sufficiently large `C`.
+The boss behaves like a gravity well because it traps survivor pressure longer than nearby rows.
 
-## Requirements To Reach 100%
-
-To move the Analytic Rescue Lemma proof from `5-10%` to `100%`, one of these
-must be proven.
-
-Direct lower bound:
+The strongest current visible difference between boss and baby-boss:
 
 ```text
-S(C, floor(K log^2(C))) >= 1
+boss P29 survivors      = 582
+baby-boss P29 survivors = 417
+difference              = 165
 ```
 
-for all sufficiently large `C`.
+## Hotel City / DMV Classification Status
 
-Weighted lower bound:
+The workbench now includes a deterministic classification architecture:
 
 ```text
-sum_{0 <= g <= W} Lambda(C-g)Lambda(C+g) > 0
+City
+└── State / Hotel
+    └── Floor
+        └── Room
+            └── DMV ID
+                └── Echo Bridges
 ```
 
-with an error term small enough to force an actual BOTH-prime pair.
-
-Survivor-to-prime theorem:
+Core rule:
 
 ```text
-The survivor gaps left after local congruence obstructions contain at least
-one true BOTH-prime hit inside K log^2(C).
+Every C gets exactly one home state.
+Every C can carry zero or more echo bridges.
+Every C keeps returnAddress = C.
+No C escapes classification.
 ```
 
-Short-window circle-method theorem with pointwise control:
+Best current DMV sorter:
 
 ```text
-S(C,W) = SingularSeries(2C) * W/log^2(C) + Error(C,W)
+homeState / D-width / P29 bucket / tail bucket / K bucket / suffix
 ```
 
-and:
+Boss DMV ID:
 
 ```text
-|Error(C,W)| < Main(C,W)
+3|5 / D24 / P29_BOSS / TAIL_STRONG / K13 / 37|3;3|11
 ```
 
-uniformly for every sufficiently large `C`.
+## State-Specific ID Rules
 
-## Safe Final Statement
+Different states use different useful fields.
 
 ```text
-Goldbach Distributed Rescue Framework:
-Every even number E = 2C can be tested through mirror gaps g.
-A Goldbach pair appears when C-g and C+g are both prime.
-Finite tests strongly support that a BOTH-hit appears inside K log^2(C).
-The universal proof remains open until the Rescue Lemma is proven analytically.
+3|5  state: P29 + tail + K + D-width + suffix
+3|17 state: suffix rhythm + P29 + K + D-width
+L|3  state: side-leak shape + D-width + P29 + tail
+L|L  state: tail rescue + suffix + P29 + K
+```
+
+## Current Best Theorem Target
+
+The analytic wall remains a rescue statement:
+
+```text
+For sufficiently large C, prove that at least one BOTH-prime hit appears inside a bounded K log^2(C) mirror window.
+```
+
+But the computational classification target is now sharper:
+
+```text
+Explain why high survivor mass plus tail rescue keeps producing a prime-prime door before the current finite wall.
+```
+
+## Active Next Tests
+
+```text
+1. Boss DMV ID stress test over larger state neighborhoods
+2. State-width DMV test using pairStart + D mod 30 + P29 + tail
+3. Boss vs baby-boss leak map to locate where the +165 survivor difference emerges
+4. Hotel/state classification validator over wider C ranges
+5. Color City visualization linking home state, P29 bucket, tail bucket, and K bucket
+```
+
+## Safe Repository Statement
+
+```text
+Goldbach is reframed as a folded hallway / mirror-center rescue problem.
+The new workbench classifies every center C into a state/hotel/room identity,
+then measures survivor pressure and tail rescue inside that identity.
+The current finite boss row is C = 3,889,129,261,038,184 with trueK = 13.4309400510447.
+K12 and K13 finite window claims are superseded; K13.431 is the current held finite backwall in these tests.
 ```
