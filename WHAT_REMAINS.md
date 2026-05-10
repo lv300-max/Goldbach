@@ -1,86 +1,96 @@
 # What Remains
 
-## The repository does not currently prove Goldbach
+Universal proof: OPEN.
 
-This project has a structured framework and strong finite evidence. The universal proof remains open.
+## Current Open Target
 
-The exact missing step is the analytic proof of the Rescue Lemma.
-
----
-
-## The missing theorem
+The active missing theorem is:
 
 ```text
-Rescue Lemma
-
-There exist constants K > 0 and C0 such that for every C >= C0,
-there exists an integer g with
-
-0 <= g <= K log^2(C)
-
-such that C - g and C + g are both prime.
+Large-Prime No-Cover Lemma
 ```
 
-This is the only universal wall in the current theorem stack.
-
----
-
-## Why finite testing is not enough
-
-Computational validation can show that no failure appears up to a very large bound. It cannot by itself prove the statement for every future center `C`.
-
-A universal proof needs an argument that works for all `C >= C0`.
-
----
-
-## The needed analytic shape
-
-The desired proof likely needs an estimate of the form:
+The next narrower note is:
 
 ```text
-Actual BOTH-hits = Expected BOTH-hits ± Error
+Structured Leftover No-Persistence Lemma
 ```
 
-Then prove:
+After small-prime filtering, survivor gaps remain. A universal proof must show:
 
 ```text
-Error < Expected
+large-prime left/right killer lanes cannot cover every survivor gap forever
 ```
 
-That would force:
+Equivalently:
 
 ```text
-Actual BOTH-hits > 0
+Perfect killer nets cannot persist forever.
 ```
 
-which means some mirror gap `g` produces two primes.
+## What The Latest Finite Evidence Shows
 
----
-
-## Tools that may be relevant
-
-- circle method
-- sieve theory
-- Hardy-Littlewood style estimates
-- prime distribution in short intervals
-- explicit error bounds
-
-Important note: ordinary prime-gap theorems are not enough by themselves. Goldbach needs the linked mirror condition:
+The current reviewer packet has:
 
 ```text
-C - g is prime
-C + g is prime
+K13.431 misses = 0
+full K-window coverage candidates = 0
+boss normalized survivor pressure remains highest
+high-pressure killer nets are diffuse
+greedy-lane decay requires hundreds of lanes on the selected high-pressure rows
+overlap waste is measurable and leaves 22 and 52 uncovered survivors after top 291 lanes in two selected rows
+those uncovered survivors show partial residue clustering instead of uniform spread
+the boss top200 leftover pocket is 100% inside g mod 30 in {3,15,27} but breaks at mod 210 / 2310 / 30030
+boss HALF-L leftovers require one right killer each in the canonical 16-core bridge packet
 ```
 
-using the same `g`.
-
----
-
-## Safe current status
+The strongest finite followup found:
 
 ```text
-Finite evidence: strong
-Proof direction: clear
-Rescue Lemma: analytic open
-Universal Goldbach proof: open
+boss S29/log^2(C) = 0.451656
+best visitor S29/log^2(C) = 0.440262
+boss top20 killer-lane cover = 36.60%
+boss greedy lane count = 291
+boss top200 leftovers = 91
+boss unique right killers on HALF-L leftovers = 53 with max repeat 1
+raw max S29 row top20/top291 cover = 33.85% / 92.63%
+```
+
+## What Is Still Missing
+
+1. A symbolic lower bound for the number of independent survivor gaps that cannot be killed by residue lanes.
+2. A theorem proving that left/right large-prime killer lanes cannot form a complete covering system.
+3. A scale-matched control audit separating true pressure from raw survivor mass growth.
+4. Independent reviewer reruns of the 3-hour assault and exact followup analyzer.
+5. A formal proof bridge from diffuse finite killer nets to a uniform all-`C` obstruction theorem.
+6. A theorem-level version of the greedy-lane decay curve: coverage grows too slowly, and overlap loss prevents permanent full coverage.
+7. A rigorous inequality turning measured overlap waste into a universal `OverlapLoss(C,W,P)` term.
+8. A structural explanation for why uncovered survivors cluster in residues like `g mod 30 in {3,15,27}` without allowing permanent full cover.
+9. A theorem-level bridge from shallow mod-30 clustering to deep-modulus breakup with diffuse right-killer coverage.
+
+## What Would Move This To Proof
+
+A proof must establish something like:
+
+```text
+For all sufficiently large C, inside W = floor(K log^2(C)),
+the survivor set after small-prime filtering cannot be fully covered by
+left-side and right-side composite residue classes.
+```
+
+Then at least one survivor gap must satisfy:
+
+```text
+C-g is prime
+C+g is prime
+```
+
+That would produce a BOTH escape.
+
+## Safe Bottom Line
+
+```text
+The paperwork and finite evidence are reviewer-ready.
+The theorem is not proven.
+The next mathematical job is a real no-cover theorem for large-prime killer lanes.
 ```

@@ -1,0 +1,127 @@
+{
+  "suiteName": "GOLDBACH_BOX_GUARD_RATIO_NEXT_TESTS",
+  "warning": "FINITE EVIDENCE ONLY.\nUNIVERSAL PROOF REMAINS OPEN.\nTHIS IS A FOLLOWUP TEST SUITE, NOT A PROOF.",
+  "boxGrowthCurve": [
+    {
+      "modulus": 30,
+      "bucketCount": 3,
+      "largestBucketShare": 0.36363636363636365
+    },
+    {
+      "modulus": 210,
+      "bucketCount": 15,
+      "largestBucketShare": 0.09090909090909091
+    },
+    {
+      "modulus": 2310,
+      "bucketCount": 68,
+      "largestBucketShare": 0.03409090909090909
+    },
+    {
+      "modulus": 30030,
+      "bucketCount": 88,
+      "largestBucketShare": 0.011363636363636364
+    },
+    {
+      "modulus": 510510,
+      "bucketCount": 88,
+      "largestBucketShare": 0.011363636363636364
+    }
+  ],
+  "killerRepeatGrowth": [
+    {
+      "label": "boss",
+      "halfL": 53,
+      "uniqueRightKillers": 53,
+      "maxRightRepeat": 1,
+      "top10CoveragePct": 0.18867924528301888,
+      "top20CoveragePct": 0.37735849056603776,
+      "compactness": "RIGHT_KILLERS_DIFFUSE"
+    },
+    {
+      "label": "hot1",
+      "halfL": 37,
+      "uniqueRightKillers": 37,
+      "maxRightRepeat": 1,
+      "top10CoveragePct": 0.2702702702702703,
+      "top20CoveragePct": 0.5405405405405406,
+      "compactness": "RIGHT_KILLERS_DIFFUSE"
+    },
+    {
+      "label": "hot2",
+      "halfL": 41,
+      "uniqueRightKillers": 41,
+      "maxRightRepeat": 1,
+      "top10CoveragePct": 0.24390243902439024,
+      "top20CoveragePct": 0.4878048780487805,
+      "compactness": "RIGHT_KILLERS_DIFFUSE"
+    }
+  ],
+  "boxVsGuardRatio": [
+    {
+      "modulus": 30,
+      "boxCount": 3,
+      "maxRightRepeat": 1,
+      "boxToRepeatRatio": 3
+    },
+    {
+      "modulus": 210,
+      "boxCount": 15,
+      "maxRightRepeat": 1,
+      "boxToRepeatRatio": 15
+    },
+    {
+      "modulus": 2310,
+      "boxCount": 68,
+      "maxRightRepeat": 1,
+      "boxToRepeatRatio": 68
+    },
+    {
+      "modulus": 30030,
+      "boxCount": 88,
+      "maxRightRepeat": 1,
+      "boxToRepeatRatio": 88
+    },
+    {
+      "modulus": 510510,
+      "boxCount": 88,
+      "maxRightRepeat": 1,
+      "boxToRepeatRatio": 88
+    }
+  ],
+  "futureRightCoverProbe": [
+    {
+      "label": "boss",
+      "leftovers200": 91,
+      "futureEscapesFound": 7,
+      "futureNoEscapes": 84,
+      "minFutureEscapeDistance": 4200,
+      "escapeRate": 0.07692307692307693
+    },
+    {
+      "label": "hot1",
+      "leftovers200": 42,
+      "futureEscapesFound": 6,
+      "futureNoEscapes": 36,
+      "minFutureEscapeDistance": 3780,
+      "escapeRate": 0.14285714285714285
+    },
+    {
+      "label": "hot2",
+      "leftovers200": 41,
+      "futureEscapesFound": 11,
+      "futureNoEscapes": 30,
+      "minFutureEscapeDistance": 3150,
+      "escapeRate": 0.2682926829268293
+    }
+  ],
+  "greedyVsNonGreedy": {
+    "verdict": "NO_COMPACT_COVER_FOUND_IN_15MIN_BOUNDED_SEARCH",
+    "hiddenCompactCoverFound": false,
+    "maxAbsoluteGap": 0,
+    "maxPercentGap": 0,
+    "totalIterations": 3183126
+  },
+  "verdict": "BOX_SPLITTING_AND_GUARD_DIFFUSION_HOLD_IN_NEXT_TESTS",
+  "read": "The next tests keep the same bridge shape. Exact boss box counts grow from 3 to 15 to 68 to 88 to 88, largest bucket share collapses from 36.36% to 1.14%, right-killer repeat stays at 1, future right-cover probes already find short escapes, and the 15-minute bounded search still finds no hidden compact cover."
+}

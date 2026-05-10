@@ -9,16 +9,39 @@
 <body>
 <div class="app">
   <div class="workspace">
-    <div class="disc-wrap">
-      <canvas id="disc" width="900" height="900"></canvas>
-      <div class="readout readout-left">
-        <span>E</span><strong id="readout-e">—</strong>
-        <span>C</span><strong id="readout-c">—</strong>
+    <div class="workspace-shell">
+      <div class="workspace-head">
+        <div class="workspace-kicker">Mirror Field</div>
+        <h2>Goldbach HUD</h2>
+        <p>Centered wheel, compressed telemetry, no full-stage sprawl.</p>
       </div>
-      <div class="readout readout-right">
-        <span>Lane</span><strong id="lane-id">—</strong>
-        <span>Key</span><strong id="key-signature">—</strong>
-        <span>Chord</span><strong id="chord-name">—</strong>
+      <div class="workspace-stage">
+        <div class="disc-wrap">
+          <canvas id="disc" width="900" height="900"></canvas>
+          <div class="readout readout-left">
+            <span>E</span><strong id="readout-e">—</strong>
+            <span>C</span><strong id="readout-c">—</strong>
+          </div>
+          <div class="readout readout-right">
+            <span>Lane</span><strong id="lane-id">—</strong>
+            <span>Key</span><strong id="key-signature">—</strong>
+            <span>Chord</span><strong id="chord-name">—</strong>
+          </div>
+        </div>
+      </div>
+      <div class="workspace-foot">
+        <div class="hud-chip">
+          <span>Orbit</span>
+          <strong>Prime Mirror</strong>
+        </div>
+        <div class="hud-chip">
+          <span>Mode</span>
+          <strong>Manual Only</strong>
+        </div>
+        <div class="hud-chip">
+          <span>Surface</span>
+          <strong>Glass Console</strong>
+        </div>
       </div>
     </div>
   </div>
@@ -103,6 +126,452 @@
       <pre id="weird-output"></pre>
     </div>
 
+    <div class="proof-panel" id="k17-backwall-results">
+      <h2>5-Min K17 Backwall Sweep</h2>
+      <div class="proof-grid">
+        <div><span>Runtime</span><strong>300.034s</strong></div>
+        <div><span>Workers</span><strong>16</strong></div>
+        <div><span>Rows scanned</span><strong>2,245,506</strong></div>
+        <div><span>Max trueK</span><strong>13.430940</strong></div>
+        <div><span>Best C</span><strong>3,889,129,261,038,184</strong></div>
+        <div><span>K12 misses</span><strong>300,551</strong></div>
+        <div><span>K13 misses</span><strong>100,055</strong></div>
+        <div><span>K14 misses</span><strong>0</strong></div>
+        <div><span>K15 misses</span><strong>0</strong></div>
+        <div><span>K16 misses</span><strong>0</strong></div>
+        <div><span>K17 misses</span><strong>0</strong></div>
+        <div><span>trueK13 M1=0</span><strong>0</strong></div>
+        <div><span>trueK14 M1=0</span><strong>0</strong></div>
+        <div><span>trueK15 M1=0</span><strong>0</strong></div>
+        <div><span>tail2 failures</span><strong>0</strong></div>
+        <div><span>tail4 failures</span><strong>0</strong></div>
+        <div><span>tail8 failures</span><strong>0</strong></div>
+        <div><span>Highest broken K</span><strong>13</strong></div>
+        <div><span>Lowest held K</span><strong>13.5</strong></div>
+        <div><span>Verdict</span><strong>K14_TO_K17_HELD_FINITE</strong></div>
+      </div>
+      <pre>FINITE EVIDENCE ONLY.
+UNIVERSAL PROOF REMAINS OPEN.
+K17 HELD FINITE DOES NOT MEAN K17 IS PROVEN.</pre>
+    </div>
+
+    <div class="proof-panel" id="k13-pinpoint-replay-results">
+      <h2>Condensed K13 Pinpoint Replay</h2>
+      <div class="proof-grid">
+        <div><span>Runtime</span><strong>60.014s</strong></div>
+        <div><span>Workers</span><strong>16</strong></div>
+        <div><span>C</span><strong>3,889,129,261,038,184</strong></div>
+        <div><span>firstBothG</span><strong>17,307</strong></div>
+        <div><span>trueK</span><strong>13.4309400510447</strong></div>
+        <div><span>K13.430</span><strong>MISS by 2</strong></div>
+        <div><span>K13.431</span><strong>HIT at boundary</strong></div>
+        <div><span>K13.500</span><strong>HIT</strong></div>
+        <div><span>Unique rows</span><strong>1</strong></div>
+        <div><span>Raw rows</span><strong>68,232</strong></div>
+        <div><span>Duplicates skipped</span><strong>68,231</strong></div>
+        <div><span>Mismatches</span><strong>0</strong></div>
+        <div><span>M1 tail1</span><strong>5</strong></div>
+        <div><span>M1 tail2</span><strong>7</strong></div>
+        <div><span>M1 tail4</span><strong>16</strong></div>
+      </div>
+      <pre>FINITE EVIDENCE ONLY.
+UNIVERSAL PROOF REMAINS OPEN.
+ROUNDING CAN CHANGE BORDERLINE K RESULTS.</pre>
+    </div>
+
+    <div class="proof-panel" id="k13431-unique-mutation-sweep-results">
+      <h2>5-Min K13.431 Unique Mutation Sweep</h2>
+      <div class="proof-grid">
+        <div><span>Runtime</span><strong>300.006s</strong></div>
+        <div><span>Workers</span><strong>16</strong></div>
+        <div><span>Raw rows generated</span><strong>4,023,064</strong></div>
+        <div><span>Unique rows scanned</span><strong>4,022,759</strong></div>
+        <div><span>Duplicate rows skipped</span><strong>305</strong></div>
+        <div><span>Max trueK</span><strong>13.4309400510447</strong></div>
+        <div><span>Best C</span><strong>3,889,129,261,038,184</strong></div>
+        <div><span>Best firstBothG</span><strong>17,307</strong></div>
+        <div><span>K13.431 misses</span><strong>0</strong></div>
+        <div><span>K13.45 misses</span><strong>0</strong></div>
+        <div><span>K13.5 misses</span><strong>0</strong></div>
+        <div><span>K14 misses</span><strong>0</strong></div>
+        <div><span>M1-zero rows</span><strong>0</strong></div>
+        <div><span>Verdict</span><strong>K13_431_HELD_FINITE_IN_5MIN_UNIQUE_SWEEP</strong></div>
+      </div>
+      <pre>FINITE EVIDENCE ONLY.
+UNIVERSAL PROOF REMAINS OPEN.
+K13.431 HELD FINITE DOES NOT MEAN PROVEN.</pre>
+    </div>
+
+    <div class="proof-panel" id="k13431-hostile-phase-attack-results">
+      <h2>5-Min K13.431 Hostile Phase Attack</h2>
+      <div class="proof-grid">
+        <div><span>Runtime</span><strong>302.366s</strong></div>
+        <div><span>Workers</span><strong>16</strong></div>
+        <div><span>Raw rows generated</span><strong>7,979,358</strong></div>
+        <div><span>Unique rows scanned</span><strong>2,509,798</strong></div>
+        <div><span>Duplicate rows skipped</span><strong>5,469,560</strong></div>
+        <div><span>Hostile attempts</span><strong>571,784</strong></div>
+        <div><span>Max trueK</span><strong>10.076353717594746</strong></div>
+        <div><span>Best C</span><strong>4,188,443,487,470,101</strong></div>
+        <div><span>Best firstBothG</span><strong>13,038</strong></div>
+        <div><span>K13.431 misses</span><strong>0</strong></div>
+        <div><span>K13.45 misses</span><strong>0</strong></div>
+        <div><span>K13.5 misses</span><strong>0</strong></div>
+        <div><span>K14 misses</span><strong>0</strong></div>
+        <div><span>trueK13 rows</span><strong>0</strong></div>
+        <div><span>trueK13.431 rows</span><strong>0</strong></div>
+        <div><span>trueK13 M1-zero rows</span><strong>0</strong></div>
+        <div><span>trueK13.431 M1-zero rows</span><strong>0</strong></div>
+        <div><span>Tail2 failures</span><strong>0</strong></div>
+        <div><span>Tail4 failures</span><strong>0</strong></div>
+        <div><span>Tail8 failures</span><strong>0</strong></div>
+        <div><span>Best phase bucket</span><strong>9699690:9482329</strong></div>
+        <div><span>Verdict</span><strong>K13_431_AND_TAIL13_HELD_FINITE_UNDER_HOSTILE_PHASE_ATTACK</strong></div>
+      </div>
+      <pre>FINITE EVIDENCE ONLY.
+UNIVERSAL PROOF REMAINS OPEN.
+HELD FINITE DOES NOT MEAN PROVEN.</pre>
+    </div>
+
+        <div class="proof-panel" id="goldbach-2min-6test-10core-suite-results">
+      <h2>Goldbach 2-Min 6-Test 10-Core Suite</h2>
+      <div class="proof-grid">
+        <div><span>Workers</span><strong>10</strong></div>
+        <div><span>Seconds per test</span><strong>120</strong></div>
+        <div><span>Total unique rows</span><strong>9,229,532</strong></div>
+        <div><span>Global max trueK</span><strong>10.323590888035527</strong></div>
+        <div><span>Global best C</span><strong>3209851851697528</strong></div>
+        <div><span>K13.431 misses</span><strong>0</strong></div>
+        <div><span>trueK >= 13 rows</span><strong>0</strong></div>
+        <div><span>trueK >= 10 & M1_tail1 = 0</span><strong>0</strong></div>
+        <div><span>Verdict</span><strong>LARGE_PRIME_FULL_COVER_FOUND_FINITE</strong></div>
+      </div>
+      <pre>FINITE EVIDENCE ONLY.
+UNIVERSAL PROOF REMAINS OPEN.
+HELD FINITE DOES NOT MEAN PROVEN.</pre>
+    </div>
+    <div class="proof-panel" id="boss-phase-ladder-pinpoint-results">
+      <h2>5-Min Boss Phase Ladder Pinpoint</h2>
+      <div class="proof-grid">
+        <div><span>Runtime</span><strong>300.006s</strong></div>
+        <div><span>Workers</span><strong>16</strong></div>
+        <div><span>Raw rows generated</span><strong>6,173,894</strong></div>
+        <div><span>Unique rows scanned</span><strong>2,596,746</strong></div>
+        <div><span>Duplicate rows skipped</span><strong>3,577,148</strong></div>
+        <div><span>Candidate rows saved</span><strong>0</strong></div>
+        <div><span>Max trueK</span><strong>9.519012285939962</strong></div>
+        <div><span>Best C</span><strong>3,194,374,783,841,321</strong></div>
+        <div><span>Best firstBothG</span><strong>12,132</strong></div>
+        <div><span>K13.431 misses</span><strong>0</strong></div>
+        <div><span>trueK12.5 rows</span><strong>0</strong></div>
+        <div><span>trueK13 rows</span><strong>0</strong></div>
+        <div><span>trueK13 M1-zero rows</span><strong>0</strong></div>
+        <div><span>Verdict</span><strong>PHASE_LADDER_TOO_WEAK</strong></div>
+      </div>
+      <pre>FINITE EVIDENCE ONLY.
+UNIVERSAL PROOF REMAINS OPEN.
+K13.431 HELD FINITE DOES NOT MEAN PROVEN.</pre>
+    </div>
+
+    <div class="proof-panel" id="large-prime-killer-compression-smoke-results">
+      <h2>30-sec Large-Prime Killer Compression Smoke</h2>
+      <div class="proof-grid">
+        <div><span>Runtime</span><strong>30.001s</strong></div>
+        <div><span>Workers</span><strong>16</strong></div>
+        <div><span>Unique rows</span><strong>35</strong></div>
+        <div><span>Boss S17 survivors</span><strong>757</strong></div>
+        <div><span>Boss bothComposite</span><strong>543</strong></div>
+        <div><span>Boss oneSidePrime</span><strong>214</strong></div>
+        <div><span>Boss bothPrimeBefore</span><strong>0</strong></div>
+        <div><span>Left large</span><strong>224</strong></div>
+        <div><span>Right large</span><strong>230</strong></div>
+        <div><span>K13.431 nearby misses</span><strong>0</strong></div>
+        <div><span>Verdict</span><strong>BOSS_KILLER_COMPRESSION_SMOKE_AUDITED_FINITE</strong></div>
+      </div>
+      <pre>FINITE EVIDENCE ONLY.
+UNIVERSAL PROOF REMAINS OPEN.
+AUDIT DOES NOT PROVE GOLDBACH.</pre>
+    </div>
+
+    <div class="proof-panel" id="local-pump-cleanup-tests">
+      <h2>Goldbach Local Pump Cleanup Tests</h2>
+      <div class="proof-grid">
+        <div><span>Rows tested</span><strong>5</strong></div>
+        <div><span>Boss S17 normalized</span><strong>757</strong></div>
+        <div><span>Boss S29 normalized</span><strong>582</strong></div>
+        <div><span>Boss final20 tail</span><strong>FOE 13 / HALF-L 4 / HALF-R 3</strong></div>
+        <div><span>Boss escape</span><strong>g = 17,307</strong></div>
+        <div><span>K13.431 misses</span><strong>0</strong></div>
+        <div><span>Report</span><strong><a href="GOLDBACH_LOCAL_PUMP_CLEANUP_TESTS.md">Open report</a></strong></div>
+        <div><span>Evidence</span><strong><a href="evidence/GOLDBACH_LOCAL_PUMP_CLEANUP_TESTS.json">Open JSON</a></strong></div>
+      </div>
+      <pre>S17/S29 mismatch resolved as definition drift.
+FINITE EVIDENCE ONLY.
+UNIVERSAL PROOF REMAINS OPEN.</pre>
+    </div>
+
+    <div class="proof-panel" id="no-escape-proof-assault-3h">
+      <h2>Goldbach 3H 8-Core No-Escape Proof Assault</h2>
+      <div class="proof-grid">
+        <div><span>Runtime</span><strong>10,800.043s</strong></div>
+        <div><span>Workers</span><strong>8</strong></div>
+        <div><span>Unique rows tested</span><strong>102,211,417</strong></div>
+        <div><span>K13.431 misses</span><strong>0</strong></div>
+        <div><span>Full coverage candidates</span><strong>0</strong></div>
+        <div><span>Max trueK</span><strong>13.4309400510447</strong></div>
+        <div><span>Max S29</span><strong>706</strong></div>
+        <div><span>Best non-boss trueK</span><strong>13.201583059795</strong></div>
+        <div><span>Best hostile CRT trueK</span><strong>13.157604706523</strong></div>
+        <div><span>Verdict</span><strong>INVISIBLE_NO_COVER_PRESSURE_MATCH_FOUND_FINITE</strong></div>
+        <div><span>Report</span><strong><a href="GOLDBACH_3H_8CORE_NO_ESCAPE_PROOF_ASSAULT.md">Open report</a></strong></div>
+        <div><span>Evidence</span><strong><a href="evidence/GOLDBACH_3H_8CORE_NO_ESCAPE_PROOF_ASSAULT.json">Open JSON</a></strong></div>
+      </div>
+      <pre>New signal: non-boss K13-class pressure rows exist below boss.
+No tested row broke K13.431.
+No tested row formed full survivor coverage inside the K13.431 window.
+FINITE EVIDENCE ONLY.</pre>
+    </div>
+
+    <div class="proof-panel" id="next3-no-escape-followup">
+      <h2>Goldbach Next 3 No-Escape Followup</h2>
+      <div class="proof-grid">
+        <div><span>Rows analyzed</span><strong>23</strong></div>
+        <div><span>K13.431 breaks</span><strong>0</strong></div>
+        <div><span>Audit errors</span><strong>0</strong></div>
+        <div><span>Best normalized S29/log²</span><strong>boss</strong></div>
+        <div><span>Boss S29/log²</span><strong>0.451656</strong></div>
+        <div><span>Best visitor S29/log²</span><strong>0.440262</strong></div>
+        <div><span>Boss top20 lane cover</span><strong>36.43%</strong></div>
+        <div><span>Boss greedy lanes</span><strong>291</strong></div>
+        <div><span>Verdict</span><strong>FINITE_DIFFUSE_KILLER_NET_PATTERN_STRONG</strong></div>
+        <div><span>Report</span><strong><a href="GOLDBACH_NEXT3_NO_ESCAPE_FOLLOWUP.md">Open report</a></strong></div>
+        <div><span>Evidence</span><strong><a href="evidence/GOLDBACH_NEXT3_NO_ESCAPE_FOLLOWUP.json">Open JSON</a></strong></div>
+      </div>
+      <pre>Normalized survivor density puts boss back on top.
+Top-20 killer lanes cover only about one-third of high-pressure survivor gaps.
+Killer nets are diffuse, not compact.
+FINITE EVIDENCE ONLY.</pre>
+    </div>
+
+    <div class="proof-panel" id="boss-next3-followup-results">
+      <h2>Goldbach Boss Next 3 Followup</h2>
+      <div class="proof-grid">
+        <div><span>Runtime</span><strong>90.452s</strong></div>
+        <div><span>Workers</span><strong>16</strong></div>
+        <div><span>Boss S17 legacy count</span><strong>758</strong></div>
+        <div><span>Boss bothComposite</span><strong>543</strong></div>
+        <div><span>Boss oneSidePrime</span><strong>214</strong></div>
+        <div><span>Boss bothPrimeBefore</span><strong>0</strong></div>
+        <div><span>Nearby K13.431 misses</span><strong>0</strong></div>
+        <div><span>Best nearby trueK</span><strong>5.987932</strong></div>
+        <div><span>Anchor comparison verdict</span><strong>ANCHOR_COMPARISON_FINITE</strong></div>
+        <div><span>Suite verdict</span><strong>BOSS_KILLER_SPLIT_AUDITED_FINITE</strong></div>
+      </div>
+      <pre>FINITE EVIDENCE ONLY.
+UNIVERSAL PROOF REMAINS OPEN.
+AUDIT DOES NOT PROVE GOLDBACH.
+NOTE: current normalized boss S17 is 757; 758 is legacy definition drift.</pre>
+    </div>
+
+    <div class="proof-panel" id="targeted-signal-suite-results">
+      <h2>Goldbach 1-Min 10-Core Targeted Signal Suite</h2>
+      <div class="proof-grid">
+        <div><span>Workers</span><strong>10</strong></div>
+        <div><span>Budget</span><strong>60s total</strong></div>
+        <div><span>Report</span><strong><a href="GOLDBACH_1MIN_10CORE_TARGETED_SIGNAL_SUITE.md">Open report</a></strong></div>
+        <div><span>Evidence</span><strong><a href="evidence/GOLDBACH_1MIN_10CORE_TARGETED_SIGNAL_SUITE.json">Open JSON</a></strong></div>
+      </div>
+      <pre>FINITE EVIDENCE ONLY.
+UNIVERSAL PROOF REMAINS OPEN.
+TARGETED SIGNAL TEST DOES NOT PROVE GOLDBACH.</pre>
+    </div>
+
+                    <div class="proof-panel" id="greedy-vs-optimal-cover-gap-15min-results">
+      <h2>Greedy vs Optimal Cover Gap 15-Min</h2>
+      <div class="proof-grid">
+        <div><span>Runtime</span><strong>900.456s</strong></div>
+        <div><span>Workers</span><strong>16</strong></div>
+        <div><span>Tasks</span><strong>15</strong></div>
+        <div><span>Boss N20 Greedy</span><strong>36.6%</strong></div>
+        <div><span>Boss N20 Best</span><strong>36.6%</strong></div>
+        <div><span>Boss N100 Greedy</span><strong>67.18%</strong></div>
+        <div><span>Boss N100 Best</span><strong>67.18%</strong></div>
+        <div><span>Boss N200 Greedy</span><strong>84.36%</strong></div>
+        <div><span>Boss N200 Best</span><strong>84.36%</strong></div>
+        <div><span>Max Gap</span><strong>0</strong></div>
+        <div><span>Hidden Compact Cover</span><strong>NO</strong></div>
+        <div><span>Total Iterations</span><strong>3,183,126</strong></div>
+        <div><span>Verdict</span><strong>NO_COMPACT_COVER_FOUND_IN_15MIN_BOUNDED_SEARCH</strong></div>
+        <div><span>Report</span><strong><a href="GOLDBACH_15MIN_GREEDY_VS_OPTIMAL_COVER_GAP_16CORE.md">Open report</a></strong></div>
+        <div><span>Evidence</span><strong><a href="evidence/GOLDBACH_15MIN_GREEDY_VS_OPTIMAL_COVER_GAP_16CORE.json">Open JSON</a></strong></div>
+      </div>
+      <pre>FINITE EVIDENCE ONLY.
+UNIVERSAL PROOF REMAINS OPEN.
+THIS IS A BOUNDED NON-GREEDY SEARCH, NOT AN OPTIMAL-COVER PROOF.
+NEXT_MONSTER=GREEDY_VS_OPTIMAL_COVER_GAP
+HIDDEN_COMPACT=NO</pre>
+    </div>
+
+<div class="proof-panel" id="greedy-vs-optimal-cover-gap-results">
+      <h2>Greedy vs Optimal Cover Gap</h2>
+      <div class="proof-grid">
+        <div><span>Runtime</span><strong>5.43s</strong></div>
+        <div><span>Workers</span><strong>16</strong></div>
+        <div><span>Tasks</span><strong>15</strong></div>
+        <div><span>Boss N20 Greedy</span><strong>36.6%</strong></div>
+        <div><span>Boss N20 Best</span><strong>36.6%</strong></div>
+        <div><span>Boss N100 Greedy</span><strong>67.18%</strong></div>
+        <div><span>Boss N100 Best</span><strong>67.18%</strong></div>
+        <div><span>Boss N200 Greedy</span><strong>84.36%</strong></div>
+        <div><span>Boss N200 Best</span><strong>84.36%</strong></div>
+        <div><span>Max Gap</span><strong>0</strong></div>
+        <div><span>Hidden Compact Cover</span><strong>NO</strong></div>
+        <div><span>Verdict</span><strong>NO_COMPACT_COVER_FOUND_IN_BOUNDED_SEARCH</strong></div>
+        <div><span>Report</span><strong><a href="GOLDBACH_GREEDY_VS_OPTIMAL_COVER_GAP_16CORE.md">Open report</a></strong></div>
+        <div><span>Evidence</span><strong><a href="evidence/GOLDBACH_GREEDY_VS_OPTIMAL_COVER_GAP_16CORE.json">Open JSON</a></strong></div>
+      </div>
+      <pre>FINITE EVIDENCE ONLY.
+UNIVERSAL PROOF REMAINS OPEN.
+BOUNDED NON-GREEDY SEARCH IS STILL NOT A UNIVERSAL PROOF.
+NEXT_MONSTER=GREEDY_VS_OPTIMAL_COVER_GAP
+HIDDEN_COMPACT=NO</pre>
+    </div>
+
+            <div class="proof-panel" id="box-guard-ratio-next-tests-results">
+      <h2>Box Guard Ratio Next Tests</h2>
+      <div class="proof-grid">
+        <div><span>Boss Box30/210/2310/30030/510510</span><strong>3 / 15 / 68 / 88 / 88</strong></div>
+        <div><span>Boss Largest Shares</span><strong>36.4% / 9.1% / 3.4% / 1.1% / 1.1%</strong></div>
+        <div><span>Boss HALF-L</span><strong>53</strong></div>
+        <div><span>Boss Right Killers</span><strong>53</strong></div>
+        <div><span>Boss Max Repeat</span><strong>1</strong></div>
+        <div><span>Boss Top10/Top20</span><strong>18.9% / 37.7%</strong></div>
+        <div><span>Future Escape Rate</span><strong>7.7%</strong></div>
+        <div><span>Greedy vs Non-Greedy</span><strong>NO HIDDEN COMPACT</strong></div>
+        <div><span>Verdict</span><strong>BOX_SPLITTING_AND_GUARD_DIFFUSION_HOLD_IN_NEXT_TESTS</strong></div>
+        <div><span>Report</span><strong><a href="GOLDBACH_BOX_GUARD_RATIO_NEXT_TESTS.md">Open report</a></strong></div>
+        <div><span>Evidence</span><strong><a href="evidence/GOLDBACH_BOX_GUARD_RATIO_NEXT_TESTS.json">Open JSON</a></strong></div>
+      </div>
+      <pre>FINITE EVIDENCE ONLY.
+UNIVERSAL PROOF REMAINS OPEN.
+THIS IS A FOLLOWUP TEST SUITE, NOT A PROOF.
+LOCKED_LINE=The rooms multiply faster than the guards repeat.
+HIDDEN_COMPACT=NO</pre>
+    </div>
+
+<div class="proof-panel" id="killer-containment-box-engine-results">
+      <h2>Killer Containment Box Engine</h2>
+      <div class="proof-grid">
+        <div><span>Boss S29</span><strong>582</strong></div>
+        <div><span>Boss Leftovers@200</span><strong>91</strong></div>
+        <div><span>Boss Leftovers@291</span><strong>0</strong></div>
+        <div><span>Boss mod30 Boxes</span><strong>3</strong></div>
+        <div><span>Boss mod210 Boxes</span><strong>12+</strong></div>
+        <div><span>Boss mod2310 Boxes</span><strong>12+</strong></div>
+        <div><span>Boss mod30030 Boxes</span><strong>12+</strong></div>
+        <div><span>Boss Cluster30</span><strong>100%</strong></div>
+        <div><span>Boss HALF-L</span><strong>53</strong></div>
+        <div><span>Boss Right Killers</span><strong>53</strong></div>
+        <div><span>Boss Max Repeat</span><strong>1</strong></div>
+        <div><span>Verdict</span><strong>SURVIVOR_BOXES_SPLIT_FASTER_THAN_KILLER_LANES_REPEAT_FINITE</strong></div>
+        <div><span>Report</span><strong><a href="GOLDBACH_KILLER_CONTAINMENT_BOX_ENGINE.md">Open report</a></strong></div>
+        <div><span>Evidence</span><strong><a href="evidence/GOLDBACH_KILLER_CONTAINMENT_BOX_ENGINE.json">Open JSON</a></strong></div>
+      </div>
+      <pre>FINITE EVIDENCE ONLY.
+UNIVERSAL PROOF REMAINS OPEN.
+THIS IS A CONTAINMENT SUMMARY, NOT A PROOF.
+BOX_RULE=survivor boxes split faster than killer lanes repeat
+RIGHT_KILLERS=RIGHT_KILLERS_DIFFUSE</pre>
+    </div>
+
+<div class="proof-panel" id="final-5min-no-cover-bridge-results">
+      <h2>Final 5-Min No-Cover Bridge Test</h2>
+      <div class="proof-grid">
+        <div><span>Runtime</span><strong>301.556s</strong></div>
+        <div><span>Workers</span><strong>16</strong></div>
+        <div><span>Boss Boundary</span><strong>PASS</strong></div>
+        <div><span>K13.431 Misses</span><strong>0</strong></div>
+        <div><span>Boss S17</span><strong>757</strong></div>
+        <div><span>Boss S29</span><strong>582</strong></div>
+        <div><span>Boss Top20</span><strong>36.6%</strong></div>
+        <div><span>Boss Top100</span><strong>67.18%</strong></div>
+        <div><span>Boss Top291</span><strong>100%</strong></div>
+        <div><span>Boss Leftovers@200</span><strong>91</strong></div>
+        <div><span>Boss Leftovers@291</span><strong>0</strong></div>
+        <div><span>Boss Cluster30</span><strong>100%</strong></div>
+        <div><span>Boss HALF-L</span><strong>53</strong></div>
+        <div><span>Boss Right Killers</span><strong>53</strong></div>
+        <div><span>Boss Max Right Repeat</span><strong>1</strong></div>
+        <div><span>Future Escapes</span><strong>7</strong></div>
+        <div><span>Verdict</span><strong>BOSS_CLUSTER_PERSISTS_BUT_RIGHT_KILLERS_DIFFUSE</strong></div>
+        <div><span>Report</span><strong><a href="GOLDBACH_FINAL_5MIN_NO_COVER_BRIDGE_16CORE.md">Open report</a></strong></div>
+        <div><span>Evidence</span><strong><a href="evidence/GOLDBACH_FINAL_5MIN_NO_COVER_BRIDGE_16CORE.json">Open JSON</a></strong></div>
+        <div><span>Local Compare</span><strong><a href="IMPORTED_2026_05_09_BOSS_CLUSTER_BRIDGE_COMPARISON.md">Open note</a></strong></div>
+      </div>
+      <pre>FINITE EVIDENCE ONLY.
+UNIVERSAL PROOF REMAINS OPEN.
+BOSS_CLUSTER_30=100%
+RIGHT_KILLERS=RIGHT_KILLERS_DIFFUSE</pre>
+    </div>
+
+<div class="proof-panel" id="no-escape-theorem-results">
+      <h2>No-Escape Hotel Theorem</h2>
+      <div class="proof-grid">
+        <div><span>Status</span><strong>TARGET LEMMA</strong></div>
+        <div><span>Focus lock</span><strong>Large-Prime No-Cover</strong></div>
+        <div><span>Reviewer Packet</span><strong><a href="REVIEWER_PACKET.md">Open packet</a></strong></div>
+        <div><span>Reviewer Q&A</span><strong><a href="REVIEWER_WEAKNESS_QA_PACKET.md">Open Q&A</a></strong></div>
+        <div><span>1-Page Summary</span><strong><a href="GOLDBACH_NO_COVER_BRIDGE_1_PAGE_SUMMARY.md">Open summary</a></strong></div>
+        <div><span>README</span><strong><a href="README.md">Open overview</a></strong></div>
+        <div><span>Current Status</span><strong><a href="CURRENT_STATUS.md">Open status</a></strong></div>
+        <div><span>Report</span><strong><a href="NO_ESCAPE_THEOREM.md">Open theorem</a></strong></div>
+        <div><span>Leftover Note</span><strong><a href="STRUCTURED_LEFTOVER_RESIDUE_FAMILY_NOTE.md">Open note</a></strong></div>
+        <div><span>Flow</span><strong><a href="GOLDBACH_NO_ESCAPE_DIRECTIONS.html">Open directions</a></strong></div>
+        <div><span>Validator</span><strong><a href="GOLDBACH_FILTERED_NO_ESCAPE_VALIDATOR.md">Open report</a></strong></div>
+        <div><span>Validator JSON</span><strong><a href="evidence/GOLDBACH_FILTERED_NO_ESCAPE_VALIDATOR.json">Open JSON</a></strong></div>
+        <div><span>Greedy Decay</span><strong><a href="GOLDBACH_GREEDY_LANE_DECAY_CURVE.md">Open report</a></strong></div>
+        <div><span>Greedy JSON</span><strong><a href="evidence/GOLDBACH_GREEDY_LANE_DECAY_CURVE.json">Open JSON</a></strong></div>
+        <div><span>Overlap Waste</span><strong><a href="GOLDBACH_OVERLAP_WASTE_CURVE.md">Open report</a></strong></div>
+        <div><span>Overlap JSON</span><strong><a href="evidence/GOLDBACH_OVERLAP_WASTE_CURVE.json">Open JSON</a></strong></div>
+        <div><span>Uncovered Audit</span><strong><a href="GOLDBACH_UNCOVERED_RESIDUE_SURVIVOR_AUDIT.md">Open report</a></strong></div>
+        <div><span>Audit JSON</span><strong><a href="evidence/GOLDBACH_UNCOVERED_RESIDUE_SURVIVOR_AUDIT.json">Open JSON</a></strong></div>
+        <div><span>Tie-Path Summary</span><strong><a href="GOLDBACH_TIE_PATH_INVARIANCE_SUMMARY.md">Open report</a></strong></div>
+        <div><span>No-Compact Note</span><strong><a href="NO_COMPACT_COVER_FOUND_IN_BOUNDED_SEARCH_NOTE.md">Open note</a></strong></div>
+        <div><span>Containment Engine</span><strong><a href="GOLDBACH_KILLER_CONTAINMENT_BOX_ENGINE.md">Open report</a></strong></div>
+        <div><span>Containment Note</span><strong><a href="KILLER_CONTAINMENT_BOX_NOTE.md">Open note</a></strong></div>
+        <div><span>Next Test Suite</span><strong><a href="GOLDBACH_BOX_GUARD_RATIO_NEXT_TESTS.md">Open report</a></strong></div>
+        <div><span>Next Test JSON</span><strong><a href="evidence/GOLDBACH_BOX_GUARD_RATIO_NEXT_TESTS.json">Open JSON</a></strong></div>
+        <div><span>Imported Compare</span><strong><a href="IMPORTED_2026_05_09_CLEANUP_PACKET_COMPARISON.md">Open note</a></strong></div>
+        <div><span>Boss Bridge Compare</span><strong><a href="IMPORTED_2026_05_09_BOSS_CLUSTER_BRIDGE_COMPARISON.md">Open note</a></strong></div>
+        <div><span>Filtered CSV</span><strong><a href="evidence/goldbach_filtered_no_escape_validator_records.csv">Open CSV</a></strong></div>
+      </div>
+      <pre>NO FULL COVERAGE CAN EXIST.
+CURRENTLY UNPROVEN.
+EVERY TEST MUST ANSWER THE RESCUE QUESTION.</pre>
+    </div>
+
+    <div class="proof-panel" id="tail-pinch-results">
+      <h2>3-Min 6-Core Tail Pinch Test</h2>
+      <div class="proof-grid">
+        <div><span>Runtime</span><strong>180.005s</strong></div>
+        <div><span>Workers</span><strong>6</strong></div>
+        <div><span>Unique rows scanned</span><strong>424,726</strong></div>
+        <div><span>Max trueK</span><strong>13.430940051045</strong></div>
+        <div><span>Best C</span><strong>3,889,129,261,038,184</strong></div>
+        <div><span>K13.431 misses</span><strong>0</strong></div>
+        <div><span>trueK >= 10 rows</span><strong>1</strong></div>
+        <div><span>trueK >= 12 rows</span><strong>1</strong></div>
+        <div><span>trueK >= 13 rows</span><strong>1</strong></div>
+        <div><span>Tail1 zero danger rows</span><strong>0</strong></div>
+        <div><span>Large-prime full-cover rows</span><strong>239</strong></div>
+        <div><span>Cover + rescue rows</span><strong>218</strong></div>
+        <div><span>Verdict</span><strong>TRUEK13_DANGER_FOUND</strong></div>
+      </div>
+      <pre>FINITE EVIDENCE ONLY.
+UNIVERSAL PROOF REMAINS OPEN.
+HELD FINITE DOES NOT MEAN PROVEN.</pre>
+    </div>
+
     <div style="margin-top:18px;border-top:1px solid var(--line);padding-top:10px;">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:12px;color:var(--muted);">
         <div>Bridge status: <strong id="bridge-status">—</strong></div>
@@ -122,10 +591,395 @@
       <pre id="log-window" style="max-height:200px;overflow-y:auto;"></pre>
     </div>
 
-    <!-- Residue Piano Octave Engine -->
+    <section id="prime-visual-section" class="wb-panel">
+      <style>
+        #prime-visual-section{
+          background:#0f172a;
+          color:#e5eefc;
+          border:1px solid rgba(255,255,255,.12);
+          border-radius:18px;
+          padding:18px;
+          margin:18px 0;
+          box-shadow:0 10px 30px rgba(0,0,0,.25);
+          font-family:Inter,system-ui,Arial,sans-serif;
+        }
+        #prime-visual-section h2{
+          margin:0 0 12px;
+          font-size:24px;
+          line-height:1.2;
+        }
+        #prime-visual-section .sub{
+          opacity:.8;
+          margin-bottom:14px;
+          font-size:14px;
+        }
+        #prime-visual-section .grid{
+          display:grid;
+          grid-template-columns: repeat(4, minmax(0,1fr));
+          gap:10px;
+          margin-bottom:14px;
+        }
+        #prime-visual-section .field{
+          display:flex;
+          flex-direction:column;
+          gap:6px;
+        }
+        #prime-visual-section label{
+          font-size:12px;
+          opacity:.8;
+        }
+        #prime-visual-section input,
+        #prime-visual-section button{
+          border-radius:12px;
+          border:1px solid rgba(255,255,255,.12);
+          background:#111827;
+          color:#fff;
+          padding:10px 12px;
+          font-size:14px;
+        }
+        #prime-visual-section button{
+          cursor:pointer;
+          font-weight:700;
+          background:linear-gradient(135deg,#1d4ed8,#2563eb);
+        }
+        #prime-visual-section .summary{
+          display:grid;
+          grid-template-columns: repeat(4, minmax(0,1fr));
+          gap:10px;
+          margin-bottom:16px;
+        }
+        #prime-visual-section .card{
+          background:#111827;
+          border:1px solid rgba(255,255,255,.08);
+          border-radius:14px;
+          padding:12px;
+          min-height:78px;
+        }
+        #prime-visual-section .card .k{
+          font-size:12px;
+          opacity:.7;
+          margin-bottom:4px;
+        }
+        #prime-visual-section .card .v{
+          font-size:18px;
+          font-weight:800;
+          word-break:break-word;
+        }
+        #prime-visual-section .center-line{
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          gap:12px;
+          flex-wrap:wrap;
+          background:#111827;
+          border:1px solid rgba(255,255,255,.08);
+          border-radius:14px;
+          padding:14px;
+          margin-bottom:16px;
+        }
+        #prime-visual-section .bubble{
+          padding:10px 14px;
+          border-radius:999px;
+          background:#1f2937;
+          border:1px solid rgba(255,255,255,.08);
+          font-weight:700;
+        }
+        #prime-visual-section .bubble.center{ background:#7c3aed; }
+        #prime-visual-section .bubble.prime{ background:#065f46; }
+        #prime-visual-section .bubble.composite{ background:#7f1d1d; }
+        #prime-visual-section .visual-strip{
+          display:grid;
+          grid-template-columns: repeat(auto-fit, minmax(92px,1fr));
+          gap:8px;
+          margin-bottom:16px;
+        }
+        #prime-visual-section .strip-box{
+          background:#111827;
+          border:1px solid rgba(255,255,255,.08);
+          border-radius:12px;
+          padding:10px 8px;
+          text-align:center;
+          font-size:12px;
+        }
+        #prime-visual-section .strip-box strong{
+          display:block;
+          font-size:14px;
+          margin-bottom:4px;
+        }
+        #prime-visual-section .strip-box.prime{ outline:2px solid #10b981; }
+        #prime-visual-section .strip-box.center{ outline:2px solid #8b5cf6; }
+        #prime-visual-section .strip-box.hit{
+          outline:2px solid #f59e0b;
+          background:#1f2937;
+        }
+        #prime-visual-section table{
+          width:100%;
+          border-collapse:collapse;
+          overflow:hidden;
+          border-radius:14px;
+          background:#111827;
+        }
+        #prime-visual-section th,
+        #prime-visual-section td{
+          padding:10px 8px;
+          border-bottom:1px solid rgba(255,255,255,.08);
+          text-align:center;
+          font-size:13px;
+        }
+        #prime-visual-section th{
+          position:sticky;
+          top:0;
+          background:#1f2937;
+          z-index:1;
+        }
+        #prime-visual-section .yes{ color:#34d399; font-weight:800; }
+        #prime-visual-section .no{ color:#f87171; font-weight:800; }
+        #prime-visual-section .hit-row{ background:rgba(245,158,11,.12); }
+        #prime-visual-section .scroll{
+          max-height:420px;
+          overflow:auto;
+          border-radius:14px;
+          border:1px solid rgba(255,255,255,.08);
+        }
+        #prime-visual-section .tiny{
+          font-size:12px;
+          opacity:.75;
+          margin-top:8px;
+        }
+        @media (max-width:900px){
+          #prime-visual-section .grid,
+          #prime-visual-section .summary{
+            grid-template-columns:1fr 1fr;
+          }
+        }
+        @media (max-width:640px){
+          #prime-visual-section .grid,
+          #prime-visual-section .summary{
+            grid-template-columns:1fr;
+          }
+        }
+      </style>
+      <h2>Prime Mirror Viewer</h2>
+      <div class="sub">
+        Put in a center seed <strong>C</strong>. This shows the numbers around it, the nearest primes, and the first mirror gap where both sides are prime.
+      </div>
+      <div class="grid">
+        <div class="field">
+          <label for="pmv-seed">Seed C</label>
+          <input id="pmv-seed" type="text" value="3889129261038184" />
+        </div>
+        <div class="field">
+          <label for="pmv-range">Rows to show</label>
+          <input id="pmv-range" type="number" min="10" max="2000" value="120" />
+        </div>
+        <div class="field">
+          <label for="pmv-strip">Visual strip half-width</label>
+          <input id="pmv-strip" type="number" min="5" max="50" value="12" />
+        </div>
+        <div class="field">
+          <label>&nbsp;</label>
+          <button id="pmv-run">Show Prime View</button>
+        </div>
+      </div>
+      <div class="summary" id="pmv-summary">
+        <div class="card"><div class="k">Center C</div><div class="v" id="pmv-s-c">-</div></div>
+        <div class="card"><div class="k">Nearest Prime Below C</div><div class="v" id="pmv-s-below">-</div></div>
+        <div class="card"><div class="k">Nearest Prime Above C</div><div class="v" id="pmv-s-above">-</div></div>
+        <div class="card"><div class="k">First Mirror Prime Gap g</div><div class="v" id="pmv-s-firstg">-</div></div>
+      </div>
+      <div class="summary">
+        <div class="card"><div class="k">Left Prime at First Hit</div><div class="v" id="pmv-s-leftprime">-</div></div>
+        <div class="card"><div class="k">Right Prime at First Hit</div><div class="v" id="pmv-s-rightprime">-</div></div>
+        <div class="card"><div class="k">E = 2C</div><div class="v" id="pmv-s-e">-</div></div>
+        <div class="card"><div class="k">trueK = g / log(C)^2</div><div class="v" id="pmv-s-truek">-</div></div>
+      </div>
+      <div class="center-line" id="pmv-first-hit-line"></div>
+      <h3 style="margin:10px 0 8px;">Numbers around C</h3>
+      <div class="visual-strip" id="pmv-strip-out"></div>
+      <h3 style="margin:10px 0 8px;">Mirror rows</h3>
+      <div class="scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>g</th>
+              <th>Left = C - g</th>
+              <th>Left Prime</th>
+              <th>C</th>
+              <th>Right Prime</th>
+              <th>Right = C + g</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="pmv-table"></tbody>
+        </table>
+      </div>
+      <div class="tiny">
+        Status key:
+        <strong>BOTH</strong> = both sides prime,
+        <strong>HALF-L</strong> = left prime only,
+        <strong>HALF-R</strong> = right prime only,
+        <strong>FOE</strong> = both composite.
+      </div>
+      <script>
+        (function(){
+          const $ = (id) => document.getElementById(id);
+          function fmt(n){
+            try { return BigInt(n).toLocaleString("en-US"); }
+            catch { return String(n); }
+          }
+          function parseBigIntLoose(s){
+            return BigInt(String(s).replace(/,/g, "").trim());
+          }
+          function modPow(base, exp, mod){
+            let result = 1n;
+            base %= mod;
+            while(exp > 0n){
+              if(exp & 1n) result = (result * base) % mod;
+              base = (base * base) % mod;
+              exp >>= 1n;
+            }
+            return result;
+          }
+          function isPrimeBig(n){
+            if (n < 2n) return false;
+            const small = [2n,3n,5n,7n,11n,13n,17n,19n,23n,29n,31n,37n];
+            for(const p of small){
+              if(n === p) return true;
+              if(n % p === 0n) return false;
+            }
+            let d = n - 1n;
+            let s = 0n;
+            while ((d & 1n) === 0n){
+              d >>= 1n;
+              s++;
+            }
+            const bases = [2n,3n,5n,7n,11n,13n,17n];
+            for(const a of bases){
+              if(a >= n) continue;
+              let x = modPow(a, d, n);
+              if(x === 1n || x === n - 1n) continue;
+              let witness = true;
+              for(let r = 1n; r < s; r++){
+                x = (x * x) % n;
+                if(x === n - 1n){
+                  witness = false;
+                  break;
+                }
+              }
+              if(witness) return false;
+            }
+            return true;
+          }
+          function nearestPrimeBelow(c){
+            let x = c - 1n;
+            while (x >= 2n){
+              if(isPrimeBig(x)) return x;
+              x--;
+            }
+            return null;
+          }
+          function nearestPrimeAbove(c){
+            let x = c + 1n;
+            while (true){
+              if(isPrimeBig(x)) return x;
+              x++;
+            }
+          }
+          function firstMirrorPrimePair(c, maxRows){
+            for(let g = 0n; g <= BigInt(maxRows); g++){
+              const left = c - g;
+              const right = c + g;
+              if(left >= 2n && isPrimeBig(left) && isPrimeBig(right)){
+                return { g, left, right };
+              }
+            }
+            return null;
+          }
+          function render(){
+            let c;
+            try{ c = parseBigIntLoose($("pmv-seed").value); }
+            catch{ alert("Bad seed C"); return; }
+            const maxRows = Math.max(10, parseInt($("pmv-range").value || "120", 10));
+            const stripHalf = Math.max(5, parseInt($("pmv-strip").value || "12", 10));
+            $("pmv-s-c").textContent = fmt(c);
+            $("pmv-s-e").textContent = fmt(c * 2n);
+            const below = nearestPrimeBelow(c);
+            const above = nearestPrimeAbove(c);
+            $("pmv-s-below").textContent = below ? fmt(below) : "-";
+            $("pmv-s-above").textContent = above ? fmt(above) : "-";
+            const firstHit = firstMirrorPrimePair(c, maxRows);
+            $("pmv-s-firstg").textContent = firstHit ? fmt(firstHit.g) : "not found in range";
+            $("pmv-s-leftprime").textContent = firstHit ? fmt(firstHit.left) : "-";
+            $("pmv-s-rightprime").textContent = firstHit ? fmt(firstHit.right) : "-";
+            const cNum = Number(c);
+            const trueK = (firstHit && Number.isFinite(cNum) && cNum > 1)
+              ? (Number(firstHit.g) / (Math.log(cNum) ** 2))
+              : null;
+            $("pmv-s-truek").textContent = trueK !== null ? String(trueK.toFixed(12)) : "-";
+            const line = $("pmv-first-hit-line");
+            line.innerHTML = "";
+            if(firstHit){
+              line.innerHTML = `
+                <div class="bubble prime">${fmt(firstHit.left)}</div>
+                <div class="bubble">${fmt(firstHit.g)} gap</div>
+                <div class="bubble center">C = ${fmt(c)}</div>
+                <div class="bubble">${fmt(firstHit.g)} gap</div>
+                <div class="bubble prime">${fmt(firstHit.right)}</div>
+              `;
+            } else {
+              line.innerHTML = `<div class="bubble composite">No BOTH hit found inside shown range</div>`;
+            }
+            const strip = $("pmv-strip-out");
+            strip.innerHTML = "";
+            for(let d = -stripHalf; d <= stripHalf; d++){
+              const n = c + BigInt(d);
+              const prime = n >= 2n && isPrimeBig(n);
+              const hit = firstHit && (n === firstHit.left || n === firstHit.right);
+              const div = document.createElement("div");
+              div.className = "strip-box" + (prime ? " prime" : "") + (d === 0 ? " center" : "") + (hit ? " hit" : "");
+              div.innerHTML = `
+                <strong>${d === 0 ? "C" : (d > 0 ? "+" + d : d)}</strong>
+                ${fmt(n)}
+                <div style="margin-top:4px;opacity:.75;">${prime ? "prime" : "composite"}</div>
+              `;
+              strip.appendChild(div);
+            }
+            const tbody = $("pmv-table");
+            tbody.innerHTML = "";
+            for(let gi = 0; gi <= maxRows; gi++){
+              const g = BigInt(gi);
+              const left = c - g;
+              const right = c + g;
+              const lp = left >= 2n && isPrimeBig(left);
+              const rp = isPrimeBig(right);
+              let status = "FOE";
+              if(lp && rp) status = "BOTH";
+              else if(lp) status = "HALF-L";
+              else if(rp) status = "HALF-R";
+              const tr = document.createElement("tr");
+              if(firstHit && g === firstHit.g) tr.className = "hit-row";
+              tr.innerHTML = `
+                <td>${fmt(g)}</td>
+                <td>${fmt(left)}</td>
+                <td class="${lp ? "yes" : "no"}">${lp ? "YES" : "NO"}</td>
+                <td>${fmt(c)}</td>
+                <td class="${rp ? "yes" : "no"}">${rp ? "YES" : "NO"}</td>
+                <td>${fmt(right)}</td>
+                <td><strong>${status}</strong></td>
+              `;
+              tbody.appendChild(tr);
+            }
+          }
+          $("pmv-run").addEventListener("click", render);
+          render();
+        })();
+      </script>
+    </section>
+
+    <!-- Prime Piano / Goldbach Octave Map -->
     <div class="residue-piano-section">
-      <h2>Residue Piano Octave</h2>
-      <p class="residue-piano-note">Mirror residue lane analysis</p>
+      <h2>Prime Piano / Goldbach Octave Map</h2>
+      <p class="residue-piano-note">C sits in the middle. C-g is the left hand, C+g is the right hand, and BOTH is both hands landing on prime together.</p>
       <div class="residue-piano-controls">
         <label>E input
           <input id="rpo-e-input" type="number" value="1000000" step="2" min="4" />
@@ -138,24 +992,30 @@
         </label>
         <label>Modulus M
           <select id="rpo-m-select">
-            <option value="30">30</option>
-            <option value="210" selected>210</option>
+            <option value="30" selected>30</option>
+            <option value="210">210</option>
             <option value="2310">2310</option>
+            <option value="510510">510510</option>
           </select>
         </label>
         <label>Mode
           <select id="rpo-mode-select">
-            <option value="standard">Standard</option>
-            <option value="deep">Deep</option>
+            <option value="goldbach" selected>Goldbach mirror</option>
+            <option value="prime-lane">Prime lanes</option>
+            <option value="polignac">Gap-2 echo</option>
           </select>
         </label>
       </div>
       <div class="residue-piano-button-row">
-        <button id="rpo-run-button">Run RPO</button>
+        <button id="rpo-run-button">Run Piano</button>
         <button id="rpo-export-json-button">Export JSON</button>
         <button id="rpo-export-md-button">Export MD</button>
       </div>
       <div class="residue-piano-metrics">
+        <div>C center<strong id="rpo-center">—</strong></div>
+        <div>Wheel<strong id="rpo-wheel">—</strong></div>
+        <div>First BOTH<strong id="rpo-first-both">—</strong></div>
+        <div>tail_1 wall<strong id="rpo-tail1-wall">—</strong></div>
         <div>Ringing families<strong id="rpo-ringing-families">—</strong></div>
         <div>Muted families<strong id="rpo-muted-families">—</strong></div>
         <div>Survivor families<strong id="rpo-survivor-families">—</strong></div>
@@ -163,6 +1023,8 @@
         <div>All die<strong id="rpo-all-die-status">—</strong></div>
         <div>Hash<strong id="rpo-hash">—</strong></div>
       </div>
+      <div class="prime-piano-wall" id="rpo-wall-note">Finite visual map only. Current wall: high-pressure tail_1_logC should show both left and right HALF pressure before BOTH.</div>
+      <div class="prime-piano-keyboard" id="rpo-keyboard" aria-label="Prime piano keyboard"></div>
       <div id="residuePianoOctaveOut"><pre id="rpo-output"></pre></div>
     </div>
 
@@ -170,8 +1032,345 @@
 </div><!-- end .app -->
 
 <script src="app.js"></script>
+<script src="scripts/analytic_proof_pressure_test.js"></script>
+<script src="scripts/residue_octave_repeat_test.js"></script>
+<script src="scripts/residue_danger_replay_test.js"></script>
 
 <script>
+window.runMirrorDesertBreakTest = function runMirrorDesertBreakTest() {
+  const K = 8.25;
+  const modLane = 210;
+  const bands = [
+    { label: "10^5-10^6", minE: 100000, maxE: 1000000, rows: 1000, maxG: 100000 },
+    { label: "10^6-10^7", minE: 1000000, maxE: 10000000, rows: 1000, maxG: 150000 },
+    { label: "10^7-10^8", minE: 10000000, maxE: 100000000, rows: 1000, maxG: 250000 },
+    { label: "10^8-10^9", minE: 100000000, maxE: 1000000000, rows: 500, maxG: 500000 },
+    { label: "10^9-10^10", minE: 1000000000, maxE: 10000000000, rows: 250, maxG: 1000000 },
+  ];
+
+  function modPow(base, exp, mod) {
+    let result = 1n;
+    base %= mod;
+    while (exp > 0n) {
+      if (exp % 2n === 1n) result = (result * base) % mod;
+      exp /= 2n;
+      base = (base * base) % mod;
+    }
+    return result;
+  }
+
+  const witnesses = [2n, 3n, 5n, 7n, 11n, 13n, 17n, 19n, 23n, 29n, 31n, 37n];
+
+  function isPrimeBig(n) {
+    if (n < 2n) return false;
+    if (n === 2n || n === 3n) return true;
+    if (n % 2n === 0n) return false;
+
+    let d = n - 1n;
+    let r = 0n;
+    while (d % 2n === 0n) {
+      d /= 2n;
+      r += 1n;
+    }
+
+    witnessLoop:
+    for (const a of witnesses) {
+      if (a >= n) continue;
+      let x = modPow(a, d, n);
+      if (x === 1n || x === n - 1n) continue;
+      for (let i = 0n; i < r - 1n; i += 1n) {
+        x = (x * x) % n;
+        if (x === n - 1n) continue witnessLoop;
+      }
+      return false;
+    }
+    return true;
+  }
+
+  const primeTest = typeof isPrime === "function"
+    ? (n) => isPrime(n)
+    : (n) => isPrimeBig(BigInt(Math.round(n)));
+
+  function makeLCG(seed) {
+    let s = Math.trunc(seed) >>> 0;
+    return function next() {
+      s = (Math.imul(1664525, s) + 1013904223) >>> 0;
+      return s / 0x100000000;
+    };
+  }
+
+  function average(values) {
+    return values.length ? values.reduce((sum, value) => sum + value, 0) / values.length : 0;
+  }
+
+  function pct(sorted, p) {
+    if (!sorted.length) return 0;
+    return sorted[Math.min(sorted.length - 1, Math.floor(p * sorted.length))];
+  }
+
+  function fixed(value, digits = 6) {
+    return value === null || value === undefined || !Number.isFinite(value) ? null : Number(value.toFixed(digits));
+  }
+
+  function scanRow(E, maxG) {
+    const C = E / 2;
+    const logC = Math.log(C);
+    const logC2 = logC * logC;
+    const W = Math.floor(K * logC2);
+    const scanLimit = Math.min(maxG, Math.max(W, 1000));
+    let firstBothG = null;
+    let longestNoBothRun = 0;
+    let currentNoBothRun = 0;
+    let totalBothHitsInsideW = 0;
+    let halfHitsBeforeRescue = 0;
+    let foesBeforeRescue = 0;
+    let lastHalfHitG = null;
+    let lane210 = null;
+    let sameLane = false;
+
+    for (let g = 0; g <= scanLimit; g += 1) {
+      const L = C - g;
+      const R = C + g;
+      if (L < 2) break;
+      const leftPrime = primeTest(L);
+      const rightPrime = primeTest(R);
+      const both = leftPrime && rightPrime;
+      const half = leftPrime !== rightPrime;
+
+      if (both) {
+        if (g <= W) totalBothHitsInsideW += 1;
+        if (firstBothG === null) {
+          firstBothG = g;
+          lane210 = g % modLane;
+          sameLane = ((L % modLane) + modLane) % modLane === ((R % modLane) + modLane) % modLane;
+        }
+        currentNoBothRun = 0;
+      } else {
+        currentNoBothRun += 1;
+        if (currentNoBothRun > longestNoBothRun) longestNoBothRun = currentNoBothRun;
+        if (firstBothG === null) {
+          if (half) {
+            halfHitsBeforeRescue += 1;
+            lastHalfHitG = g;
+          } else {
+            foesBeforeRescue += 1;
+          }
+        }
+      }
+    }
+
+    const missed = firstBothG === null;
+    const firstBothK = missed ? null : firstBothG / logC2;
+    return {
+      E,
+      C,
+      W,
+      scanLimit,
+      firstBothG,
+      firstBothK,
+      missed,
+      longestNoBothRun,
+      totalBothHitsInsideW,
+      halfHitsBeforeRescue,
+      foesBeforeRescue,
+      lastHalfHitG,
+      distanceLastHalfToRescue: missed || lastHalfHitG === null ? null : firstBothG - lastHalfHitG,
+      sparkRate: halfHitsBeforeRescue / Math.max(1, firstBothG || 0),
+      foeRate: foesBeforeRescue / Math.max(1, firstBothG || 0),
+      lane210,
+      sameLane,
+      bothHitDensityInsideW: totalBothHitsInsideW / Math.max(1, W + 1),
+      desertRatioLog: missed ? null : firstBothG / logC,
+      desertRatioLog2: firstBothK,
+    };
+  }
+
+  function aggregateBand(band, rows) {
+    const found = rows.filter((row) => !row.missed);
+    const sortedG = found.map((row) => row.firstBothG).sort((a, b) => a - b);
+    const sortedK = found.map((row) => row.firstBothK).sort((a, b) => a - b);
+    const sortedRuns = rows.map((row) => row.longestNoBothRun).sort((a, b) => a - b);
+    const laneCounts = {};
+    for (const row of found) {
+      if (row.lane210 !== null) laneCounts[row.lane210] = (laneCounts[row.lane210] || 0) + 1;
+    }
+    const topFirstRescueLanes210 = Object.entries(laneCounts)
+      .sort((a, b) => b[1] - a[1] || Number(a[0]) - Number(b[0]))
+      .slice(0, 5)
+      .map(([lane, count]) => ({ lane: Number(lane), count }));
+    const worstDesertsTop10 = rows.slice()
+      .sort((a, b) => Number(b.missed) - Number(a.missed)
+        || ((b.firstBothK ?? -1) - (a.firstBothK ?? -1))
+        || ((b.firstBothG ?? -1) - (a.firstBothG ?? -1)))
+      .slice(0, 10)
+      .map((row) => ({
+        E: row.E,
+        C: row.C,
+        W: row.W,
+        scanLimit: row.scanLimit,
+        firstBothG: row.firstBothG,
+        firstBothK: fixed(row.firstBothK),
+        missed: row.missed,
+        longestNoBothRun: row.longestNoBothRun,
+        totalBothHitsInsideW: row.totalBothHitsInsideW,
+        halfHitsBeforeRescue: row.halfHitsBeforeRescue,
+        foesBeforeRescue: row.foesBeforeRescue,
+        lastHalfHitG: row.lastHalfHitG,
+        distanceLastHalfToRescue: row.distanceLastHalfToRescue,
+        sparkRate: fixed(row.sparkRate),
+        foeRate: fixed(row.foeRate),
+        lane210: row.lane210,
+        sameLane: row.sameLane,
+        bothHitDensityInsideW: fixed(row.bothHitDensityInsideW),
+        desertRatioLog: fixed(row.desertRatioLog),
+        desertRatioLog2: fixed(row.desertRatioLog2),
+      }));
+
+    return {
+      label: band.label,
+      tested: rows.length,
+      found: found.length,
+      missed: rows.length - found.length,
+      missRate: fixed((rows.length - found.length) / Math.max(1, rows.length)),
+      maxFirstBothG: sortedG.length ? sortedG[sortedG.length - 1] : null,
+      avgFirstBothG: fixed(average(sortedG), 2),
+      medianFirstBothG: pct(sortedG, 0.5),
+      p95FirstBothG: pct(sortedG, 0.95),
+      p99FirstBothG: pct(sortedG, 0.99),
+      maxFirstBothK: fixed(sortedK.length ? sortedK[sortedK.length - 1] : null),
+      avgFirstBothK: fixed(average(sortedK)),
+      medianFirstBothK: fixed(pct(sortedK, 0.5)),
+      p95FirstBothK: fixed(pct(sortedK, 0.95)),
+      p99FirstBothK: fixed(pct(sortedK, 0.99)),
+      maxLongestNoBothRun: sortedRuns[sortedRuns.length - 1],
+      avgLongestNoBothRun: fixed(average(sortedRuns), 2),
+      p95LongestNoBothRun: pct(sortedRuns, 0.95),
+      p99LongestNoBothRun: pct(sortedRuns, 0.99),
+      avgHalfHitsBeforeRescue: fixed(average(rows.map((row) => row.halfHitsBeforeRescue)), 2),
+      maxHalfHitsBeforeRescue: Math.max(...rows.map((row) => row.halfHitsBeforeRescue)),
+      avgFoesBeforeRescue: fixed(average(rows.map((row) => row.foesBeforeRescue)), 2),
+      maxFoesBeforeRescue: Math.max(...rows.map((row) => row.foesBeforeRescue)),
+      avgSparkRate: fixed(average(rows.map((row) => row.sparkRate))),
+      avgFoeRate: fixed(average(rows.map((row) => row.foeRate))),
+      percentRowsWithSpark: fixed(rows.filter((row) => row.halfHitsBeforeRescue > 0).length / Math.max(1, rows.length)),
+      aboveK1: found.filter((row) => row.firstBothK > 1).length,
+      aboveK2: found.filter((row) => row.firstBothK > 2).length,
+      aboveK4: found.filter((row) => row.firstBothK > 4).length,
+      aboveK6: found.filter((row) => row.firstBothK > 6).length,
+      aboveK825: found.filter((row) => row.firstBothK > 8.25).length,
+      uniqueFirstRescueLanes210: Object.keys(laneCounts).length,
+      uniqueFirstRescueLaneRate: fixed(Object.keys(laneCounts).length / Math.max(1, found.length)),
+      topFirstRescueLanes210,
+      topLaneConcentration: fixed(topFirstRescueLanes210.length ? topFirstRescueLanes210[0].count / Math.max(1, found.length) : 0),
+      sameLaneRate: fixed(found.filter((row) => row.sameLane).length / Math.max(1, found.length)),
+      worstDesertsTop10,
+    };
+  }
+
+  const bandResults = [];
+  const allRows = [];
+  for (let bandIndex = 0; bandIndex < bands.length; bandIndex += 1) {
+    const band = bands[bandIndex];
+    const rng = makeLCG(band.minE + band.rows * 131 + bandIndex * 8191);
+    const rows = [];
+    const range = band.maxE - band.minE;
+    for (let i = 0; i < band.rows; i += 1) {
+      let E = band.minE + Math.floor(rng() * range);
+      if (E % 2 !== 0) E += 1;
+      if (E > band.maxE) E -= 2;
+      if (E < 4) E = 4;
+      const row = scanRow(E, band.maxG);
+      rows.push(row);
+      allRows.push(row);
+    }
+    bandResults.push(aggregateBand(band, rows));
+  }
+
+  const worstOverallTop10 = allRows.slice()
+    .sort((a, b) => Number(b.missed) - Number(a.missed)
+      || ((b.firstBothK ?? -1) - (a.firstBothK ?? -1))
+      || ((b.firstBothG ?? -1) - (a.firstBothG ?? -1)))
+    .slice(0, 10)
+    .map((row) => ({
+      E: row.E,
+      C: row.C,
+      W: row.W,
+      scanLimit: row.scanLimit,
+      firstBothG: row.firstBothG,
+      firstBothK: fixed(row.firstBothK),
+      missed: row.missed,
+      longestNoBothRun: row.longestNoBothRun,
+      totalBothHitsInsideW: row.totalBothHitsInsideW,
+      halfHitsBeforeRescue: row.halfHitsBeforeRescue,
+      foesBeforeRescue: row.foesBeforeRescue,
+      lastHalfHitG: row.lastHalfHitG,
+      distanceLastHalfToRescue: row.distanceLastHalfToRescue,
+      sparkRate: fixed(row.sparkRate),
+      foeRate: fixed(row.foeRate),
+      lane210: row.lane210,
+      sameLane: row.sameLane,
+      bothHitDensityInsideW: fixed(row.bothHitDensityInsideW),
+      desertRatioLog: fixed(row.desertRatioLog),
+      desertRatioLog2: fixed(row.desertRatioLog2),
+    }));
+
+  const strongestPatterns = [];
+  const weakestSignals = [];
+  if (bandResults.every((row) => row.missed === 0)) strongestPatterns.push("No missed first BOTH-hit in tested bands");
+  else weakestSignals.push("Missed BOTH-hits found in tested bands");
+  if (bandResults.every((row) => row.aboveK825 === 0)) strongestPatterns.push("K=8.25 envelope held in all tested rows");
+  else weakestSignals.push("K=8.25 breach detected");
+  if (bandResults.every((row) => row.p95FirstBothK < 2)) strongestPatterns.push("P95 firstBothK stayed below 2 in every band");
+  else weakestSignals.push("P95 firstBothK reached at least 2 in one or more bands");
+  if (bandResults.every((row) => row.percentRowsWithSpark >= 0.4)) strongestPatterns.push("At least 40% of rows had HALF sparks before rescue in every band");
+  else weakestSignals.push("Rows with HALF sparks before rescue dropped below 40% in one or more bands");
+  if (bandResults.every((row) => row.uniqueFirstRescueLaneRate > 0.1)) strongestPatterns.push("First-rescue lanes stayed diverse modulo 210");
+  else weakestSignals.push("First-rescue lane diversity was low in one or more bands");
+  weakestSignals.push("Finite random desert scan only; universal proof remains open");
+
+  const crossBandSummary = {
+    missedByBand: bandResults.map((row) => row.missed),
+    maxFirstBothKByBand: bandResults.map((row) => row.maxFirstBothK),
+    p95FirstBothKByBand: bandResults.map((row) => row.p95FirstBothK),
+    maxLongestNoBothRunByBand: bandResults.map((row) => row.maxLongestNoBothRun),
+    p95LongestNoBothRunByBand: bandResults.map((row) => row.p95LongestNoBothRun),
+    avgSparkRateByBand: bandResults.map((row) => row.avgSparkRate),
+    percentRowsWithSparkByBand: bandResults.map((row) => row.percentRowsWithSpark),
+    uniqueLaneRateByBand: bandResults.map((row) => row.uniqueFirstRescueLaneRate),
+    worstOverallTop10,
+    strongestPatterns,
+    weakestSignals,
+  };
+
+  const result = {
+    label: "RAW_APP_MIRROR_DESERT_BREAK_TEST",
+    createdAt: new Date().toISOString(),
+    settings: { K, modLane, bands },
+    bandResults,
+    crossBandSummary,
+    honesty: "FINITE RAW NUMBER DESERT TEST ONLY. UNIVERSAL PROOF STATUS: OPEN.",
+  };
+
+  console.log("RAW_APP_MIRROR_DESERT_BREAK_TEST", result);
+  console.table(bandResults.map((row) => ({
+    band: row.label,
+    tested: row.tested,
+    found: row.found,
+    missed: row.missed,
+    maxG: row.maxFirstBothG,
+    p95G: row.p95FirstBothG,
+    maxK: row.maxFirstBothK,
+    p95K: row.p95FirstBothK,
+    maxDesert: row.maxLongestNoBothRun,
+    p95Desert: row.p95LongestNoBothRun,
+    sparkRate: row.avgSparkRate,
+    laneRate: row.uniqueFirstRescueLaneRate,
+    aboveK825: row.aboveK825,
+  })));
+  window.RAW_APP_MIRROR_DESERT_BREAK_TEST = result;
+  return result;
+};
+
 (function(){
   // Deterministic BigInt Miller-Rabin
   function _modpow(b,e,m){let r=1n;b=b%m;while(e>0n){if(e%2n===1n)r=r*b%m;e=e/2n;b=b*b%m;}return r;}
@@ -314,7 +1513,315 @@
   }
 
   window.runMirrorDesertRawNumbers=runMirrorDesertRawNumbers;
-  setTimeout(()=>runMirrorDesertRawNumbers(),500);
+})();
+</script>
+
+<script>
+(function initWorkbenchDock(){
+  const panel = document.querySelector(".panel");
+  if (!panel || panel.dataset.compactDock === "ready") return;
+
+  const header = panel.querySelector("header");
+  const controls = panel.querySelector(".controls");
+  const metrics = panel.querySelector(".metrics");
+  const report = panel.querySelector(".report");
+  const proofOutput = panel.querySelector(".proof-panel:not([id])");
+  const weird = panel.querySelector(".weird-panel");
+  const resultPanels = Array.from(panel.querySelectorAll(".proof-panel[id]"));
+  const bridgeBlock = panel.querySelector('div[style*="margin-top:18px"][style*="border-top:1px solid var(--line)"]');
+  const heatmapBlock = Array.from(panel.querySelectorAll("div")).find((node) => node.textContent && node.textContent.includes("Fingerprint heatmap"));
+  const logBlock = panel.querySelector("#log-window")?.parentElement || null;
+  const primeViewer = panel.querySelector("#prime-visual-section");
+  const piano = panel.querySelector(".residue-piano-section");
+
+  const utilityBlocks = [bridgeBlock, heatmapBlock, logBlock].filter(Boolean);
+
+  const dock = document.createElement("div");
+  dock.className = "wb-dock";
+
+  const tabs = document.createElement("div");
+  tabs.className = "wb-tabs";
+
+  const panes = document.createElement("div");
+  panes.className = "wb-panes";
+
+  const defs = [
+    { key: "overview", label: "Overview" },
+    { key: "results", label: "Results" },
+    { key: "viewer", label: "Viewer" },
+    { key: "piano", label: "Piano" },
+    { key: "system", label: "System" },
+  ];
+
+  const paneMap = {};
+  defs.forEach((def, idx) => {
+    const button = document.createElement("button");
+    button.className = "wb-tab" + (idx === 0 ? " is-active" : "");
+    button.type = "button";
+    button.textContent = def.label;
+    button.dataset.target = def.key;
+    tabs.appendChild(button);
+
+    const pane = document.createElement("div");
+    pane.className = "wb-pane" + (idx === 0 ? " is-active" : "");
+    pane.dataset.pane = def.key;
+    panes.appendChild(pane);
+    paneMap[def.key] = pane;
+  });
+
+  const overviewGrid = document.createElement("div");
+  overviewGrid.className = "wb-overview-grid";
+  const overviewStack = document.createElement("div");
+  overviewStack.className = "wb-overview-stack";
+  if (report) overviewStack.appendChild(report);
+  if (proofOutput) overviewStack.appendChild(proofOutput);
+  overviewGrid.appendChild(overviewStack);
+  if (weird) overviewGrid.appendChild(weird);
+  paneMap.overview.appendChild(overviewGrid);
+
+  const resultGrid = document.createElement("div");
+  resultGrid.className = "wb-result-grid";
+  resultPanels.forEach((node) => resultGrid.appendChild(node));
+  paneMap.results.appendChild(resultGrid);
+
+  if (primeViewer) paneMap.viewer.appendChild(primeViewer);
+  if (piano) paneMap.piano.appendChild(piano);
+
+  const systemStack = document.createElement("div");
+  systemStack.className = "wb-system-stack";
+  utilityBlocks.forEach((node) => systemStack.appendChild(node));
+  paneMap.system.appendChild(systemStack);
+
+  dock.appendChild(tabs);
+  dock.appendChild(panes);
+  panel.appendChild(dock);
+
+  tabs.addEventListener("click", (event) => {
+    const button = event.target.closest(".wb-tab");
+    if (!button) return;
+    const target = button.dataset.target;
+    tabs.querySelectorAll(".wb-tab").forEach((node) => {
+      node.classList.toggle("is-active", node === button);
+    });
+    panes.querySelectorAll(".wb-pane").forEach((node) => {
+      node.classList.toggle("is-active", node.dataset.pane === target);
+    });
+  });
+
+  panel.dataset.compactDock = "ready";
+})();
+</script>
+
+<script>
+(function(){
+  // BigInt Miller-Rabin (no bitwise on BigInt)
+  function _mp(b,e,m){let r=1n;b=b%m;while(e>0n){if(e%2n===1n)r=r*b%m;e=e/2n;b=b*b%m;}return r;}
+  const _W=[2n,3n,5n,7n,11n,13n,17n,19n,23n,29n,31n,37n];
+  function _ip(n){if(n<2n)return false;if(n===2n||n===3n)return true;if(n%2n===0n)return false;let d=n-1n,r=0n;while(d%2n===0n){d=d/2n;r=r+1n;}outer:for(const a of _W){if(a>=n)continue;let x=_mp(a,d,n);if(x===1n||x===n-1n)continue;for(let i=0n;i<r-1n;i++){x=x*x%n;if(x===n-1n)continue outer;}return false;}return true;}
+  function ip(n){return _ip(BigInt(Math.round(n)));}
+
+  function makeLCG(s){s=(s^0x9e3779b9)>>>0;return()=>{s=(Math.imul(1664525,s)+1013904223)>>>0;return s/0x100000000;};}
+  function pct(a,p){if(!a.length)return null;const s=a.slice().sort((x,y)=>x-y);return s[Math.min(s.length-1,Math.floor(p*s.length))];}
+  function avg(a){return a.length?a.reduce((s,v)=>s+v,0)/a.length:null;}
+
+  const KS=[8.25,10,12,16,20];
+
+  function scanC(C){
+    const lC=Math.log(C),lC2=lC*lC;
+    const W20=Math.floor(20*lC2);
+    const wins=KS.map(k=>Math.floor(k*lC2));
+    let firstBothG=null;
+    const hits=KS.map(()=>0);
+    for(let g=0;g<=W20;g++){
+      const L=C-g,R=C+g;
+      if(L<2)break;
+      if(ip(L)&&ip(R)){
+        if(firstBothG===null)firstBothG=g;
+        for(let ki=0;ki<KS.length;ki++)if(g<=wins[ki])hits[ki]++;
+      }
+    }
+    const trueK=firstBothG!==null?firstBothG/lC2:null;
+    const pass=hits.map(h=>h>=1);
+    return{C,E:C*2,firstBothG,trueK,hits,pass};
+  }
+
+  function runK20RescueWindowTest(){
+    const M=510510;
+    const dangerResidues=[113111,293074,136021,478724,232018,75317,81938,142018,339542,360431];
+    const bands=[
+      {label:"10^5-10^6",minE:100000,maxE:1000000,rows:3000},
+      {label:"10^6-10^7",minE:1000000,maxE:10000000,rows:3000},
+      {label:"10^7-10^8",minE:10000000,maxE:100000000,rows:3000},
+      {label:"10^8-10^9",minE:100000000,maxE:1000000000,rows:1500},
+      {label:"10^9-10^10",minE:1000000000,maxE:10000000000,rows:1000},
+      {label:"10^10-10^12",minE:10000000000,maxE:1000000000000,rows:500}
+    ];
+
+    // Test 1
+    const _dr=scanC(435067631);
+    const knownDangerRowResult={
+      C:435067631,E:870135262,
+      firstBothG:_dr.firstBothG,trueK:_dr.trueK,
+      totalBothHitsK825:_dr.hits[0],totalBothHitsK10:_dr.hits[1],
+      totalBothHitsK12:_dr.hits[2],totalBothHitsK16:_dr.hits[3],totalBothHitsK20:_dr.hits[4],
+      passK825:_dr.pass[0],passK10:_dr.pass[1],passK12:_dr.pass[2],
+      passK16:_dr.pass[3],passK20:_dr.pass[4]
+    };
+
+    // Test 2
+    const residueResults=dangerResidues.map(residue=>{
+      const rows=[];
+      for(let k=1;k<=2000;k++){
+        const C=residue+k*M;
+        if(C<100000)continue;
+        rows.push({k,...scanC(C)});
+      }
+      const trueKs=rows.filter(r=>r.trueK!==null).map(r=>r.trueK);
+      const worst20=rows.slice().sort((a,b)=>{
+        const ka=a.trueK??Infinity,kb=b.trueK??Infinity;
+        if(kb!==ka)return kb-ka;
+        return(b.firstBothG??Infinity)-(a.firstBothG??Infinity);
+      }).slice(0,20).map(r=>({
+        k:r.k,C:r.C,E:r.E,firstBothG:r.firstBothG,trueK:r.trueK,
+        passK825:r.pass[0],passK10:r.pass[1],passK12:r.pass[2],passK16:r.pass[3],passK20:r.pass[4],
+        totalBothHitsK825:r.hits[0],totalBothHitsK10:r.hits[1],totalBothHitsK12:r.hits[2],
+        totalBothHitsK16:r.hits[3],totalBothHitsK20:r.hits[4]
+      }));
+      return{
+        residue,copiesTested:rows.length,
+        missesK825:rows.filter(r=>!r.pass[0]).length,
+        missesK10:rows.filter(r=>!r.pass[1]).length,
+        missesK12:rows.filter(r=>!r.pass[2]).length,
+        missesK16:rows.filter(r=>!r.pass[3]).length,
+        missesK20:rows.filter(r=>!r.pass[4]).length,
+        maxTrueK:trueKs.length?+Math.max(...trueKs).toFixed(6):null,
+        p95TrueK:trueKs.length?+pct(trueKs,0.95).toFixed(6):null,
+        p99TrueK:trueKs.length?+pct(trueKs,0.99).toFixed(6):null,
+        avgTrueK:trueKs.length?+avg(trueKs).toFixed(6):null,
+        minFirstBothG:rows.filter(r=>r.firstBothG!==null).length?Math.min(...rows.filter(r=>r.firstBothG!==null).map(r=>r.firstBothG)):null,
+        maxFirstBothG:rows.filter(r=>r.firstBothG!==null).length?Math.max(...rows.filter(r=>r.firstBothG!==null).map(r=>r.firstBothG)):null,
+        avgFirstBothG:rows.filter(r=>r.firstBothG!==null).length?+avg(rows.filter(r=>r.firstBothG!==null).map(r=>r.firstBothG)).toFixed(2):null,
+        worstCopiesTop20:worst20
+      };
+    });
+
+    // Test 3
+    const bandResults=bands.map(bd=>{
+      const rng=makeLCG((bd.minE^0xdeadbeef)>>>0);
+      const range=bd.maxE-bd.minE;
+      const rows=[];
+      for(let i=0;i<bd.rows;i++){
+        let E=bd.minE+Math.floor(rng()*range);
+        if(E%2!==0)E++;if(E<4)E=4;
+        rows.push(scanC(E/2));
+      }
+      const trueKs=rows.filter(r=>r.trueK!==null).map(r=>r.trueK);
+      const worst20=rows.slice().sort((a,b)=>{
+        const ka=a.trueK??Infinity,kb=b.trueK??Infinity;
+        return kb-ka;
+      }).slice(0,20).map(r=>({E:r.E,C:r.C,firstBothG:r.firstBothG,trueK:r.trueK,
+        passK825:r.pass[0],passK10:r.pass[1],passK12:r.pass[2],passK16:r.pass[3],passK20:r.pass[4]}));
+      return{
+        label:bd.label,tested:rows.length,
+        missesK825:rows.filter(r=>!r.pass[0]).length,
+        missesK10:rows.filter(r=>!r.pass[1]).length,
+        missesK12:rows.filter(r=>!r.pass[2]).length,
+        missesK16:rows.filter(r=>!r.pass[3]).length,
+        missesK20:rows.filter(r=>!r.pass[4]).length,
+        maxTrueK:trueKs.length?+Math.max(...trueKs).toFixed(6):null,
+        p95TrueK:trueKs.length?+pct(trueKs,0.95).toFixed(6):null,
+        p99TrueK:trueKs.length?+pct(trueKs,0.99).toFixed(6):null,
+        avgTrueK:trueKs.length?+avg(trueKs).toFixed(6):null,
+        worstRowsTop20:worst20
+      };
+    });
+
+    // Cross summary
+    const totalMissesK825=residueResults.reduce((s,r)=>s+r.missesK825,0)+bandResults.reduce((s,r)=>s+r.missesK825,0)+(knownDangerRowResult.passK825?0:1);
+    const totalMissesK10=residueResults.reduce((s,r)=>s+r.missesK10,0)+bandResults.reduce((s,r)=>s+r.missesK10,0)+(knownDangerRowResult.passK10?0:1);
+    const totalMissesK12=residueResults.reduce((s,r)=>s+r.missesK12,0)+bandResults.reduce((s,r)=>s+r.missesK12,0)+(knownDangerRowResult.passK12?0:1);
+    const totalMissesK16=residueResults.reduce((s,r)=>s+r.missesK16,0)+bandResults.reduce((s,r)=>s+r.missesK16,0)+(knownDangerRowResult.passK16?0:1);
+    const totalMissesK20=residueResults.reduce((s,r)=>s+r.missesK20,0)+bandResults.reduce((s,r)=>s+r.missesK20,0)+(knownDangerRowResult.passK20?0:1);
+    const totalResidueCopiesTested=residueResults.reduce((s,r)=>s+r.copiesTested,0);
+    const totalRandomRowsTested=bandResults.reduce((s,r)=>s+r.tested,0);
+
+    const allMaxKs=[
+      knownDangerRowResult.trueK,
+      ...residueResults.map(r=>r.maxTrueK),
+      ...bandResults.map(r=>r.maxTrueK)
+    ].filter(v=>v!==null);
+    const highestTrueKObserved=allMaxKs.length?+Math.max(...allMaxKs).toFixed(6):null;
+
+    // highestTrueKRow: find the actual row
+    let highestTrueKRow=null;
+    {
+      let best=-Infinity;
+      for(const br of bandResults)for(const r of br.worstRowsTop20)if((r.trueK??-Infinity)>best){best=r.trueK;highestTrueKRow=r;}
+      for(const rr of residueResults)for(const r of rr.worstCopiesTop20)if((r.trueK??-Infinity)>best){best=r.trueK;highestTrueKRow=r;}
+      if((knownDangerRowResult.trueK??-Infinity)>best)highestTrueKRow=knownDangerRowResult;
+    }
+
+    let candidateSafeK;
+    if(totalMissesK825===0)candidateSafeK=8.25;
+    else if(totalMissesK10===0)candidateSafeK=10;
+    else if(totalMissesK12===0)candidateSafeK=12;
+    else if(totalMissesK16===0)candidateSafeK=16;
+    else if(totalMissesK20===0)candidateSafeK=20;
+    else candidateSafeK="ABOVE_20_NEEDED";
+
+    const kStatusRead=totalMissesK20===0
+      ?"K<=20 contained every first BOTH-hit in this finite test."
+      :"K=20 missed at least one tested row; larger K or different bound needed.";
+
+    const strongestPatterns=[];
+    const weakestSignals=[];
+    if(totalMissesK825===0)strongestPatterns.push("K=8.25 missed nothing in this run");
+    if(totalMissesK10===0)strongestPatterns.push("K=10 missed nothing in this run");
+    if(totalMissesK20===0)strongestPatterns.push("K=20 window contained every first BOTH-hit tested");
+    if(highestTrueKObserved!==null&&highestTrueKObserved<8.25)strongestPatterns.push("All observed trueK below 8.25");
+    weakestSignals.push("finite test only");
+    weakestSignals.push("universal proof open");
+    weakestSignals.push("K constant still empirical");
+    weakestSignals.push("danger residues pre-selected");
+
+    const crossSummary={
+      knownDangerRowResult,
+      totalResidueCopiesTested,totalRandomRowsTested,
+      totalMissesK825,totalMissesK10,totalMissesK12,totalMissesK16,totalMissesK20,
+      highestTrueKObserved,highestTrueKRow,
+      candidateSafeK,kStatusRead,strongestPatterns,weakestSignals,
+      nextRawTest:"Extend danger residues or push to 10^13+ if candidateSafeK is confirmed"
+    };
+
+    const result={
+      label:"K20_RESCUE_WINDOW_TEST",
+      createdAt:new Date().toISOString(),
+      settings:{KValues:[8.25,10,12,16,20],M,dangerResidues,residueCopiesPerResidue:2000,bands},
+      knownDangerRowResult,
+      residueResults,
+      bandResults,
+      crossSummary,
+      honesty:"FINITE RAW K-WINDOW TEST ONLY. UNIVERSAL PROOF STATUS: OPEN."
+    };
+
+    console.log("K20_RESCUE_WINDOW_TEST",result);
+    console.table(residueResults.map(r=>({
+      residue:r.residue,copies:r.copiesTested,
+      miss825:r.missesK825,miss10:r.missesK10,miss12:r.missesK12,
+      miss16:r.missesK16,miss20:r.missesK20,
+      maxK:r.maxTrueK,p95K:r.p95TrueK,p99K:r.p99TrueK
+    })));
+    console.table(bandResults.map(r=>({
+      band:r.label,tested:r.tested,
+      miss825:r.missesK825,miss10:r.missesK10,miss12:r.missesK12,
+      miss16:r.missesK16,miss20:r.missesK20,
+      maxK:r.maxTrueK,p95K:r.p95TrueK,p99K:r.p99TrueK
+    })));
+    window.K20_RESCUE_WINDOW_TEST=result;
+    return result;
+  }
+
+  window.runK20RescueWindowTest=runK20RescueWindowTest;
 })();
 </script>
 </body>

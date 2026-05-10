@@ -1,0 +1,1160 @@
+{
+  "suiteName": "GOLDBACH_UNCOVERED_RESIDUE_SURVIVOR_AUDIT",
+  "source": "evidence/GOLDBACH_3H_8CORE_NO_ESCAPE_PROOF_ASSAULT.json",
+  "runtimeSeconds": 0.907,
+  "filterPrime": 29,
+  "topLanes": 291,
+  "rowsAnalyzed": 2,
+  "finalVerdict": "FINITE_UNCOVERED_SURVIVORS_SHOW_PARTIAL_CLUSTERING",
+  "analyses": [
+    {
+      "label": "hostile visitor",
+      "C": "59825417609829034",
+      "sourceReason": "hostile-crt:boss:m4",
+      "sourceLane": "lane2:Hostile CRT Net Builder",
+      "trueK": 13.157604706523053,
+      "sourceS29": 657,
+      "DMV": "L|31/D0/P29_BOSS/TAIL_STRONG/K13",
+      "greedyLaneCount": 313,
+      "uncoveredCount": 22,
+      "uncoveredPctOfS29": 0.0334855403348554,
+      "topGMod30": [
+        {
+          "key": "15",
+          "count": 11
+        },
+        {
+          "key": "27",
+          "count": 6
+        },
+        {
+          "key": "3",
+          "count": 5
+        }
+      ],
+      "topGMod210": [
+        {
+          "key": "195",
+          "count": 5
+        },
+        {
+          "key": "15",
+          "count": 3
+        },
+        {
+          "key": "147",
+          "count": 2
+        },
+        {
+          "key": "165",
+          "count": 2
+        },
+        {
+          "key": "183",
+          "count": 2
+        },
+        {
+          "key": "27",
+          "count": 2
+        },
+        {
+          "key": "123",
+          "count": 1
+        },
+        {
+          "key": "3",
+          "count": 1
+        },
+        {
+          "key": "45",
+          "count": 1
+        },
+        {
+          "key": "57",
+          "count": 1
+        },
+        {
+          "key": "63",
+          "count": 1
+        },
+        {
+          "key": "87",
+          "count": 1
+        }
+      ],
+      "sideStateCounts": [
+        {
+          "key": "HALF_L",
+          "count": 22
+        }
+      ],
+      "leftBandCounts": [
+        {
+          "key": "prime",
+          "count": 22
+        }
+      ],
+      "rightBandCounts": [
+        {
+          "key": "100-999",
+          "count": 6
+        },
+        {
+          "key": "1k-9k",
+          "count": 6
+        },
+        {
+          "key": "10k-99k",
+          "count": 5
+        },
+        {
+          "key": "100k-999k",
+          "count": 3
+        },
+        {
+          "key": "1M+",
+          "count": 2
+        }
+      ],
+      "pairBandCounts": [
+        {
+          "key": "prime/100-999",
+          "count": 6
+        },
+        {
+          "key": "prime/1k-9k",
+          "count": 6
+        },
+        {
+          "key": "prime/10k-99k",
+          "count": 5
+        },
+        {
+          "key": "prime/100k-999k",
+          "count": 3
+        },
+        {
+          "key": "prime/1M+",
+          "count": 2
+        }
+      ],
+      "topLeftKillers": [
+        {
+          "key": "prime",
+          "count": 22
+        }
+      ],
+      "topRightKillers": [
+        {
+          "key": "5303",
+          "count": 1
+        },
+        {
+          "key": "5689",
+          "count": 1
+        },
+        {
+          "key": "5867",
+          "count": 1
+        },
+        {
+          "key": "613",
+          "count": 1
+        },
+        {
+          "key": "647",
+          "count": 1
+        },
+        {
+          "key": "6689",
+          "count": 1
+        },
+        {
+          "key": "6833",
+          "count": 1
+        },
+        {
+          "key": "6842327",
+          "count": 1
+        },
+        {
+          "key": "688111",
+          "count": 1
+        },
+        {
+          "key": "691",
+          "count": 1
+        },
+        {
+          "key": "701",
+          "count": 1
+        },
+        {
+          "key": "7103",
+          "count": 1
+        }
+      ],
+      "sampleUncovered": [
+        {
+          "g": 333,
+          "leftPrime": true,
+          "rightPrime": false,
+          "leftKiller": "prime",
+          "rightKiller": "73529",
+          "leftBand": "prime",
+          "rightBand": "10k-99k",
+          "leftMod30": 1,
+          "rightMod30": 7,
+          "gMod30": 3,
+          "gMod210": 123,
+          "coverLanes": [
+            "R:p73529:g=333"
+          ],
+          "sideState": "HALF_L"
+        },
+        {
+          "g": 1233,
+          "leftPrime": true,
+          "rightPrime": false,
+          "leftKiller": "prime",
+          "rightKiller": "83389",
+          "leftBand": "prime",
+          "rightBand": "10k-99k",
+          "leftMod30": 1,
+          "rightMod30": 7,
+          "gMod30": 3,
+          "gMod210": 183,
+          "coverLanes": [
+            "R:p83389:g=1233"
+          ],
+          "sideState": "HALF_L"
+        },
+        {
+          "g": 1653,
+          "leftPrime": true,
+          "rightPrime": false,
+          "leftKiller": "prime",
+          "rightKiller": "823",
+          "leftBand": "prime",
+          "rightBand": "100-999",
+          "leftMod30": 1,
+          "rightMod30": 7,
+          "gMod30": 3,
+          "gMod210": 183,
+          "coverLanes": [
+            "R:p823:g=7"
+          ],
+          "sideState": "HALF_L"
+        },
+        {
+          "g": 3447,
+          "leftPrime": true,
+          "rightPrime": false,
+          "leftKiller": "prime",
+          "rightKiller": "613",
+          "leftBand": "prime",
+          "rightBand": "100-999",
+          "leftMod30": 7,
+          "rightMod30": 1,
+          "gMod30": 27,
+          "gMod210": 87,
+          "coverLanes": [
+            "R:p613:g=382"
+          ],
+          "sideState": "HALF_L"
+        },
+        {
+          "g": 3807,
+          "leftPrime": true,
+          "rightPrime": false,
+          "leftKiller": "prime",
+          "rightKiller": "848797",
+          "leftBand": "prime",
+          "rightBand": "100k-999k",
+          "leftMod30": 7,
+          "rightMod30": 1,
+          "gMod30": 27,
+          "gMod210": 27,
+          "coverLanes": [
+            "R:p848797:g=3807"
+          ],
+          "sideState": "HALF_L"
+        },
+        {
+          "g": 4047,
+          "leftPrime": true,
+          "rightPrime": false,
+          "leftKiller": "prime",
+          "rightKiller": "85109",
+          "leftBand": "prime",
+          "rightBand": "10k-99k",
+          "leftMod30": 7,
+          "rightMod30": 1,
+          "gMod30": 27,
+          "gMod210": 57,
+          "coverLanes": [
+            "R:p85109:g=4047"
+          ],
+          "sideState": "HALF_L"
+        },
+        {
+          "g": 5085,
+          "leftPrime": true,
+          "rightPrime": false,
+          "leftKiller": "prime",
+          "rightKiller": "647",
+          "leftBand": "prime",
+          "rightBand": "100-999",
+          "leftMod30": 19,
+          "rightMod30": 19,
+          "gMod30": 15,
+          "gMod210": 45,
+          "coverLanes": [
+            "R:p647:g=556"
+          ],
+          "sideState": "HALF_L"
+        },
+        {
+          "g": 5607,
+          "leftPrime": true,
+          "rightPrime": false,
+          "leftKiller": "prime",
+          "rightKiller": "5689",
+          "leftBand": "prime",
+          "rightBand": "1k-9k",
+          "leftMod30": 7,
+          "rightMod30": 1,
+          "gMod30": 27,
+          "gMod210": 147,
+          "coverLanes": [
+            "R:p5689:g=5607"
+          ],
+          "sideState": "HALF_L"
+        },
+        {
+          "g": 5697,
+          "leftPrime": true,
+          "rightPrime": false,
+          "leftKiller": "prime",
+          "rightKiller": "5303",
+          "leftBand": "prime",
+          "rightBand": "1k-9k",
+          "leftMod30": 7,
+          "rightMod30": 1,
+          "gMod30": 27,
+          "gMod210": 27,
+          "coverLanes": [
+            "R:p5303:g=394"
+          ],
+          "sideState": "HALF_L"
+        },
+        {
+          "g": 5835,
+          "leftPrime": true,
+          "rightPrime": false,
+          "leftKiller": "prime",
+          "rightKiller": "74573",
+          "leftBand": "prime",
+          "rightBand": "10k-99k",
+          "leftMod30": 19,
+          "rightMod30": 19,
+          "gMod30": 15,
+          "gMod210": 165,
+          "coverLanes": [
+            "R:p74573:g=5835"
+          ],
+          "sideState": "HALF_L"
+        },
+        {
+          "g": 8757,
+          "leftPrime": true,
+          "rightPrime": false,
+          "leftKiller": "prime",
+          "rightKiller": "7103",
+          "leftBand": "prime",
+          "rightBand": "1k-9k",
+          "leftMod30": 7,
+          "rightMod30": 1,
+          "gMod30": 27,
+          "gMod210": 147,
+          "coverLanes": [
+            "R:p7103:g=1654"
+          ],
+          "sideState": "HALF_L"
+        },
+        {
+          "g": 9435,
+          "leftPrime": true,
+          "rightPrime": false,
+          "leftKiller": "prime",
+          "rightKiller": "94305143",
+          "leftBand": "prime",
+          "rightBand": "1M+",
+          "leftMod30": 19,
+          "rightMod30": 19,
+          "gMod30": 15,
+          "gMod210": 195,
+          "coverLanes": [
+            "R:p94305143:g=9435"
+          ],
+          "sideState": "HALF_L"
+        },
+        {
+          "g": 10035,
+          "leftPrime": true,
+          "rightPrime": false,
+          "leftKiller": "prime",
+          "rightKiller": "5867",
+          "leftBand": "prime",
+          "rightBand": "1k-9k",
+          "leftMod30": 19,
+          "rightMod30": 19,
+          "gMod30": 15,
+          "gMod210": 165,
+          "coverLanes": [
+            "R:p5867:g=4168"
+          ],
+          "sideState": "HALF_L"
+        },
+        {
+          "g": 10905,
+          "leftPrime": true,
+          "rightPrime": false,
+          "leftKiller": "prime",
+          "rightKiller": "691",
+          "leftBand": "prime",
+          "rightBand": "100-999",
+          "leftMod30": 19,
+          "rightMod30": 19,
+          "gMod30": 15,
+          "gMod210": 195,
+          "coverLanes": [
+            "R:p691:g=540"
+          ],
+          "sideState": "HALF_L"
+        },
+        {
+          "g": 11565,
+          "leftPrime": true,
+          "rightPrime": false,
+          "leftKiller": "prime",
+          "rightKiller": "92737",
+          "leftBand": "prime",
+          "rightBand": "10k-99k",
+          "leftMod30": 19,
+          "rightMod30": 19,
+          "gMod30": 15,
+          "gMod210": 15,
+          "coverLanes": [
+            "R:p92737:g=11565"
+          ],
+          "sideState": "HALF_L"
+        },
+        {
+          "g": 14295,
+          "leftPrime": true,
+          "rightPrime": false,
+          "leftKiller": "prime",
+          "rightKiller": "6842327",
+          "leftBand": "prime",
+          "rightBand": "1M+",
+          "leftMod30": 19,
+          "rightMod30": 19,
+          "gMod30": 15,
+          "gMod210": 15,
+          "coverLanes": [
+            "R:p6842327:g=14295"
+          ],
+          "sideState": "HALF_L"
+        },
+        {
+          "g": 14715,
+          "leftPrime": true,
+          "rightPrime": false,
+          "leftKiller": "prime",
+          "rightKiller": "718259",
+          "leftBand": "prime",
+          "rightBand": "100k-999k",
+          "leftMod30": 19,
+          "rightMod30": 19,
+          "gMod30": 15,
+          "gMod210": 15,
+          "coverLanes": [
+            "R:p718259:g=14715"
+          ],
+          "sideState": "HALF_L"
+        },
+        {
+          "g": 15315,
+          "leftPrime": true,
+          "rightPrime": false,
+          "leftKiller": "prime",
+          "rightKiller": "6833",
+          "leftBand": "prime",
+          "rightBand": "1k-9k",
+          "leftMod30": 19,
+          "rightMod30": 19,
+          "gMod30": 15,
+          "gMod210": 195,
+          "coverLanes": [
+            "R:p6833:g=1649"
+          ],
+          "sideState": "HALF_L"
+        },
+        {
+          "g": 15735,
+          "leftPrime": true,
+          "rightPrime": false,
+          "leftKiller": "prime",
+          "rightKiller": "743",
+          "leftBand": "prime",
+          "rightBand": "100-999",
+          "leftMod30": 19,
+          "rightMod30": 19,
+          "gMod30": 15,
+          "gMod210": 195,
+          "coverLanes": [
+            "R:p743:g=132"
+          ],
+          "sideState": "HALF_L"
+        },
+        {
+          "g": 17643,
+          "leftPrime": true,
+          "rightPrime": false,
+          "leftKiller": "prime",
+          "rightKiller": "6689",
+          "leftBand": "prime",
+          "rightBand": "1k-9k",
+          "leftMod30": 1,
+          "rightMod30": 7,
+          "gMod30": 3,
+          "gMod210": 3,
+          "coverLanes": [
+            "R:p6689:g=4265"
+          ],
+          "sideState": "HALF_L"
+        }
+      ]
+    },
+    {
+      "label": "raw max S29 row",
+      "C": "3268329311518612504",
+      "sourceReason": "hostile-crt:boss:m5",
+      "sourceLane": "lane2:Hostile CRT Net Builder",
+      "trueK": 11.639244409992209,
+      "sourceS29": 706,
+      "DMV": "L|L/D6/P29_BOSS/TAIL_STRONG/K10",
+      "greedyLaneCount": 343,
+      "uncoveredCount": 52,
+      "uncoveredPctOfS29": 0.07365439093484419,
+      "topGMod30": [
+        {
+          "key": "27",
+          "count": 20
+        },
+        {
+          "key": "15",
+          "count": 18
+        },
+        {
+          "key": "3",
+          "count": 14
+        }
+      ],
+      "topGMod210": [
+        {
+          "key": "27",
+          "count": 7
+        },
+        {
+          "key": "153",
+          "count": 5
+        },
+        {
+          "key": "195",
+          "count": 5
+        },
+        {
+          "key": "207",
+          "count": 5
+        },
+        {
+          "key": "57",
+          "count": 5
+        },
+        {
+          "key": "165",
+          "count": 4
+        },
+        {
+          "key": "105",
+          "count": 3
+        },
+        {
+          "key": "15",
+          "count": 3
+        },
+        {
+          "key": "45",
+          "count": 3
+        },
+        {
+          "key": "63",
+          "count": 3
+        },
+        {
+          "key": "123",
+          "count": 2
+        },
+        {
+          "key": "183",
+          "count": 2
+        }
+      ],
+      "sideStateCounts": [
+        {
+          "key": "HALF_L",
+          "count": 45
+        },
+        {
+          "key": "FOE",
+          "count": 6
+        },
+        {
+          "key": "HALF_R",
+          "count": 1
+        }
+      ],
+      "leftBandCounts": [
+        {
+          "key": "prime",
+          "count": 45
+        },
+        {
+          "key": "100k-999k",
+          "count": 3
+        },
+        {
+          "key": "1M+",
+          "count": 2
+        },
+        {
+          "key": "100-999",
+          "count": 1
+        },
+        {
+          "key": "10k-99k",
+          "count": 1
+        }
+      ],
+      "rightBandCounts": [
+        {
+          "key": "100-999",
+          "count": 13
+        },
+        {
+          "key": "1k-9k",
+          "count": 13
+        },
+        {
+          "key": "1M+",
+          "count": 13
+        },
+        {
+          "key": "100k-999k",
+          "count": 6
+        },
+        {
+          "key": "10k-99k",
+          "count": 6
+        },
+        {
+          "key": "prime",
+          "count": 1
+        }
+      ],
+      "pairBandCounts": [
+        {
+          "key": "prime/100-999",
+          "count": 12
+        },
+        {
+          "key": "prime/1M+",
+          "count": 11
+        },
+        {
+          "key": "prime/1k-9k",
+          "count": 10
+        },
+        {
+          "key": "prime/100k-999k",
+          "count": 6
+        },
+        {
+          "key": "prime/10k-99k",
+          "count": 6
+        },
+        {
+          "key": "100k-999k/1k-9k",
+          "count": 2
+        },
+        {
+          "key": "100-999/1M+",
+          "count": 1
+        },
+        {
+          "key": "100k-999k/100-999",
+          "count": 1
+        },
+        {
+          "key": "10k-99k/prime",
+          "count": 1
+        },
+        {
+          "key": "1M+/1k-9k",
+          "count": 1
+        },
+        {
+          "key": "1M+/1M+",
+          "count": 1
+        }
+      ],
+      "topLeftKillers": [
+        {
+          "key": "prime",
+          "count": 45
+        },
+        {
+          "key": "95747",
+          "count": 1
+        },
+        {
+          "key": "959867",
+          "count": 1
+        },
+        {
+          "key": "967",
+          "count": 1
+        },
+        {
+          "key": "973423117",
+          "count": 1
+        },
+        {
+          "key": "975553",
+          "count": 1
+        },
+        {
+          "key": "982453",
+          "count": 1
+        },
+        {
+          "key": "995547713",
+          "count": 1
+        }
+      ],
+      "topRightKillers": [
+        {
+          "key": "1212671",
+          "count": 1
+        },
+        {
+          "key": "123377",
+          "count": 1
+        },
+        {
+          "key": "127",
+          "count": 1
+        },
+        {
+          "key": "131",
+          "count": 1
+        },
+        {
+          "key": "13586663",
+          "count": 1
+        },
+        {
+          "key": "1361",
+          "count": 1
+        },
+        {
+          "key": "1415092153",
+          "count": 1
+        },
+        {
+          "key": "1427",
+          "count": 1
+        },
+        {
+          "key": "14350481",
+          "count": 1
+        },
+        {
+          "key": "14533",
+          "count": 1
+        },
+        {
+          "key": "154043",
+          "count": 1
+        },
+        {
+          "key": "1663",
+          "count": 1
+        }
+      ],
+      "sampleUncovered": [
+        {
+          "g": 483,
+          "leftPrime": true,
+          "rightPrime": false,
+          "leftKiller": "prime",
+          "rightKiller": "1427",
+          "leftBand": "prime",
+          "rightBand": "1k-9k",
+          "leftMod30": 1,
+          "rightMod30": 7,
+          "gMod30": 3,
+          "gMod210": 63,
+          "coverLanes": [
+            "R:p1427:g=483"
+          ],
+          "sideState": "HALF_L"
+        },
+        {
+          "g": 675,
+          "leftPrime": true,
+          "rightPrime": false,
+          "leftKiller": "prime",
+          "rightKiller": "479",
+          "leftBand": "prime",
+          "rightBand": "100-999",
+          "leftMod30": 19,
+          "rightMod30": 19,
+          "gMod30": 15,
+          "gMod210": 45,
+          "coverLanes": [
+            "R:p479:g=196"
+          ],
+          "sideState": "HALF_L"
+        },
+        {
+          "g": 993,
+          "leftPrime": true,
+          "rightPrime": false,
+          "leftKiller": "prime",
+          "rightKiller": "258008921",
+          "leftBand": "prime",
+          "rightBand": "1M+",
+          "leftMod30": 1,
+          "rightMod30": 7,
+          "gMod30": 3,
+          "gMod210": 153,
+          "coverLanes": [
+            "R:p258008921:g=993"
+          ],
+          "sideState": "HALF_L"
+        },
+        {
+          "g": 1257,
+          "leftPrime": true,
+          "rightPrime": false,
+          "leftKiller": "prime",
+          "rightKiller": "3187",
+          "leftBand": "prime",
+          "rightBand": "1k-9k",
+          "leftMod30": 7,
+          "rightMod30": 1,
+          "gMod30": 27,
+          "gMod210": 207,
+          "coverLanes": [
+            "R:p3187:g=1257"
+          ],
+          "sideState": "HALF_L"
+        },
+        {
+          "g": 1533,
+          "leftPrime": true,
+          "rightPrime": false,
+          "leftKiller": "prime",
+          "rightKiller": "6373",
+          "leftBand": "prime",
+          "rightBand": "1k-9k",
+          "leftMod30": 1,
+          "rightMod30": 7,
+          "gMod30": 3,
+          "gMod210": 63,
+          "coverLanes": [
+            "R:p6373:g=1533"
+          ],
+          "sideState": "HALF_L"
+        },
+        {
+          "g": 1635,
+          "leftPrime": true,
+          "rightPrime": false,
+          "leftKiller": "prime",
+          "rightKiller": "924827",
+          "leftBand": "prime",
+          "rightBand": "100k-999k",
+          "leftMod30": 19,
+          "rightMod30": 19,
+          "gMod30": 15,
+          "gMod210": 165,
+          "coverLanes": [
+            "R:p924827:g=1635"
+          ],
+          "sideState": "HALF_L"
+        },
+        {
+          "g": 2127,
+          "leftPrime": false,
+          "rightPrime": false,
+          "leftKiller": "995547713",
+          "rightKiller": "3564661",
+          "leftBand": "1M+",
+          "rightBand": "1M+",
+          "leftMod30": 7,
+          "rightMod30": 1,
+          "gMod30": 27,
+          "gMod210": 27,
+          "coverLanes": [
+            "L:p995547713:g=2127",
+            "R:p3564661:g=2127"
+          ],
+          "sideState": "FOE"
+        },
+        {
+          "g": 2157,
+          "leftPrime": false,
+          "rightPrime": false,
+          "leftKiller": "967",
+          "rightKiller": "1212671",
+          "leftBand": "100-999",
+          "rightBand": "1M+",
+          "leftMod30": 7,
+          "rightMod30": 1,
+          "gMod30": 27,
+          "gMod210": 57,
+          "coverLanes": [
+            "L:p967:g=223",
+            "R:p1212671:g=2157"
+          ],
+          "sideState": "FOE"
+        },
+        {
+          "g": 2355,
+          "leftPrime": false,
+          "rightPrime": true,
+          "leftKiller": "95747",
+          "rightKiller": "prime",
+          "leftBand": "10k-99k",
+          "rightBand": "prime",
+          "leftMod30": 19,
+          "rightMod30": 19,
+          "gMod30": 15,
+          "gMod210": 45,
+          "coverLanes": [
+            "L:p95747:g=2355"
+          ],
+          "sideState": "HALF_R"
+        },
+        {
+          "g": 2967,
+          "leftPrime": true,
+          "rightPrime": false,
+          "leftKiller": "prime",
+          "rightKiller": "243787",
+          "leftBand": "prime",
+          "rightBand": "100k-999k",
+          "leftMod30": 7,
+          "rightMod30": 1,
+          "gMod30": 27,
+          "gMod210": 27,
+          "coverLanes": [
+            "R:p243787:g=2967"
+          ],
+          "sideState": "HALF_L"
+        },
+        {
+          "g": 3147,
+          "leftPrime": true,
+          "rightPrime": false,
+          "leftKiller": "prime",
+          "rightKiller": "613",
+          "leftBand": "prime",
+          "rightBand": "100-999",
+          "leftMod30": 7,
+          "rightMod30": 1,
+          "gMod30": 27,
+          "gMod210": 207,
+          "coverLanes": [
+            "R:p613:g=82"
+          ],
+          "sideState": "HALF_L"
+        },
+        {
+          "g": 3585,
+          "leftPrime": true,
+          "rightPrime": false,
+          "leftKiller": "prime",
+          "rightKiller": "31147",
+          "leftBand": "prime",
+          "rightBand": "10k-99k",
+          "leftMod30": 19,
+          "rightMod30": 19,
+          "gMod30": 15,
+          "gMod210": 15,
+          "coverLanes": [
+            "R:p31147:g=3585"
+          ],
+          "sideState": "HALF_L"
+        },
+        {
+          "g": 4785,
+          "leftPrime": true,
+          "rightPrime": false,
+          "leftKiller": "prime",
+          "rightKiller": "14350481",
+          "leftBand": "prime",
+          "rightBand": "1M+",
+          "leftMod30": 19,
+          "rightMod30": 19,
+          "gMod30": 15,
+          "gMod210": 165,
+          "coverLanes": [
+            "R:p14350481:g=4785"
+          ],
+          "sideState": "HALF_L"
+        },
+        {
+          "g": 4815,
+          "leftPrime": true,
+          "rightPrime": false,
+          "leftKiller": "prime",
+          "rightKiller": "24733",
+          "leftBand": "prime",
+          "rightBand": "10k-99k",
+          "leftMod30": 19,
+          "rightMod30": 19,
+          "gMod30": 15,
+          "gMod210": 195,
+          "coverLanes": [
+            "R:p24733:g=4815"
+          ],
+          "sideState": "HALF_L"
+        },
+        {
+          "g": 4833,
+          "leftPrime": false,
+          "rightPrime": false,
+          "leftKiller": "982453",
+          "rightKiller": "2861",
+          "leftBand": "100k-999k",
+          "rightBand": "1k-9k",
+          "leftMod30": 1,
+          "rightMod30": 7,
+          "gMod30": 3,
+          "gMod210": 3,
+          "coverLanes": [
+            "L:p982453:g=4833",
+            "R:p2861:g=1972"
+          ],
+          "sideState": "FOE"
+        },
+        {
+          "g": 5445,
+          "leftPrime": true,
+          "rightPrime": false,
+          "leftKiller": "prime",
+          "rightKiller": "168943",
+          "leftBand": "prime",
+          "rightBand": "100k-999k",
+          "leftMod30": 19,
+          "rightMod30": 19,
+          "gMod30": 15,
+          "gMod210": 195,
+          "coverLanes": [
+            "R:p168943:g=5445"
+          ],
+          "sideState": "HALF_L"
+        },
+        {
+          "g": 5475,
+          "leftPrime": true,
+          "rightPrime": false,
+          "leftKiller": "prime",
+          "rightKiller": "68863",
+          "leftBand": "prime",
+          "rightBand": "10k-99k",
+          "leftMod30": 19,
+          "rightMod30": 19,
+          "gMod30": 15,
+          "gMod210": 15,
+          "coverLanes": [
+            "R:p68863:g=5475"
+          ],
+          "sideState": "HALF_L"
+        },
+        {
+          "g": 5907,
+          "leftPrime": true,
+          "rightPrime": false,
+          "leftKiller": "prime",
+          "rightKiller": "2526211",
+          "leftBand": "prime",
+          "rightBand": "1M+",
+          "leftMod30": 7,
+          "rightMod30": 1,
+          "gMod30": 27,
+          "gMod210": 27,
+          "coverLanes": [
+            "R:p2526211:g=5907"
+          ],
+          "sideState": "HALF_L"
+        },
+        {
+          "g": 6693,
+          "leftPrime": true,
+          "rightPrime": false,
+          "leftKiller": "prime",
+          "rightKiller": "1415092153",
+          "leftBand": "prime",
+          "rightBand": "1M+",
+          "leftMod30": 1,
+          "rightMod30": 7,
+          "gMod30": 3,
+          "gMod210": 183,
+          "coverLanes": [
+            "R:p1415092153:g=6693"
+          ],
+          "sideState": "HALF_L"
+        },
+        {
+          "g": 7077,
+          "leftPrime": true,
+          "rightPrime": false,
+          "leftKiller": "prime",
+          "rightKiller": "34615433",
+          "leftBand": "prime",
+          "rightBand": "1M+",
+          "leftMod30": 7,
+          "rightMod30": 1,
+          "gMod30": 27,
+          "gMod210": 147,
+          "coverLanes": [
+            "R:p34615433:g=7077"
+          ],
+          "sideState": "HALF_L"
+        }
+      ]
+    }
+  ],
+  "next3": [
+    "Build a marginal-gain decay table from the long-run packet as a standalone theorem artifact.",
+    "Turn uncovered survivor spread into a lower bound on the number of independent killer residues still needed after top 291 lanes.",
+    "Write the overlap-loss theorem note that formalizes why these leftovers matter."
+  ],
+  "warning": "FINITE EVIDENCE ONLY.\nUNIVERSAL GOLDBACH PROOF REMAINS OPEN.\nUNCOVERED-SURVIVOR AUDITS ARE DIAGNOSTIC EVIDENCE, NOT A PROOF."
+}

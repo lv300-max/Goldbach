@@ -1,233 +1,264 @@
 # Current Status
 
+## Safe Status
+
 ```text
-GOLDBACH MIRROR WORKBENCH ACTIVE
-K12 AND K13 FINITE WINDOWS BROKEN
-K13.431 HELD IN CURRENT FINITE TESTING
-HOTEL CITY / DMV CLASSIFICATION SYSTEM ADDED
-UNIVERSAL RESCUE LEMMA STILL THE ANALYTIC TARGET
+FINITE EVIDENCE STRONG
+LARGE-PRIME NO-COVER TARGET OPEN
+UNIVERSAL GOLDBACH PROOF NOT CLAIMED
 ```
 
-## Core Setup
-
-For an even number `E = 2C`, every mirror gap `g` gives:
+Reviewer entry point:
 
 ```text
-left  = C - g
-right = C + g
-E = (C - g) + (C + g) = 2C
+REVIEWER_PACKET.md
 ```
 
-A BOTH hit occurs when:
+## Current Proof Target
+
+For `E = 2C` and mirror gap `g`:
 
 ```text
-prime(C-g) AND prime(C+g)
+Room(C,g) = (C-g, C+g)
+BOTH_C(g) = 1_prime(C-g) * 1_prime(C+g)
 ```
 
-The first such gap is:
+Goldbach for `E = 2C` is equivalent to:
 
 ```text
-firstBothG
+there exists g such that BOTH_C(g) = 1
 ```
 
-The normalized pressure score is:
+Current active target:
 
 ```text
-trueK = firstBothG / log(C)^2
+Large-Prime No-Cover Lemma
 ```
 
-The full door-to-door spacing is:
+Current next-note target:
 
 ```text
-D = 2 * firstBothG
+Structured Leftover No-Persistence Lemma
 ```
 
-## Current Boss Row
+Working statement:
 
 ```text
-C = 3,889,129,261,038,184
-E = 7,778,258,522,076,368
-firstBothG = 17,307
-D = 34,614
-trueK = 13.4309400510447
-D mod 30 = 24
-pairStart = 3|5
-P29 survivors = 582
-S17 survivors = 757
-tail1/tail2/tail4 = 6 / 16 / 28
+After small-prime filtering, survivor gaps cannot all be permanently killed
+on the left or right side. A two-sided prime escape must eventually occur.
 ```
 
-Current finite wall around the boss:
+## Latest Readiness
+
+| Area | Current |
+|---|---:|
+| Framework / notation | 99% |
+| Finite engine stack | 98% |
+| Classification consistency | 98% |
+| No-Escape target clarity | 97% |
+| Large-Prime No-Cover proof | 44-46% |
+| Universal Goldbach proof | 42-44% |
+
+These are internal readiness estimates, not formal mathematical proof percentages.
+
+## Latest Evidence
+
+### Filtered Validator
 
 ```text
-K13.430 = MISS
-K13.431 = HIT at boundary
-13.430 < current finite wall <= 13.431
+Artifact: GOLDBACH_FILTERED_NO_ESCAPE_VALIDATOR.md
+JSON: evidence/GOLDBACH_FILTERED_NO_ESCAPE_VALIDATOR.json
+records converted = 1,265
+proof-scale K13.431 misses = 0
+proof-scale full coverage before rescue = 0
 ```
 
-## Superseded Older Status
-
-Older repository notes treated `K=12` as the strongest finite ceiling. That is now superseded.
-
-Current status:
+### Local Pump Cleanup
 
 ```text
-K12 = broken
-K13 = broken
-K13.431 = held in current finite testing
-```
-
-## Recent Finite Evidence Snapshot
-
-### 5-minute unique sweep
-
-```text
-runtime = 300.006s
-unique rows = 4,022,759
+Artifact: GOLDBACH_LOCAL_PUMP_CLEANUP_TESTS.md
+JSON: evidence/GOLDBACH_LOCAL_PUMP_CLEANUP_TESTS.json
+boss S17 = 757
+boss S29 = 582
 K13.431 misses = 0
+```
+
+### 3H No-Escape Assault
+
+```text
+Artifact: GOLDBACH_3H_8CORE_NO_ESCAPE_PROOF_ASSAULT.md
+JSON: evidence/GOLDBACH_3H_8CORE_NO_ESCAPE_PROOF_ASSAULT.json
+runtime = 10,800.043s
+workers = 8
+unique rows tested = 102,211,417
+K13.431 misses = 0
+full coverage candidates inside K13.431 = 0
 max trueK = 13.4309400510447
-best C = 3,889,129,261,038,184
-verdict = K13_431_HELD_FINITE_IN_5MIN_UNIQUE_SWEEP
+max S29 = 706
 ```
 
-### 6-test / 2-minute / 10-core suite
+### Next3 No-Escape Followup
 
 ```text
-unique rows = 9,229,532
+Artifact: GOLDBACH_NEXT3_NO_ESCAPE_FOLLOWUP.md
+JSON: evidence/GOLDBACH_NEXT3_NO_ESCAPE_FOLLOWUP.json
+rows analyzed = 23
+K13.431 breaks = 0
+audit errors = 0
+verdict = FINITE_DIFFUSE_KILLER_NET_PATTERN_STRONG
+```
+
+### Greedy-Lane Decay Curve
+
+```text
+Artifact: GOLDBACH_GREEDY_LANE_DECAY_CURVE.md
+JSON: evidence/GOLDBACH_GREEDY_LANE_DECAY_CURVE.json
+rows analyzed = 5
+verdict = FINITE_DIFFUSE_KILLER_NET_DECAY_CONFIRMED
+boss top20/top291 = 36.60% / 100.00%
+hostile visitor top20/top291 = 36.38% / 96.65%
+raw max S29 top20/top291 = 33.85% / 92.63%
+```
+
+### Final 5-Min No-Cover Bridge
+
+```text
+Artifact: GOLDBACH_FINAL_5MIN_NO_COVER_BRIDGE_16CORE.md
+JSON: evidence/GOLDBACH_FINAL_5MIN_NO_COVER_BRIDGE_16CORE.json
+runtime = 301.556s
+workers = 16
+rows analyzed = 1,083,085
+boss boundary passed = yes
 K13.431 misses = 0
-trueK >= 13 rows = 0 outside boss context
-tail1-zero danger rows = 0
-global max trueK = 10.323590888035527 at C = 3,209,851,851,697,528
-final finite verdict = LARGE_PRIME_FULL_COVER_FOUND_FINITE
+boss top20/top100/top291 = 36.60% / 67.18% / 100.00%
+boss leftovers after top200/top291 = 91 / 0
+boss mod30 cluster share = 100%
+boss HALF-L leftovers = 53
+boss unique right killers = 53
+boss max right-killer repeat = 1
+verdict = BOSS_CLUSTER_PERSISTS_BUT_RIGHT_KILLERS_DIFFUSE
 ```
 
-Important rows from that suite:
+### Imported Boss-Cluster Bridge Corroboration
 
 ```text
-hot row:
-C = 3,209,851,851,697,528
-firstBothG = 13,161
-trueK = 10.323590888035527
-pairStart = 3|17
-P29 = 441
-
-fullCover / baby-boss row:
-C = 3,194,349,700,443,064
-firstBothG = 12,225
-trueK = 9.591986184281602
-pairStart = 3|5
-P29 = 417
-
-corridor row:
-C = 3,912,698,353,475,078
-firstBothG = 12,915
-trueK = 10.019195344119744
-pairStart = L|3
-P29 = 457
-
-tailWeak row:
-C = 3,889,134,139,471,741
-firstBothG = 12,030
-trueK = 9.335771509911405
-pairStart = L|L
-P29 = 405
+Artifact: IMPORTED_2026_05_09_BOSS_CLUSTER_BRIDGE_COMPARISON.md
+source note: imports/2026-05-09_boss_cluster_bridge/BOSS_CLUSTER_BREAK_RIGHT_KILLER_DIFFUSION_BRIDGE_NOTE.md
+source JSON: imports/2026-05-09_boss_cluster_bridge/BOSS_CLUSTER_BREAK_RIGHT_KILLER_DIFFUSION_LOCAL.json
+local tie-model leftovers@200 = 88
+mod30 cluster share = 100%
+mod210 bucket count = 15
+mod2310 bucket count = 68
+mod30030 bucket count = 88
+mod510510 bucket count = 88
+HALF-L leftovers = 27
+unique minimum right killers = 27
+max right-killer repeat = 1
+read = same bridge shape, different tie-path counts
 ```
 
-## Current Working Interpretation
-
-The older `K12/K13 always works` idea is dead.
-
-The active mechanism now being studied is:
+### Greedy vs Optimal Cover Gap
 
 ```text
-P29 survivor mass + tail rescue + state-specific DMV identity
+Artifact: GOLDBACH_GREEDY_VS_OPTIMAL_COVER_GAP_16CORE.md
+JSON: evidence/GOLDBACH_GREEDY_VS_OPTIMAL_COVER_GAP_16CORE.json
+runtime = 5.430s
+workers = 16
+tasks = 15
+hidden compact cover found = no
+max absolute gap = 0
+max percent gap = 0.00%
+verdict = NO_COMPACT_COVER_FOUND_IN_BOUNDED_SEARCH
 ```
 
-The boss behaves like a gravity well because it traps survivor pressure longer than nearby rows.
-
-The strongest current visible difference between boss and baby-boss:
+### 15-Min Greedy vs Optimal Cover Gap
 
 ```text
-boss P29 survivors      = 582
-baby-boss P29 survivors = 417
-difference              = 165
+Artifact: GOLDBACH_15MIN_GREEDY_VS_OPTIMAL_COVER_GAP_16CORE.md
+JSON: evidence/GOLDBACH_15MIN_GREEDY_VS_OPTIMAL_COVER_GAP_16CORE.json
+runtime = 900.456s
+workers = 16
+tasks = 15
+total iterations = 3,183,126
+hidden compact cover found = no
+max absolute gap = 0
+max percent gap = 0.00%
+verdict = NO_COMPACT_COVER_FOUND_IN_15MIN_BOUNDED_SEARCH
 ```
 
-## Hotel City / DMV Classification Status
-
-The workbench now includes a deterministic classification architecture:
+### Current Best Theorem Story
 
 ```text
-City
-└── State / Hotel
-    └── Floor
-        └── Room
-            └── DMV ID
-                └── Echo Bridges
+1. Small primes make survivor rooms: S29 = 582
+2. Greedy killer lanes attack the rooms: leftovers@200 = 91, leftovers@291 = 0
+3. The leftover pocket looks simple at first: mod30 boxes = 3
+4. But deeper boxes split it apart: mod210 / mod2310 / mod30030 = many boxes
+5. The right killers do not repeat enough: HALF-L = 53, unique right killers = 53, max repeat = 1
+6. So the obstruction is not compact: RIGHT_KILLERS_DIFFUSE
 ```
 
-Core rule:
+Locked containment line:
 
 ```text
-Every C gets exactly one home state.
-Every C can carry zero or more echo bridges.
-Every C keeps returnAddress = C.
-No C escapes classification.
+The rooms multiply faster than the guards repeat.
 ```
 
-Best current DMV sorter:
+### Overlap Waste Curve
 
 ```text
-homeState / D-width / P29 bucket / tail bucket / K bucket / suffix
+Artifact: GOLDBACH_OVERLAP_WASTE_CURVE.md
+JSON: evidence/GOLDBACH_OVERLAP_WASTE_CURVE.json
+rows analyzed = 5
+verdict = FINITE_OVERLAP_WASTE_SUPPORTS_NO_COVER_TARGET
+hostile visitor uncovered after top 291 lanes = 22
+raw max S29 uncovered after top 291 lanes = 52
 ```
 
-Boss DMV ID:
+### Uncovered Residue Survivor Audit
 
 ```text
-3|5 / D24 / P29_BOSS / TAIL_STRONG / K13 / 37|3;3|11
+Artifact: GOLDBACH_UNCOVERED_RESIDUE_SURVIVOR_AUDIT.md
+JSON: evidence/GOLDBACH_UNCOVERED_RESIDUE_SURVIVOR_AUDIT.json
+rows analyzed = 2
+verdict = FINITE_UNCOVERED_SURVIVORS_SHOW_PARTIAL_CLUSTERING
+hostile visitor uncovered = 22, all HALF_L
+raw max S29 uncovered = 52, HALF_L dominant
 ```
 
-## State-Specific ID Rules
-
-Different states use different useful fields.
+## Current Strongest Interpretation
 
 ```text
-3|5  state: P29 + tail + K + D-width + suffix
-3|17 state: suffix rhythm + P29 + K + D-width
-L|3  state: side-leak shape + D-width + P29 + tail
-L|L  state: tail rescue + suffix + P29 + K
+Boss still holds max trueK.
+Non-boss K13-class pressure visitors exist below boss.
+Raw S29 mass can beat boss.
+Normalized S29/log^2(C) puts boss back on top.
+High-pressure killer nets are diffuse, not compact.
+Greedy-lane decay rises slowly across top 10/20/50/100/200/291 lanes.
+Overlap waste is measurable and persistent as greedy lanes accumulate.
+The remaining uncovered survivors do not look fully diffuse; they show partial residue clustering.
+No tested row formed full survivor coverage inside K13.431.
 ```
 
-## Current Best Theorem Target
+## Main Open Gap
 
-The analytic wall remains a rescue statement:
+Finite tests support the no-cover direction, but the universal theorem remains open:
 
 ```text
-For sufficiently large C, prove that at least one BOTH-prime hit appears inside a bounded K log^2(C) mirror window.
+Prove that large-prime left/right residue killer lanes cannot fully cover
+all survivor gaps for every sufficiently large center C.
 ```
 
-But the computational classification target is now sharper:
+Equivalently:
 
 ```text
-Explain why high survivor mass plus tail rescue keeps producing a prime-prime door before the current finite wall.
+Perfect killer nets cannot persist forever.
 ```
 
-## Active Next Tests
+## Reviewer-Safe Final Statement
 
 ```text
-1. Boss DMV ID stress test over larger state neighborhoods
-2. State-width DMV test using pairStart + D mod 30 + P29 + tail
-3. Boss vs baby-boss leak map to locate where the +165 survivor difference emerges
-4. Hotel/state classification validator over wider C ranges
-5. Color City visualization linking home state, P29 bucket, tail bucket, and K bucket
-```
-
-## Safe Repository Statement
-
-```text
-Goldbach is reframed as a folded hallway / mirror-center rescue problem.
-The new workbench classifies every center C into a state/hotel/room identity,
-then measures survivor pressure and tail rescue inside that identity.
-The current finite boss row is C = 3,889,129,261,038,184 with trueK = 13.4309400510447.
-K12 and K13 finite window claims are superseded; K13.431 is the current held finite backwall in these tests.
+The framework is coherent and the finite evidence is strong.
+The current No-Escape target is clear.
+The universal proof remains open until the Large-Prime No-Cover Lemma is
+proved analytically.
 ```

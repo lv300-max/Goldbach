@@ -1,0 +1,35 @@
+{
+  "suiteName": "GOLDBACH_TIE_PATH_INVARIANCE_SUMMARY",
+  "warning": "FINITE EVIDENCE ONLY.\nUNIVERSAL PROOF REMAINS OPEN.\nTIE-PATH STABILITY IS A FINITE DEFENSE, NOT A UNIVERSAL THEOREM.",
+  "rows": [
+    {
+      "packet": "canonical_16core_bridge",
+      "top200Leftovers": 91,
+      "halfL": 53,
+      "uniqueRightKillers": 53,
+      "maxRightRepeat": 1,
+      "clusterShare30": 1,
+      "deeperSplit": true
+    },
+    {
+      "packet": "imported_local_tie_model",
+      "top200Leftovers": 88,
+      "halfL": 27,
+      "uniqueRightKillers": 27,
+      "maxRightRepeat": 1,
+      "clusterShare30": 1,
+      "deeperSplit": true
+    }
+  ],
+  "boundedSearchVerdict": "NO_COMPACT_COVER_FOUND_IN_15MIN_BOUNDED_SEARCH",
+  "boundedHiddenCompact": false,
+  "stableInvariants": [
+    "The boss top200 leftover pocket stays 100% inside g mod 30 in {3,15,27}.",
+    "The same pocket breaks into many higher-modulus buckets under deeper moduli.",
+    "Right-side killer support stays diffuse rather than compact.",
+    "Max right-killer repeat stays 1 in both compared packets.",
+    "The 15-minute bounded search found no hidden compact cover beyond greedy on boss, hot1, or hot2."
+  ],
+  "verdict": "TIE_PATH_COUNTS_MOVE_BUT_BRIDGE_SHAPE_STAYS_STABLE",
+  "read": "The tie path changes counts like 91 vs 88 and 53 vs 27, but it does not change the theorem-facing shape. The boss mod-30 pocket remains real, the deeper bucket split remains real, and the right-killer machine remains diffuse."
+}

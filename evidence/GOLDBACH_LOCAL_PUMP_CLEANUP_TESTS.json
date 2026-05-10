@@ -1,0 +1,1883 @@
+{
+  "testName": "GOLDBACH_LOCAL_PUMP_CLEANUP_TESTS",
+  "runtimeSecondsTotal": 0.9310438632965088,
+  "rowsTested": 5,
+  "definitions": {
+    "S17": "odd mirror gaps before first BOTH surviving divisibility by 3,5,7,11,13,17 on both sides",
+    "S19": "S17 plus 19",
+    "S23": "S19 plus 23",
+    "S29": "S23 plus 29",
+    "tailFinal20": "last 20 S29 survivors before first BOTH",
+    "tailFinal50": "last 50 S29 survivors before first BOTH",
+    "tailFinal100": "last 100 S29 survivors before first BOTH"
+  },
+  "results": [
+    {
+      "label": "boss",
+      "C": "3889129261038184",
+      "E": "7778258522076368",
+      "firstBothG": 17307,
+      "trueK": 13.4309400510447,
+      "K13_430_miss": true,
+      "K13_431_miss": false,
+      "K14_miss": false,
+      "survivorDefinitions": {
+        "S17": 757,
+        "S19": 685,
+        "S23": 626,
+        "S29": 582
+      },
+      "S29Audit": {
+        "totalOddGapsBeforeBoth": 8653,
+        "smallKilledToS29": 8071,
+        "survivors": 582,
+        "bothComposite": 394,
+        "oneSidePrime": 188,
+        "HALF_L": 96,
+        "HALF_R": 92,
+        "bothPrimeBefore": 0,
+        "leftLarge": 71,
+        "rightLarge": 83,
+        "uniqueLeftKillers": 217,
+        "uniqueRightKillers": 222,
+        "topLeftKillers": [
+          [
+            "large/unknown",
+            71
+          ],
+          [
+            "31",
+            19
+          ],
+          [
+            "41",
+            17
+          ],
+          [
+            "43",
+            13
+          ],
+          [
+            "37",
+            13
+          ],
+          [
+            "53",
+            12
+          ],
+          [
+            "47",
+            12
+          ],
+          [
+            "59",
+            10
+          ],
+          [
+            "61",
+            9
+          ],
+          [
+            "83",
+            7
+          ],
+          [
+            "107",
+            7
+          ],
+          [
+            "67",
+            7
+          ]
+        ],
+        "topRightKillers": [
+          [
+            "large/unknown",
+            83
+          ],
+          [
+            "31",
+            23
+          ],
+          [
+            "37",
+            15
+          ],
+          [
+            "41",
+            12
+          ],
+          [
+            "47",
+            11
+          ],
+          [
+            "43",
+            11
+          ],
+          [
+            "61",
+            10
+          ],
+          [
+            "53",
+            9
+          ],
+          [
+            "59",
+            9
+          ],
+          [
+            "79",
+            7
+          ],
+          [
+            "73",
+            7
+          ],
+          [
+            "127",
+            7
+          ]
+        ]
+      },
+      "tails": {
+        "final20": {
+          "size": 20,
+          "FOE": 13,
+          "HALF_L": 4,
+          "HALF_R": 3,
+          "BOTH": 0,
+          "M1": 3
+        },
+        "final50": {
+          "size": 50,
+          "FOE": 36,
+          "HALF_L": 6,
+          "HALF_R": 8,
+          "BOTH": 0,
+          "M1": 6
+        },
+        "final100": {
+          "size": 100,
+          "FOE": 74,
+          "HALF_L": 10,
+          "HALF_R": 16,
+          "BOTH": 0,
+          "M1": 10
+        },
+        "final20Rows": [
+          {
+            "g": 16845,
+            "status": "HALF-R",
+            "leftPrime": false,
+            "rightPrime": true,
+            "leftKiller": 347,
+            "rightKiller": "prime",
+            "leftMod30": 19,
+            "rightMod30": 19
+          },
+          {
+            "g": 16863,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 31,
+            "rightKiller": 97,
+            "leftMod30": 1,
+            "rightMod30": 7
+          },
+          {
+            "g": 16923,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 41,
+            "rightKiller": "large/unknown",
+            "leftMod30": 1,
+            "rightMod30": 7
+          },
+          {
+            "g": 16947,
+            "status": "HALF-L",
+            "leftPrime": true,
+            "rightPrime": false,
+            "leftKiller": "prime",
+            "rightKiller": 83,
+            "leftMod30": 7,
+            "rightMod30": 1
+          },
+          {
+            "g": 16965,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": "large/unknown",
+            "rightKiller": "large/unknown",
+            "leftMod30": 19,
+            "rightMod30": 19
+          },
+          {
+            "g": 16983,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 293,
+            "rightKiller": 61,
+            "leftMod30": 1,
+            "rightMod30": 7
+          },
+          {
+            "g": 16995,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 223,
+            "rightKiller": 113,
+            "leftMod30": 19,
+            "rightMod30": 19
+          },
+          {
+            "g": 17013,
+            "status": "HALF-L",
+            "leftPrime": true,
+            "rightPrime": false,
+            "leftKiller": "prime",
+            "rightKiller": 103,
+            "leftMod30": 1,
+            "rightMod30": 7
+          },
+          {
+            "g": 17025,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 52259,
+            "rightKiller": 41,
+            "leftMod30": 19,
+            "rightMod30": 19
+          },
+          {
+            "g": 17055,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 61,
+            "rightKiller": 67129,
+            "leftMod30": 19,
+            "rightMod30": 19
+          },
+          {
+            "g": 17067,
+            "status": "HALF-R",
+            "leftPrime": false,
+            "rightPrime": true,
+            "leftKiller": 79,
+            "rightKiller": "prime",
+            "leftMod30": 7,
+            "rightMod30": 1
+          },
+          {
+            "g": 17073,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 2671,
+            "rightKiller": 71,
+            "leftMod30": 1,
+            "rightMod30": 7
+          },
+          {
+            "g": 17097,
+            "status": "HALF-L",
+            "leftPrime": true,
+            "rightPrime": false,
+            "leftKiller": "prime",
+            "rightKiller": 281,
+            "leftMod30": 7,
+            "rightMod30": 1
+          },
+          {
+            "g": 17133,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": "large/unknown",
+            "rightKiller": 14639,
+            "leftMod30": 1,
+            "rightMod30": 7
+          },
+          {
+            "g": 17157,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 137,
+            "rightKiller": 1301,
+            "leftMod30": 7,
+            "rightMod30": 1
+          },
+          {
+            "g": 17175,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 59,
+            "rightKiller": 31,
+            "leftMod30": 19,
+            "rightMod30": 19
+          },
+          {
+            "g": 17223,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 73,
+            "rightKiller": "large/unknown",
+            "leftMod30": 1,
+            "rightMod30": 7
+          },
+          {
+            "g": 17247,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 77069,
+            "rightKiller": 1307,
+            "leftMod30": 7,
+            "rightMod30": 1
+          },
+          {
+            "g": 17265,
+            "status": "HALF-L",
+            "leftPrime": true,
+            "rightPrime": false,
+            "leftKiller": "prime",
+            "rightKiller": 2531,
+            "leftMod30": 19,
+            "rightMod30": 19
+          },
+          {
+            "g": 17277,
+            "status": "HALF-R",
+            "leftPrime": false,
+            "rightPrime": true,
+            "leftKiller": 3343,
+            "rightKiller": "prime",
+            "leftMod30": 7,
+            "rightMod30": 1
+          }
+        ]
+      },
+      "rescue": {
+        "g": 17307,
+        "left": "3889129261020877",
+        "right": "3889129261055491",
+        "leftMod30": 7,
+        "rightMod30": 1,
+        "leftPrime": true,
+        "rightPrime": true,
+        "survivesS17": true,
+        "survivesS29": true
+      },
+      "runtimeSeconds": 0.3390157222747803
+    },
+    {
+      "label": "hot_non_boss_1",
+      "C": "3209851851697528",
+      "E": "6419703703395056",
+      "firstBothG": 13161,
+      "trueK": 10.323590888035527,
+      "K13_430_miss": false,
+      "K13_431_miss": false,
+      "K14_miss": false,
+      "survivorDefinitions": {
+        "S17": 575,
+        "S19": 519,
+        "S23": 474,
+        "S29": 441
+      },
+      "S29Audit": {
+        "totalOddGapsBeforeBoth": 6580,
+        "smallKilledToS29": 6139,
+        "survivors": 441,
+        "bothComposite": 316,
+        "oneSidePrime": 125,
+        "HALF_L": 64,
+        "HALF_R": 61,
+        "bothPrimeBefore": 0,
+        "leftLarge": 61,
+        "rightLarge": 62,
+        "uniqueLeftKillers": 187,
+        "uniqueRightKillers": 185,
+        "topLeftKillers": [
+          [
+            "large/unknown",
+            61
+          ],
+          [
+            "31",
+            12
+          ],
+          [
+            "37",
+            11
+          ],
+          [
+            "47",
+            11
+          ],
+          [
+            "43",
+            10
+          ],
+          [
+            "41",
+            9
+          ],
+          [
+            "73",
+            7
+          ],
+          [
+            "61",
+            7
+          ],
+          [
+            "89",
+            6
+          ],
+          [
+            "59",
+            6
+          ],
+          [
+            "67",
+            6
+          ],
+          [
+            "79",
+            5
+          ]
+        ],
+        "topRightKillers": [
+          [
+            "large/unknown",
+            62
+          ],
+          [
+            "31",
+            13
+          ],
+          [
+            "41",
+            12
+          ],
+          [
+            "43",
+            11
+          ],
+          [
+            "37",
+            11
+          ],
+          [
+            "67",
+            8
+          ],
+          [
+            "53",
+            8
+          ],
+          [
+            "47",
+            8
+          ],
+          [
+            "71",
+            7
+          ],
+          [
+            "59",
+            5
+          ],
+          [
+            "73",
+            5
+          ],
+          [
+            "103",
+            5
+          ]
+        ]
+      },
+      "tails": {
+        "final20": {
+          "size": 20,
+          "FOE": 14,
+          "HALF_L": 4,
+          "HALF_R": 2,
+          "BOTH": 0,
+          "M1": 2
+        },
+        "final50": {
+          "size": 50,
+          "FOE": 36,
+          "HALF_L": 9,
+          "HALF_R": 5,
+          "BOTH": 0,
+          "M1": 5
+        },
+        "final100": {
+          "size": 100,
+          "FOE": 63,
+          "HALF_L": 22,
+          "HALF_R": 15,
+          "BOTH": 0,
+          "M1": 15
+        },
+        "final20Rows": [
+          {
+            "g": 12639,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 97,
+            "rightKiller": 157,
+            "leftMod30": 19,
+            "rightMod30": 7
+          },
+          {
+            "g": 12645,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 79,
+            "rightKiller": 31,
+            "leftMod30": 13,
+            "rightMod30": 13
+          },
+          {
+            "g": 12669,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 277,
+            "rightKiller": "large/unknown",
+            "leftMod30": 19,
+            "rightMod30": 7
+          },
+          {
+            "g": 12705,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 73,
+            "rightKiller": 19531,
+            "leftMod30": 13,
+            "rightMod30": 13
+          },
+          {
+            "g": 12711,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 2143,
+            "rightKiller": "large/unknown",
+            "leftMod30": 7,
+            "rightMod30": 19
+          },
+          {
+            "g": 12741,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 61,
+            "rightKiller": 41,
+            "leftMod30": 7,
+            "rightMod30": 19
+          },
+          {
+            "g": 12795,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 157,
+            "rightKiller": 41231,
+            "leftMod30": 13,
+            "rightMod30": 13
+          },
+          {
+            "g": 12825,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 67,
+            "rightKiller": 53,
+            "leftMod30": 13,
+            "rightMod30": 13
+          },
+          {
+            "g": 12831,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 3089,
+            "rightKiller": 31,
+            "leftMod30": 7,
+            "rightMod30": 19
+          },
+          {
+            "g": 12849,
+            "status": "HALF-R",
+            "leftPrime": false,
+            "rightPrime": true,
+            "leftKiller": 12097,
+            "rightKiller": "prime",
+            "leftMod30": 19,
+            "rightMod30": 7
+          },
+          {
+            "g": 12891,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 797,
+            "rightKiller": 173,
+            "leftMod30": 7,
+            "rightMod30": 19
+          },
+          {
+            "g": 12909,
+            "status": "HALF-L",
+            "leftPrime": true,
+            "rightPrime": false,
+            "leftKiller": "prime",
+            "rightKiller": "large/unknown",
+            "leftMod30": 19,
+            "rightMod30": 7
+          },
+          {
+            "g": 12915,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": "large/unknown",
+            "rightKiller": 103,
+            "leftMod30": 13,
+            "rightMod30": 13
+          },
+          {
+            "g": 12939,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 443,
+            "rightKiller": "large/unknown",
+            "leftMod30": 19,
+            "rightMod30": 7
+          },
+          {
+            "g": 12981,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 37,
+            "rightKiller": 78607,
+            "leftMod30": 7,
+            "rightMod30": 19
+          },
+          {
+            "g": 13005,
+            "status": "HALF-L",
+            "leftPrime": true,
+            "rightPrime": false,
+            "leftKiller": "prime",
+            "rightKiller": 2143,
+            "leftMod30": 13,
+            "rightMod30": 13
+          },
+          {
+            "g": 13035,
+            "status": "HALF-L",
+            "leftPrime": true,
+            "rightPrime": false,
+            "leftKiller": "prime",
+            "rightKiller": 43,
+            "leftMod30": 13,
+            "rightMod30": 13
+          },
+          {
+            "g": 13059,
+            "status": "HALF-R",
+            "leftPrime": false,
+            "rightPrime": true,
+            "leftKiller": 173,
+            "rightKiller": "prime",
+            "leftMod30": 19,
+            "rightMod30": 7
+          },
+          {
+            "g": 13065,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 2753,
+            "rightKiller": "large/unknown",
+            "leftMod30": 13,
+            "rightMod30": 13
+          },
+          {
+            "g": 13101,
+            "status": "HALF-L",
+            "leftPrime": true,
+            "rightPrime": false,
+            "leftKiller": "prime",
+            "rightKiller": 191,
+            "leftMod30": 7,
+            "rightMod30": 19
+          }
+        ]
+      },
+      "rescue": {
+        "g": 13161,
+        "left": "3209851851684367",
+        "right": "3209851851710689",
+        "leftMod30": 7,
+        "rightMod30": 19,
+        "leftPrime": true,
+        "rightPrime": true,
+        "survivesS17": true,
+        "survivesS29": true
+      },
+      "runtimeSeconds": 0.2760183811187744
+    },
+    {
+      "label": "hot_non_boss_2",
+      "C": "3912698353475078",
+      "E": "7825396706950156",
+      "firstBothG": 12915,
+      "trueK": 10.019195344119744,
+      "K13_430_miss": false,
+      "K13_431_miss": false,
+      "K14_miss": false,
+      "survivorDefinitions": {
+        "S17": 561,
+        "S19": 531,
+        "S23": 486,
+        "S29": 457
+      },
+      "S29Audit": {
+        "totalOddGapsBeforeBoth": 6457,
+        "smallKilledToS29": 6000,
+        "survivors": 457,
+        "bothComposite": 304,
+        "oneSidePrime": 153,
+        "HALF_L": 79,
+        "HALF_R": 74,
+        "bothPrimeBefore": 0,
+        "leftLarge": 54,
+        "rightLarge": 57,
+        "uniqueLeftKillers": 195,
+        "uniqueRightKillers": 185,
+        "topLeftKillers": [
+          [
+            "large/unknown",
+            54
+          ],
+          [
+            "31",
+            14
+          ],
+          [
+            "37",
+            13
+          ],
+          [
+            "43",
+            12
+          ],
+          [
+            "41",
+            10
+          ],
+          [
+            "61",
+            8
+          ],
+          [
+            "59",
+            8
+          ],
+          [
+            "53",
+            7
+          ],
+          [
+            "73",
+            6
+          ],
+          [
+            "47",
+            6
+          ],
+          [
+            "131",
+            5
+          ],
+          [
+            "67",
+            5
+          ]
+        ],
+        "topRightKillers": [
+          [
+            "large/unknown",
+            57
+          ],
+          [
+            "31",
+            15
+          ],
+          [
+            "37",
+            14
+          ],
+          [
+            "41",
+            11
+          ],
+          [
+            "47",
+            9
+          ],
+          [
+            "61",
+            9
+          ],
+          [
+            "43",
+            9
+          ],
+          [
+            "67",
+            7
+          ],
+          [
+            "71",
+            7
+          ],
+          [
+            "53",
+            7
+          ],
+          [
+            "107",
+            6
+          ],
+          [
+            "79",
+            6
+          ]
+        ]
+      },
+      "tails": {
+        "final20": {
+          "size": 20,
+          "FOE": 14,
+          "HALF_L": 4,
+          "HALF_R": 2,
+          "BOTH": 0,
+          "M1": 2
+        },
+        "final50": {
+          "size": 50,
+          "FOE": 34,
+          "HALF_L": 6,
+          "HALF_R": 10,
+          "BOTH": 0,
+          "M1": 6
+        },
+        "final100": {
+          "size": 100,
+          "FOE": 64,
+          "HALF_L": 18,
+          "HALF_R": 18,
+          "BOTH": 0,
+          "M1": 18
+        },
+        "final20Rows": [
+          {
+            "g": 12225,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": "large/unknown",
+            "rightKiller": 43,
+            "leftMod30": 23,
+            "rightMod30": 23
+          },
+          {
+            "g": 12381,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": "large/unknown",
+            "rightKiller": 1657,
+            "leftMod30": 17,
+            "rightMod30": 29
+          },
+          {
+            "g": 12429,
+            "status": "HALF-L",
+            "leftPrime": true,
+            "rightPrime": false,
+            "leftKiller": "prime",
+            "rightKiller": 37,
+            "leftMod30": 29,
+            "rightMod30": 17
+          },
+          {
+            "g": 12435,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 37,
+            "rightKiller": 107,
+            "leftMod30": 23,
+            "rightMod30": 23
+          },
+          {
+            "g": 12441,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": "large/unknown",
+            "rightKiller": 16073,
+            "leftMod30": 17,
+            "rightMod30": 29
+          },
+          {
+            "g": 12525,
+            "status": "HALF-R",
+            "leftPrime": false,
+            "rightPrime": true,
+            "leftKiller": 97,
+            "rightKiller": "prime",
+            "leftMod30": 23,
+            "rightMod30": 23
+          },
+          {
+            "g": 12555,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 26293,
+            "rightKiller": "large/unknown",
+            "leftMod30": 23,
+            "rightMod30": 23
+          },
+          {
+            "g": 12561,
+            "status": "HALF-L",
+            "leftPrime": true,
+            "rightPrime": false,
+            "leftKiller": "prime",
+            "rightKiller": 10979,
+            "leftMod30": 17,
+            "rightMod30": 29
+          },
+          {
+            "g": 12579,
+            "status": "HALF-L",
+            "leftPrime": true,
+            "rightPrime": false,
+            "leftKiller": "prime",
+            "rightKiller": 18713,
+            "leftMod30": 29,
+            "rightMod30": 17
+          },
+          {
+            "g": 12591,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": "large/unknown",
+            "rightKiller": 313,
+            "leftMod30": 17,
+            "rightMod30": 29
+          },
+          {
+            "g": 12609,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 821,
+            "rightKiller": "large/unknown",
+            "leftMod30": 29,
+            "rightMod30": 17
+          },
+          {
+            "g": 12639,
+            "status": "HALF-L",
+            "leftPrime": true,
+            "rightPrime": false,
+            "leftKiller": "prime",
+            "rightKiller": 41,
+            "leftMod30": 29,
+            "rightMod30": 17
+          },
+          {
+            "g": 12705,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 1051,
+            "rightKiller": 331,
+            "leftMod30": 23,
+            "rightMod30": 23
+          },
+          {
+            "g": 12735,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 79,
+            "rightKiller": 7297,
+            "leftMod30": 23,
+            "rightMod30": 23
+          },
+          {
+            "g": 12765,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 5087,
+            "rightKiller": 149,
+            "leftMod30": 23,
+            "rightMod30": 23
+          },
+          {
+            "g": 12789,
+            "status": "HALF-R",
+            "leftPrime": false,
+            "rightPrime": true,
+            "leftKiller": 12197,
+            "rightKiller": "prime",
+            "leftMod30": 29,
+            "rightMod30": 17
+          },
+          {
+            "g": 12801,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 43,
+            "rightKiller": 24373,
+            "leftMod30": 17,
+            "rightMod30": 29
+          },
+          {
+            "g": 12831,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 31,
+            "rightKiller": "large/unknown",
+            "leftMod30": 17,
+            "rightMod30": 29
+          },
+          {
+            "g": 12849,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 1699,
+            "rightKiller": 47,
+            "leftMod30": 29,
+            "rightMod30": 17
+          },
+          {
+            "g": 12891,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": "large/unknown",
+            "rightKiller": 103,
+            "leftMod30": 17,
+            "rightMod30": 29
+          }
+        ]
+      },
+      "rescue": {
+        "g": 12915,
+        "left": "3912698353462163",
+        "right": "3912698353487993",
+        "leftMod30": 23,
+        "rightMod30": 23,
+        "leftPrime": true,
+        "rightPrime": true,
+        "survivesS17": true,
+        "survivesS29": true
+      },
+      "runtimeSeconds": 0.26609277725219727
+    },
+    {
+      "label": "octave_below_P29",
+      "C": "3889122791344954",
+      "E": "7778245582689908",
+      "firstBothG": 627,
+      "trueK": 0.4865776964531175,
+      "K13_430_miss": false,
+      "K13_431_miss": false,
+      "K14_miss": false,
+      "survivorDefinitions": {
+        "S17": 27,
+        "S19": 25,
+        "S23": 23,
+        "S29": 21
+      },
+      "S29Audit": {
+        "totalOddGapsBeforeBoth": 313,
+        "smallKilledToS29": 292,
+        "survivors": 21,
+        "bothComposite": 19,
+        "oneSidePrime": 2,
+        "HALF_L": 2,
+        "HALF_R": 0,
+        "bothPrimeBefore": 0,
+        "leftLarge": 3,
+        "rightLarge": 5,
+        "uniqueLeftKillers": 16,
+        "uniqueRightKillers": 16,
+        "topLeftKillers": [
+          [
+            "large/unknown",
+            3
+          ],
+          [
+            "43",
+            2
+          ],
+          [
+            "367",
+            1
+          ],
+          [
+            "2003",
+            1
+          ],
+          [
+            "61757",
+            1
+          ],
+          [
+            "89",
+            1
+          ],
+          [
+            "197",
+            1
+          ],
+          [
+            "59",
+            1
+          ],
+          [
+            "1951",
+            1
+          ],
+          [
+            "47",
+            1
+          ],
+          [
+            "61",
+            1
+          ],
+          [
+            "61933",
+            1
+          ]
+        ],
+        "topRightKillers": [
+          [
+            "large/unknown",
+            5
+          ],
+          [
+            "37",
+            2
+          ],
+          [
+            "2969",
+            1
+          ],
+          [
+            "733",
+            1
+          ],
+          [
+            "53",
+            1
+          ],
+          [
+            "71",
+            1
+          ],
+          [
+            "67",
+            1
+          ],
+          [
+            "251",
+            1
+          ],
+          [
+            "61",
+            1
+          ],
+          [
+            "127",
+            1
+          ],
+          [
+            "79",
+            1
+          ],
+          [
+            "10009",
+            1
+          ]
+        ]
+      },
+      "tails": {
+        "final20": {
+          "size": 20,
+          "FOE": 18,
+          "HALF_L": 2,
+          "HALF_R": 0,
+          "BOTH": 0,
+          "M1": 0
+        },
+        "final50": {
+          "size": 21,
+          "FOE": 19,
+          "HALF_L": 2,
+          "HALF_R": 0,
+          "BOTH": 0,
+          "M1": 0
+        },
+        "final100": {
+          "size": 21,
+          "FOE": 19,
+          "HALF_L": 2,
+          "HALF_R": 0,
+          "BOTH": 0,
+          "M1": 0
+        },
+        "final20Rows": [
+          {
+            "g": 27,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 43,
+            "rightKiller": 733,
+            "leftMod30": 7,
+            "rightMod30": 1
+          },
+          {
+            "g": 87,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 2003,
+            "rightKiller": 53,
+            "leftMod30": 7,
+            "rightMod30": 1
+          },
+          {
+            "g": 153,
+            "status": "HALF-L",
+            "leftPrime": true,
+            "rightPrime": false,
+            "leftKiller": "prime",
+            "rightKiller": 37,
+            "leftMod30": 1,
+            "rightMod30": 7
+          },
+          {
+            "g": 165,
+            "status": "HALF-L",
+            "leftPrime": true,
+            "rightPrime": false,
+            "leftKiller": "prime",
+            "rightKiller": 71,
+            "leftMod30": 19,
+            "rightMod30": 19
+          },
+          {
+            "g": 183,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": "large/unknown",
+            "rightKiller": "large/unknown",
+            "leftMod30": 1,
+            "rightMod30": 7
+          },
+          {
+            "g": 195,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 61757,
+            "rightKiller": 67,
+            "leftMod30": 19,
+            "rightMod30": 19
+          },
+          {
+            "g": 225,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": "large/unknown",
+            "rightKiller": 251,
+            "leftMod30": 19,
+            "rightMod30": 19
+          },
+          {
+            "g": 297,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 89,
+            "rightKiller": "large/unknown",
+            "leftMod30": 7,
+            "rightMod30": 1
+          },
+          {
+            "g": 315,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 197,
+            "rightKiller": 61,
+            "leftMod30": 19,
+            "rightMod30": 19
+          },
+          {
+            "g": 333,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 59,
+            "rightKiller": 127,
+            "leftMod30": 1,
+            "rightMod30": 7
+          },
+          {
+            "g": 375,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 1951,
+            "rightKiller": 37,
+            "leftMod30": 19,
+            "rightMod30": 19
+          },
+          {
+            "g": 393,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 47,
+            "rightKiller": 79,
+            "leftMod30": 1,
+            "rightMod30": 7
+          },
+          {
+            "g": 417,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 61,
+            "rightKiller": 10009,
+            "leftMod30": 7,
+            "rightMod30": 1
+          },
+          {
+            "g": 477,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 61933,
+            "rightKiller": "large/unknown",
+            "leftMod30": 7,
+            "rightMod30": 1
+          },
+          {
+            "g": 483,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": "large/unknown",
+            "rightKiller": 107,
+            "leftMod30": 1,
+            "rightMod30": 7
+          },
+          {
+            "g": 507,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 31,
+            "rightKiller": "large/unknown",
+            "leftMod30": 7,
+            "rightMod30": 1
+          },
+          {
+            "g": 525,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 199,
+            "rightKiller": 79427,
+            "leftMod30": 19,
+            "rightMod30": 19
+          },
+          {
+            "g": 543,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 43,
+            "rightKiller": 5099,
+            "leftMod30": 1,
+            "rightMod30": 7
+          },
+          {
+            "g": 573,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 263,
+            "rightKiller": "large/unknown",
+            "leftMod30": 1,
+            "rightMod30": 7
+          },
+          {
+            "g": 615,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 269,
+            "rightKiller": 179,
+            "leftMod30": 19,
+            "rightMod30": 19
+          }
+        ]
+      },
+      "rescue": {
+        "g": 627,
+        "left": "3889122791344327",
+        "right": "3889122791345581",
+        "leftMod30": 7,
+        "rightMod30": 1,
+        "leftPrime": true,
+        "rightPrime": true,
+        "survivesS17": true,
+        "survivesS29": true
+      },
+      "runtimeSeconds": 0.016397476196289062
+    },
+    {
+      "label": "octave_above_P29",
+      "C": "3889135730731414",
+      "E": "7778271461462828",
+      "firstBothG": 1557,
+      "trueK": 1.2082955868306542,
+      "K13_430_miss": false,
+      "K13_431_miss": false,
+      "K14_miss": false,
+      "survivorDefinitions": {
+        "S17": 69,
+        "S19": 62,
+        "S23": 56,
+        "S29": 51
+      },
+      "S29Audit": {
+        "totalOddGapsBeforeBoth": 778,
+        "smallKilledToS29": 727,
+        "survivors": 51,
+        "bothComposite": 38,
+        "oneSidePrime": 13,
+        "HALF_L": 8,
+        "HALF_R": 5,
+        "bothPrimeBefore": 0,
+        "leftLarge": 6,
+        "rightLarge": 11,
+        "uniqueLeftKillers": 35,
+        "uniqueRightKillers": 34,
+        "topLeftKillers": [
+          [
+            "large/unknown",
+            6
+          ],
+          [
+            "31",
+            3
+          ],
+          [
+            "37",
+            2
+          ],
+          [
+            "1949",
+            1
+          ],
+          [
+            "47",
+            1
+          ],
+          [
+            "89",
+            1
+          ],
+          [
+            "769",
+            1
+          ],
+          [
+            "113",
+            1
+          ],
+          [
+            "179",
+            1
+          ],
+          [
+            "151",
+            1
+          ],
+          [
+            "2861",
+            1
+          ],
+          [
+            "83",
+            1
+          ]
+        ],
+        "topRightKillers": [
+          [
+            "large/unknown",
+            11
+          ],
+          [
+            "47",
+            2
+          ],
+          [
+            "41",
+            2
+          ],
+          [
+            "173",
+            1
+          ],
+          [
+            "467",
+            1
+          ],
+          [
+            "733",
+            1
+          ],
+          [
+            "101",
+            1
+          ],
+          [
+            "4523",
+            1
+          ],
+          [
+            "163",
+            1
+          ],
+          [
+            "8819",
+            1
+          ],
+          [
+            "67",
+            1
+          ],
+          [
+            "2131",
+            1
+          ]
+        ]
+      },
+      "tails": {
+        "final20": {
+          "size": 20,
+          "FOE": 19,
+          "HALF_L": 1,
+          "HALF_R": 0,
+          "BOTH": 0,
+          "M1": 0
+        },
+        "final50": {
+          "size": 50,
+          "FOE": 38,
+          "HALF_L": 7,
+          "HALF_R": 5,
+          "BOTH": 0,
+          "M1": 5
+        },
+        "final100": {
+          "size": 51,
+          "FOE": 38,
+          "HALF_L": 8,
+          "HALF_R": 5,
+          "BOTH": 0,
+          "M1": 5
+        },
+        "final20Rows": [
+          {
+            "g": 885,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 433,
+            "rightKiller": 89,
+            "leftMod30": 19,
+            "rightMod30": 19
+          },
+          {
+            "g": 945,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 271,
+            "rightKiller": 167,
+            "leftMod30": 19,
+            "rightMod30": 19
+          },
+          {
+            "g": 987,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 211,
+            "rightKiller": 461,
+            "leftMod30": 7,
+            "rightMod30": 1
+          },
+          {
+            "g": 993,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 317,
+            "rightKiller": "large/unknown",
+            "leftMod30": 1,
+            "rightMod30": 7
+          },
+          {
+            "g": 1005,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 191,
+            "rightKiller": 31,
+            "leftMod30": 19,
+            "rightMod30": 19
+          },
+          {
+            "g": 1023,
+            "status": "HALF-L",
+            "leftPrime": true,
+            "rightPrime": false,
+            "leftKiller": "prime",
+            "rightKiller": 79,
+            "leftMod30": 1,
+            "rightMod30": 7
+          },
+          {
+            "g": 1035,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 53,
+            "rightKiller": 5077,
+            "leftMod30": 19,
+            "rightMod30": 19
+          },
+          {
+            "g": 1053,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 1039,
+            "rightKiller": 52903,
+            "leftMod30": 1,
+            "rightMod30": 7
+          },
+          {
+            "g": 1095,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 59,
+            "rightKiller": 4637,
+            "leftMod30": 19,
+            "rightMod30": 19
+          },
+          {
+            "g": 1173,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 41,
+            "rightKiller": "large/unknown",
+            "leftMod30": 1,
+            "rightMod30": 7
+          },
+          {
+            "g": 1233,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 29501,
+            "rightKiller": 3319,
+            "leftMod30": 1,
+            "rightMod30": 7
+          },
+          {
+            "g": 1257,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 347,
+            "rightKiller": 47,
+            "leftMod30": 7,
+            "rightMod30": 1
+          },
+          {
+            "g": 1287,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 127,
+            "rightKiller": 41,
+            "leftMod30": 7,
+            "rightMod30": 1
+          },
+          {
+            "g": 1305,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 7247,
+            "rightKiller": 83299,
+            "leftMod30": 19,
+            "rightMod30": 19
+          },
+          {
+            "g": 1317,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 2971,
+            "rightKiller": 349,
+            "leftMod30": 7,
+            "rightMod30": 1
+          },
+          {
+            "g": 1323,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": "large/unknown",
+            "rightKiller": 131,
+            "leftMod30": 1,
+            "rightMod30": 7
+          },
+          {
+            "g": 1365,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 98953,
+            "rightKiller": 193,
+            "leftMod30": 19,
+            "rightMod30": 19
+          },
+          {
+            "g": 1407,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 97,
+            "rightKiller": 1129,
+            "leftMod30": 7,
+            "rightMod30": 1
+          },
+          {
+            "g": 1425,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 557,
+            "rightKiller": "large/unknown",
+            "leftMod30": 19,
+            "rightMod30": 19
+          },
+          {
+            "g": 1533,
+            "status": "FOE",
+            "leftPrime": false,
+            "rightPrime": false,
+            "leftKiller": 37,
+            "rightKiller": 41,
+            "leftMod30": 1,
+            "rightMod30": 7
+          }
+        ]
+      },
+      "rescue": {
+        "g": 1557,
+        "left": "3889135730729857",
+        "right": "3889135730732971",
+        "leftMod30": 7,
+        "rightMod30": 1,
+        "leftPrime": true,
+        "rightPrime": true,
+        "survivesS17": true,
+        "survivesS29": true
+      },
+      "runtimeSeconds": 0.03351950645446777
+    }
+  ],
+  "mainFindings": [
+    "S17/S29 mismatch is explained: boss has S17=757 and S29=582 under normalized odd-gap definitions.",
+    "Boss remains highest-pressure row in this packet: trueK=13.4309400510447 and firstBothG=17307.",
+    "K13.431 holds for all five tested rows.",
+    "P29 octave below and above collapse sharply; not octave bosses.",
+    "Hot non-boss rows stay trueK around 10 but do not reach boss wall.",
+    "Final-20 tails still show bothComposite pressure and no BOTH before rescue."
+  ],
+  "scoreUpdate": {
+    "Framework / notation": "98%",
+    "Finite engine stack": "91%",
+    "Classification consistency": "90%",
+    "No-Escape target clarity": "86%",
+    "Actual No-Escape proof": "18-20%",
+    "Universal Goldbach proof": "24-27%"
+  },
+  "warning": "FINITE EVIDENCE ONLY. UNIVERSAL PROOF REMAINS OPEN. HELD FINITE DOES NOT MEAN PROVEN."
+}
