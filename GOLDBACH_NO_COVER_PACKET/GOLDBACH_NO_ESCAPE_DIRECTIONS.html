@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Goldbach No-Escape Directions</title>
+<style>
+  :root {
+    --ink: #111827;
+    --muted: #5b6472;
+    --paper: #f7f4ed;
+    --panel: #fffdf7;
+    --line: #d8d0c2;
+    --steel: #263342;
+    --amber: #c77719;
+    --green: #1f7a52;
+    --red: #a33b31;
+    --blue: #26659c;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    color: var(--ink);
+    background:
+      linear-gradient(90deg, rgba(38,51,66,.05) 1px, transparent 1px),
+      linear-gradient(rgba(38,51,66,.04) 1px, transparent 1px),
+      var(--paper);
+    background-size: 28px 28px;
+    font-family: Georgia, "Times New Roman", serif;
+  }
+
+  .page {
+    width: min(1180px, calc(100% - 28px));
+    margin: 0 auto;
+    padding: 28px 0 54px;
+  }
+
+  .topbar {
+    display: grid;
+    grid-template-columns: 1.25fr .75fr;
+    gap: 18px;
+    align-items: stretch;
+    margin-bottom: 18px;
+  }
+
+  .hero, .status, .section {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    box-shadow: 0 12px 34px rgba(38, 51, 66, .08);
+  }
+
+  .hero {
+    padding: 26px;
+  }
+
+  .kicker {
+    color: var(--amber);
+    font: 700 12px/1.2 Verdana, sans-serif;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+
+  h1, h2, h3 {
+    margin: 0;
+    line-height: 1.05;
+    letter-spacing: 0;
+  }
+
+  h1 {
+    margin-top: 10px;
+    max-width: 760px;
+    font-size: clamp(34px, 6vw, 68px);
+  }
+
+  h2 {
+    font-size: clamp(24px, 3vw, 34px);
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  p {
+    margin: 10px 0 0;
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.55;
+  }
+
+  .status {
+    display: grid;
+    gap: 10px;
+    padding: 18px;
+  }
+
+  .stamp {
+    border: 1px solid var(--steel);
+    color: var(--steel);
+    padding: 10px;
+    font: 700 13px/1.3 Verdana, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .status-row {
+    display: grid;
+    grid-template-columns: 92px 1fr;
+    gap: 10px;
+    padding-top: 10px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font: 13px/1.35 Verdana, sans-serif;
+  }
+
+  .status-row strong {
+    color: var(--ink);
+  }
+
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 18px 0;
+  }
+
+  .nav a {
+    color: var(--steel);
+    border: 1px solid var(--line);
+    background: rgba(255,255,255,.52);
+    border-radius: 999px;
+    padding: 8px 12px;
+    font: 700 12px/1 Verdana, sans-serif;
+    text-decoration: none;
+  }
+
+  .section {
+    margin-top: 18px;
+    padding: 22px;
+  }
+
+  .section-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: baseline;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 14px;
+    margin-bottom: 18px;
+  }
+
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    color: var(--steel);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 6px 10px;
+    font: 700 11px/1 Verdana, sans-serif;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .grid.three {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .card {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 15px;
+    background: rgba(255,255,255,.56);
+  }
+
+  .card h3 {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 9px;
+  }
+
+  .label {
+    color: var(--muted);
+    font: 700 11px/1 Verdana, sans-serif;
+    text-transform: uppercase;
+  }
+
+  pre {
+    margin: 10px 0 0;
+    padding: 12px;
+    overflow-x: auto;
+    color: #16202b;
+    background: #f0eadf;
+    border: 1px solid #d7cbbb;
+    border-radius: 6px;
+    font: 14px/1.45 "SFMono-Regular", Consolas, monospace;
+    white-space: pre-wrap;
+  }
+
+  .flow {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+    counter-reset: step;
+  }
+
+  .step {
+    position: relative;
+    min-height: 154px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 14px;
+    background: #fffaf0;
+  }
+
+  .step::before {
+    counter-increment: step;
+    content: counter(step);
+    display: inline-grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    margin-bottom: 10px;
+    color: #fff;
+    background: var(--steel);
+    border-radius: 50%;
+    font: 700 13px/1 Verdana, sans-serif;
+  }
+
+  .step strong {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 17px;
+  }
+
+  .step span {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.42;
+  }
+
+  .timeline {
+    display: grid;
+    gap: 10px;
+  }
+
+  .line-item {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 14px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 14px;
+    background: rgba(255,255,255,.58);
+  }
+
+  .line-item b {
+    color: var(--steel);
+    font: 700 13px/1.35 Verdana, sans-serif;
+    text-transform: uppercase;
+  }
+
+  .line-item div {
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  .verdicts {
+    display: grid;
+    gap: 8px;
+  }
+
+  .verdict {
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    gap: 12px;
+    align-items: start;
+    padding: 10px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: rgba(255,255,255,.54);
+  }
+
+  .verdict code {
+    color: var(--steel);
+    font-weight: 700;
+  }
+
+  .ok { color: var(--green); }
+  .open { color: var(--amber); }
+  .danger { color: var(--red); }
+  .info { color: var(--blue); }
+
+  code {
+    font-family: "SFMono-Regular", Consolas, monospace;
+  }
+
+  @media (max-width: 880px) {
+    .topbar, .grid, .grid.three, .flow {
+      grid-template-columns: 1fr;
+    }
+
+    .section-head {
+      display: grid;
+    }
+
+    .line-item, .verdict {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+<main class="page">
+  <div class="topbar">
+    <section class="hero">
+      <div class="kicker">Goldbach Hotel City - proof directions</div>
+      <h1>No-Escape Hotel Flow</h1>
+      <p>
+        This page is the map for what is happening: every even number becomes a center,
+        every center opens mirror rooms, blockers try to close those rooms, and a rescue
+        happens when one gap escapes as BOTH.
+      </p>
+    </section>
+
+    <aside class="status">
+      <div class="stamp">Target lemma - formalized, not proven</div>
+      <div class="status-row"><span>Mission</span><strong>Large-Prime No-Cover Lemma</strong></div>
+      <div class="status-row"><span>Question</span><strong>Can blockers cover every survivor room?</strong></div>
+      <div class="status-row"><span>Rule</span><strong>Finite evidence is not proof</strong></div>
+      <div class="status-row"><span>Output</span><strong>Rescue, coverage, blockers, survivors</strong></div>
+    </aside>
+  </div>
+
+  <nav class="nav" aria-label="Page sections">
+    <a href="#flow">Flow</a>
+    <a href="#escape">Escape</a>
+    <a href="#current">Current State</a>
+    <a href="#equations">Equations</a>
+    <a href="#laws">Laws</a>
+    <a href="#lemmas">Lemmas</a>
+    <a href="#targets">Targets</a>
+    <a href="#blockers">Blockers</a>
+    <a href="#engines">Engine Rule</a>
+    <a href="#directions">Directions</a>
+  </nav>
+
+  <section class="section" id="flow">
+    <div class="section-head">
+      <h2>How The Machine Runs</h2>
+      <span class="tag">directions</span>
+    </div>
+    <div class="flow">
+      <div class="step"><strong>Start with E</strong><span>Every even number is written as <code>E = 2C</code>. The center <code>C</code> is the hotel address.</span></div>
+      <div class="step"><strong>Open rooms</strong><span>Each gap <code>g</code> makes one mirror room: <code>(C-g, C+g)</code>.</span></div>
+      <div class="step"><strong>Keep the sum fixed</strong><span>The room always adds back to <code>E</code>. The only question is prime status.</span></div>
+      <div class="step"><strong>Test escape</strong><span>If both sides are prime, <code>BOTH_C(g)=1</code>. That gap escapes.</span></div>
+      <div class="step"><strong>Filter blockers</strong><span>Small primes kill rooms by congruence. Surviving gaps become the live pressure set.</span></div>
+      <div class="step"><strong>Audit large primes</strong><span>Large composite factors can still close survivors. This is the hard part.</span></div>
+      <div class="step"><strong>Decide result</strong><span>One both-prime room is enough. Full failure means every valid room is blocked.</span></div>
+      <div class="step"><strong>Attack theorem</strong><span>Find what full failure must look like, then prove that shape cannot exist forever.</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="escape">
+    <div class="section-head">
+      <h2>Escape Meaning</h2>
+      <span class="tag">clean target</span>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <h3>Escape</h3>
+        <pre>C - g = prime
+C + g = prime
+
+escape = BOTH</pre>
+        <p>A gap escapes when both mirror sides are prime.</p>
+      </div>
+      <div class="card">
+        <h3>No Escape</h3>
+        <pre>for every tested g:
+BOTH_C(g) = 0
+
+no escape = every tested gap fails</pre>
+        <p>No escape means every tested gap is blocked on the left side, right side, or both sides.</p>
+      </div>
+      <div class="card">
+        <h3>Workbench Target</h3>
+        <pre>W = floor(K log^2(C))
+
+small-prime filter -> survivors
+large-prime killers try to cover survivors
+target: they cannot cover them all</pre>
+      </div>
+      <div class="card">
+        <h3>Perfect Killer Net</h3>
+        <pre>left kill lanes + right kill lanes
+= total survivor coverage
+
+full failure requires this net
+to cover every survivor gap</pre>
+        <p>The proof target is to show this complete net cannot persist forever.</p>
+      </div>
+      <div class="card">
+        <h3>What Not To Say</h3>
+        <pre>Do not say:
+K13.431 is proven
+tail pressure proves Goldbach
+No-Escape is solved
+
+Say:
+The No-Escape target is the missing theorem.</pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="current">
+    <div class="section-head">
+      <h2>Current State Check</h2>
+      <span class="tag">May 2026 evidence</span>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <h3>Boss Row</h3>
+        <pre>C = 3,889,129,261,038,184
+E = 7,778,258,522,076,368
+firstBothG = 17,307
+D = 34,614
+D mod 30 = 24
+trueK = 13.4309400510447
+K13.430 = MISS
+K13.431 = HIT</pre>
+        <p>Current finite backwall: <code>13.430 &lt; wall &lt;= 13.431</code>.</p>
+      </div>
+      <div class="card">
+        <h3>Canonical Definition</h3>
+        <pre>FILTERED_NO_ESCAPE_DMV is canonical.
+
+pairStart begins after the S17 survivor filter.
+P29, tail, and suffix are measured on the filtered audit row.</pre>
+        <p>Use this convention for proof work, reports, and future engine output.</p>
+      </div>
+      <div class="card">
+        <h3>Legacy Note</h3>
+        <pre>RAW_START_DMV is archived only.
+
+Older notes may say:
+boss pairStart = 3|5
+P29 = 583
+S17 = 758
+tail P29 = 7 / 17 / 29</pre>
+        <p>Do not use raw-start IDs as the main proof DMV. The cleanup test explains the old <code>758 vs 582</code> conflict as S17/P29 definition mixing.</p>
+      </div>
+      <div class="card">
+        <h3>Boss Filtered Audit ID</h3>
+        <pre>pairStart = L|L
+P29 = 582
+S17 = 757
+tail P29 = 31 / 60 / 118
+DMV = L|L / D24 / P29_BOSS / TAIL_STRONG / K13</pre>
+        <p>This is the current No-Escape suite convention.</p>
+      </div>
+    </div>
+    <div class="grid three" style="margin-top:12px;">
+      <div class="card"><h3>Still Current</h3><p>Boss remains the top known <code>trueK</code> row. The 3-hour assault found no <code>K13.431</code> miss and no full K-window coverage candidate.</p></div>
+      <div class="card"><h3>New Since Older Notes</h3><p>The 3-hour assault found non-boss K13-class pressure rows and raw survivor mass up to <code>S29 = 706</code>. This weakens boss uniqueness by mass, but not by late rescue.</p></div>
+      <div class="card"><h3>Canonical Rule</h3><p>Claims using <code>L|L / D24 / P29_BOSS</code> are current. Claims using <code>3|5 / D24 / P29_BOSS</code> are legacy raw-start notes.</p></div>
+    </div>
+    <div class="grid three" style="margin-top:12px;">
+      <div class="card">
+        <h3>Filtered Validator</h3>
+        <pre>records converted = 1,265
+proof-scale rows = 65
+returnAddress mismatches = 0
+changed DMV rows = 1,265</pre>
+        <p>Legacy raw-start rows were converted into canonical filtered No-Escape rows.</p>
+      </div>
+      <div class="card">
+        <h3>Proof-Scale Result</h3>
+        <pre>C >= 100,000
+K13.431 misses = 0
+full coverage before rescue = 0
+boss filtered DMV = L|L / D24 / P29_BOSS / TAIL_STRONG / K13</pre>
+      </div>
+      <div class="card">
+        <h3>Boss Blocker Split</h3>
+        <pre>S17 survivors before rescue = 757
+both composite = 543
+left-prime only = 109
+right-prime only = 105
+unresolved large-composite rows = 669</pre>
+        <p>This is the current exact shape to attack.</p>
+      </div>
+    </div>
+    <div class="grid three" style="margin-top:12px;">
+      <div class="card">
+        <h3>Local Pump Cleanup</h3>
+        <pre>rows tested = 5
+boss S17 = 757
+boss S29 = 582
+K13.431 misses = 0
+octave copies = not bosses</pre>
+        <p>Clean finite test. It confirms normalized survivor definitions and keeps boss as the highest-pressure row in that packet.</p>
+      </div>
+      <div class="card">
+        <h3>Boss Final-20 S29 Tail</h3>
+        <pre>FOE = 13
+HALF-L = 4
+HALF-R = 3
+BOTH before rescue = 0
+escape g = 17,307</pre>
+        <p>The killer net stays tight, but breaks at the BOTH escape.</p>
+      </div>
+      <div class="card">
+        <h3>Progress Snapshot</h3>
+        <pre>Framework / notation        99%
+Finite engine stack         98%
+Classification consistency  98%
+No-Escape target clarity    97%
+Large-Prime No-Cover proof  44-46%
+Universal Goldbach proof    42-44%</pre>
+      </div>
+    </div>
+    <div class="grid three" style="margin-top:12px;">
+      <div class="card">
+        <h3>Final 5-Min Bridge</h3>
+        <pre>boss top200 leftovers = 91
+boss cluster30 = 100%
+boss HALF-L = 53
+boss right killers = 53
+max right repeat = 1</pre>
+        <p>The current boss obstacle is a shallow mod-30 pocket with diffuse right-side killer support.</p>
+      </div>
+      <div class="card">
+        <h3>Imported Local Corroboration</h3>
+        <pre>top200 leftovers = 88
+mod210 buckets = 15
+mod2310 buckets = 68
+mod30030 buckets = 88
+mod510510 buckets = 88
+max right repeat = 1</pre>
+        <p>The local tie-model changes counts but preserves the same bridge shape: deeper breakup plus diffuse right killers.</p>
+      </div>
+      <div class="card">
+        <h3>Bridge Read</h3>
+        <pre>shallow mod-30 cluster = yes
+deep compact cluster = no
+right killer machine = diffuse
+locked line = BOSS_MOD30_CLUSTER_BREAKS_INTO_MANY_HIGHER_MOD_BUCKETS_AND_RIGHT_KILLERS_DIFFUSE</pre>
+        <p>This is the exact obstruction that the future overlap-loss bound has to defeat.</p>
+      </div>
+    </div>
+    <div class="grid three" style="margin-top:12px;">
+      <div class="card">
+        <h3>Best Theorem Story</h3>
+        <pre>1. S29 = 582
+2. leftovers@200 = 91, @291 = 0
+3. mod30 boxes = 3
+4. deeper boxes split apart
+5. HALF-L = 53, right killers = 53, max repeat = 1
+6. RIGHT_KILLERS_DIFFUSE</pre>
+        <p>This is the cleanest current proof story for the boss row.</p>
+      </div>
+      <div class="card">
+        <h3>Locked Sentence</h3>
+        <pre>Once survivor gaps are boxed by deeper residue structure,
+the large-prime killers must also be boxed as periodic lanes.
+The obstruction fails to stay compact when the survivor boxes
+split faster than the killer lanes can repeat.</pre>
+        <p>This is the theorem-facing version to keep stable across the packet.</p>
+      </div>
+      <div class="card">
+        <h3>Short Version</h3>
+        <pre>The rooms multiply faster
+than the guards repeat.</pre>
+        <p>Same instrument, shorter line.</p>
+      </div>
+    </div>
+    <div class="grid one" style="margin-top:12px;">
+      <div class="card">
+        <h3>The Rooms Multiply Faster Than The Guards Repeat</h3>
+        <pre>1. Box count rises: 3 -> 15 -> 68 -> 88 -> 88
+2. Largest bucket collapses: 36.36% -> 1.14%
+3. Right-killer repeat stays max 1
+4. No hidden compact cover found in bounded search</pre>
+        <p>This is the heart of the current bridge.</p>
+      </div>
+    </div>
+    <div class="grid three" style="margin-top:12px;">
+      <div class="card">
+        <h3>3H No-Escape Assault</h3>
+        <pre>runtime = 10,800.043s
+workers = 8
+unique rows = 102,211,417
+K13.431 misses = 0
+full coverage candidates = 0
+max trueK = 13.4309400510447
+max S29 = 706</pre>
+        <p>Fresh finite evidence supports no-cover direction, but does not prove it.</p>
+      </div>
+      <div class="card">
+        <h3>New K13-Class Visitors</h3>
+        <pre>C = 3,209,851,850,270,339
+trueK = 13.201583059795
+S29 = 557
+DMV = 19|L / D0 / P29_BOSS / TAIL_STRONG / K13
+
+C = 59,825,417,609,829,034
+trueK = 13.157604706523
+S29 = 657
+DMV = L|31 / D0 / P29_BOSS / TAIL_STRONG / K13</pre>
+        <p>These are bridge/visitor rows below boss, not a K13.431 break.</p>
+      </div>
+      <div class="card">
+        <h3>Max Survivor Mass</h3>
+        <pre>C = 3,268,329,311,518,612,504
+trueK = 11.639244409992
+S29 = 706
+S37 = 650
+S41 = 614
+DMV = L|L / D6 / P29_BOSS / TAIL_STRONG / K10</pre>
+        <p>Raw mass can beat boss, but the late-rescue wall still stayed below boss.</p>
+      </div>
+    </div>
+    <div class="grid three" style="margin-top:12px;">
+      <div class="card">
+        <h3>Next3 Followup</h3>
+        <pre>rows analyzed = 23
+K13.431 breaks = 0
+audit errors = 0
+verdict = FINITE_DIFFUSE_KILLER_NET_PATTERN_STRONG</pre>
+        <p>Exact residue-lane diagrams, normalized survivor mass, and finite covering-net obstruction checks are complete.</p>
+      </div>
+      <div class="card">
+        <h3>Normalized Mass Result</h3>
+        <pre>boss S29/log2 = 0.451656
+best visitor S29/log2 = 0.440262
+raw max S29 row S29/log2 = 0.388470</pre>
+        <p>Normalization puts boss back on top. Large raw survivor mass is partly scale mass.</p>
+      </div>
+      <div class="card">
+        <h3>Diffuse Net Result</h3>
+        <pre>boss top20 lane cover = 36.43%
+boss greedy lanes = 291
+visitor top20 lane cover = 35.77%
+visitor greedy lanes = 311</pre>
+        <p>The high-pressure killer nets are broad and diffuse, not compact top-lane covers.</p>
+      </div>
+      <div class="card">
+        <h3>Overlap-Waste Result</h3>
+        <pre>Coverage - OverlapLoss &lt; Survivors
+is the missing bridge.
+
+hostile uncovered after 291 = 22
+raw max S29 uncovered after 291 = 52</pre>
+        <p>Top 291 lanes still leave survivors in two strong rows. This is finite support for the overlap-loss direction only.</p>
+      </div>
+      <div class="card">
+        <h3>Uncovered Survivor Shape</h3>
+        <pre>hostile top g mod 30 = 15 / 27 / 3
+all 22 are HALF_L
+
+raw max S29 top g mod 30 = 27 / 15 / 3
+HALF_L dominates</pre>
+        <p>The leftovers are real, but they partially cluster. The next theorem step must explain structured pockets, not just diffuse scatter.</p>
+      </div>
+    </div>
+    <div class="grid three" style="margin-top:12px;">
+      <div class="card">
+        <h3>Validator Files</h3>
+        <pre>GOLDBACH_FILTERED_NO_ESCAPE_VALIDATOR.md
+evidence/GOLDBACH_FILTERED_NO_ESCAPE_VALIDATOR.json
+evidence/goldbach_filtered_no_escape_validator_records.csv</pre>
+      </div>
+      <div class="card">
+        <h3>Cleanup Files</h3>
+        <pre>GOLDBACH_LOCAL_PUMP_CLEANUP_TESTS.md
+evidence/GOLDBACH_LOCAL_PUMP_CLEANUP_TESTS.json</pre>
+      </div>
+      <div class="card">
+        <h3>3H Assault Files</h3>
+        <pre>goldbach_3h_8core_no_escape_proof_assault.js
+GOLDBACH_3H_8CORE_NO_ESCAPE_PROOF_ASSAULT.md
+evidence/GOLDBACH_3H_8CORE_NO_ESCAPE_PROOF_ASSAULT.json</pre>
+      </div>
+      <div class="card">
+        <h3>Next3 Files</h3>
+        <pre>goldbach_next3_no_escape_followup.js
+GOLDBACH_NEXT3_NO_ESCAPE_FOLLOWUP.md
+evidence/GOLDBACH_NEXT3_NO_ESCAPE_FOLLOWUP.json</pre>
+      </div>
+    </div>
+    <div class="grid three" style="margin-top:12px;">
+      <div class="card">
+        <h3>Next Proof Work</h3>
+        <pre>symbolic lower bound for independent killer lanes
+scale-matched random control audit
+proof-target note for high-rank covering nets
+boss vs K13-class visitor split model</pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="equations">
+    <div class="section-head">
+      <h2>Core Equations</h2>
+      <span class="tag">notation</span>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <h3>Center Equation <span class="label">law setup</span></h3>
+        <pre>E = 2C</pre>
+        <p>Goldbach becomes a center problem. The even number is the building; <code>C</code> is the address.</p>
+      </div>
+      <div class="card">
+        <h3>Mirror Room <span class="label">room setup</span></h3>
+        <pre>Room(C,g) = (C - g, C + g)</pre>
+        <p>Each valid gap <code>g</code> creates a left wall and right wall around the center.</p>
+      </div>
+      <div class="card">
+        <h3>Mirror Identity <span class="label">proven</span></h3>
+        <pre>(C - g) + (C + g) = 2C = E</pre>
+        <p>The sum never moves. Only the prime/composite state changes.</p>
+      </div>
+      <div class="card">
+        <h3>Left And Right <span class="label">canonical</span></h3>
+        <pre>L_C(g) = C - g
+R_C(g) = C + g
+L_C(g) + R_C(g) = E</pre>
+      </div>
+      <div class="card">
+        <h3>BOTH Indicator <span class="label">success test</span></h3>
+        <pre>BOTH_C(g) = 1_prime(C-g) * 1_prime(C+g)
+
+BOTH_C(g) = 1 iff C-g and C+g are both prime
+BOTH_C(g) = 0 otherwise</pre>
+      </div>
+      <div class="card">
+        <h3>Rescue Count <span class="label">window count</span></h3>
+        <pre>S(C,W) = sum_{0 <= g <= W} BOTH_C(g)
+       = sum_{0 <= g <= W} 1_prime(C-g) * 1_prime(C+g)
+
+S(C,W) >= 1 means rescued inside W</pre>
+      </div>
+      <div class="card">
+        <h3>K Window <span class="label">pressure window</span></h3>
+        <pre>W_K(C) = floor(K log^2(C))</pre>
+        <p>The bounded proof target asks whether every large center gets rescued before this window ends.</p>
+      </div>
+      <div class="card">
+        <h3>trueK <span class="label">observed pressure</span></h3>
+        <pre>trueK(C) = firstBothG(C) / log^2(C)</pre>
+        <p>A larger <code>trueK</code> means the first rescue came later relative to scale.</p>
+      </div>
+      <div class="card">
+        <h3>Folded Product <span class="label">structure</span></h3>
+        <pre>(C-g)(C+g) = C^2 - g^2</pre>
+        <p>A BOTH hit is the folded product being prime times prime.</p>
+      </div>
+      <div class="card">
+        <h3>Failure Equation <span class="label">counterexample shape</span></h3>
+        <pre>Goldbach fails at C only if:
+
+for all valid g, BOTH_C(g) = 0</pre>
+        <p>Failure is not random. It means full blocker coverage.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="laws">
+    <div class="section-head">
+      <h2>Laws And Patterns</h2>
+      <span class="tag">current stack</span>
+    </div>
+    <div class="grid">
+      <div class="card"><h3>1. Center Law</h3><p>Every even number is represented as <code>E = 2C</code>.</p></div>
+      <div class="card"><h3>2. Mirror Pair Law</h3><p>Every gap <code>g</code> creates the mirror pair <code>C-g</code> and <code>C+g</code>.</p></div>
+      <div class="card"><h3>3. Mirror Identity Law</h3><p><code>(C-g) + (C+g) = 2C = E</code>.</p></div>
+      <div class="card"><h3>4. BOTH-Hit Law</h3><p>Goldbach rescue occurs when <code>BOTH_C(g)=1</code>.</p></div>
+      <div class="card"><h3>5. Mirror Desert Law</h3><p>A desert is a stretch where <code>BOTH_C(g)=0</code>.</p></div>
+      <div class="card"><h3>6. K-Pressure Law</h3><p><code>trueK = firstBothG / log^2(C)</code>.</p></div>
+      <div class="card"><h3>7. K13.431 Finite Backwall Pattern</h3><p><code>K=12</code> and <code>K=13</code> are broken in finite testing. <code>K13.431</code> is the current held finite backwall.</p></div>
+      <div class="card"><h3>8. Balanced Two-Sided Obstruction Law</h3><p>Hard rows show balanced left/right obstruction before the BOTH hit in current finite data.</p></div>
+      <div class="card"><h3>9. Simultaneous Bilateral Depletion Pattern</h3><p>Hard rows happen when left and right mirror sides are depleted together across the same gap range.</p></div>
+      <div class="card"><h3>10. Bilateral Jacobsthal Coverage Pattern</h3><p>Hard rows nearly saturate small-prime bilateral coverage. Higher-prime extension stretches obstruction while staying balanced.</p></div>
+      <div class="card"><h3>11. Higher-Prime Extension Pattern</h3><p>Higher-prime factors extend obstruction beyond selected small-prime wheel coverage.</p></div>
+      <div class="card"><h3>12. Mirror Desert DNA Pattern</h3><p>Hard rows show repeated FOE/HALF signatures before rescue.</p></div>
+      <div class="card"><h3>13. Spark Alignment Pattern</h3><p>HALF sparks appear on both sides before rescue and stay balanced in hard rows.</p></div>
+      <div class="card"><h3>14. Residue-Octave Release Pattern</h3><p>Bad residue pressure can spike, then release across higher <code>k</code> copies.</p></div>
+      <div class="card"><h3>15. Folded Mirror Product Law</h3><p><code>(C-g)(C+g) = C^2 - g^2</code>. A BOTH hit corresponds to prime times prime.</p></div>
+      <div class="card"><h3>16. Mirror Center-Of-Mass Law</h3><p>The arithmetic average of every mirror pair is <code>C</code>. Value balance is exact; prime-state balance has to align.</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="lemmas">
+    <div class="section-head">
+      <h2>Lemmas</h2>
+      <span class="tag">proof chain</span>
+    </div>
+    <div class="timeline">
+      <div class="line-item"><b>Lemma 1<br><span class="ok">proven</span></b><div>Mirror Identity: for every even <code>E = 2C</code> and every gap <code>g</code>, <code>(C-g)+(C+g)=E</code>.</div></div>
+      <div class="line-item"><b>Lemma 2<br><span class="info">definition</span></b><div>BOTH-Hit Definition: <code>BOTH_C(g)=1</code> iff <code>C-g</code> and <code>C+g</code> are prime.</div></div>
+      <div class="line-item"><b>Lemma 3<br><span class="ok">proven</span></b><div>Goldbach Equivalence: for <code>E=2C</code>, Goldbach holds iff some <code>g</code> has <code>BOTH_C(g)=1</code>.</div></div>
+      <div class="line-item"><b>Lemma 4<br><span class="open">open target</span></b><div>Rescue Lemma Target: there exist <code>K&gt;0</code> and <code>C0</code> such that every <code>C&gt;=C0</code> has <code>S(C, floor(K log^2(C))) &gt;= 1</code>.</div></div>
+      <div class="line-item"><b>Lemma 5<br><span class="info">finite</span></b><div>Finite Base Lemma: for a selected cutoff <code>C0</code>, centers below <code>C0</code> can be checked directly by computation.</div></div>
+      <div class="line-item"><b>Lemma 6<br><span class="info">finite</span></b><div>K13.431 Finite Evidence Lemma: current targeted packets show zero <code>K13.431</code> misses, with the boss row setting the wall at <code>trueK = 13.4309400510447</code>.</div></div>
+      <div class="line-item"><b>Lemma 7<br><span class="info">finite</span></b><div>Bilateral Depletion Lemma: hard rows show balanced left/right obstruction before rescue.</div></div>
+      <div class="line-item"><b>Lemma 8<br><span class="info">finite</span></b><div>Bilateral Jacobsthal Coverage Lemma: hard rows show stronger bilateral coverage than matched easy rows across wheels.</div></div>
+      <div class="line-item"><b>Lemma 9<br><span class="info">finite</span></b><div>Higher-Prime Extension Lemma: higher-prime factors extend obstruction beyond selected small-prime wheel coverage.</div></div>
+      <div class="line-item"><b>Lemma 10<br><span class="open">open target</span></b><div>Overlap-Loss Lemma Target: killer-lane unions must lose enough effective coverage through overlap that they cannot cover the full survivor set.</div></div>
+      <div class="line-item"><b>Large-Prime No-Cover Lemma<br><span class="open">formalized, not proven</span></b><div>For sufficiently large <code>C</code>, the survivor set <code>S_P(C,W)</code> cannot be fully covered by large-prime left/right killer lanes. The bridge inequality is <code>Coverage(C,W,P) - OverlapLoss(C,W,P) &lt; |S_P(C,W)|</code>.</div></div>
+      <div class="line-item"><b>Lemma 11<br><span class="info">finite signal</span></b><div>Uncovered Survivor Clustering Signal: after the top 291 greedy lanes, current leftover survivors are not fully diffuse; they partially cluster in residues like <code>g mod 30 in {3,15,27}</code> and often remain one-sided.</div></div>
+    </div>
+  </section>
+
+  <section class="section" id="targets">
+    <div class="section-head">
+      <h2>Theorem Targets</h2>
+      <span class="tag">boss layer</span>
+    </div>
+    <div class="grid">
+      <div class="card"><h3>Target 1 - Binary Goldbach</h3><pre>Every even E > 2 is prime plus prime.</pre><p class="open">Status: open.</p></div>
+      <div class="card"><h3>Target 2 - Mirror Goldbach Form</h3><pre>For E = 2C, exists g such that C-g and C+g are prime.</pre><p>Status: equivalent to Goldbach.</p></div>
+      <div class="card"><h3>Target 3 - Rescue Window Theorem</h3><pre>exists K,C0 such that for every C >= C0:
+S(C, floor(K log^2(C))) >= 1</pre><p class="open">Status: open.</p></div>
+      <div class="card"><h3>Target 4 - K13.431 Candidate Version</h3><pre>K13.430 misses at the boss row.
+K13.431 has held in current targeted packets.</pre><p>Status: finite evidence only.</p></div>
+      <div class="card"><h3>Target 5 - Large-Prime No-Cover</h3><pre>For sufficiently large C:
+S_P(C,W) cannot be fully covered
+by large-prime killer lanes.</pre><p class="open">Status: target lemma, formalized but not proven.</p></div>
+      <div class="card"><h3>Target 5A - Perfect Killer Net Break</h3><pre>For prime p:
+left kill:  g =  C mod p
+right kill: g = -C mod p
+
+Failure needs all survivor gaps covered
+by these left/right residue lanes.</pre><p class="open">Status: target mechanism, not proven.</p></div>
+      <div class="card"><h3>Target 5B - Overlap-Loss Inequality</h3><pre>Coverage(C,W,P) - OverlapLoss(C,W,P)
+&lt; |S_P(C,W)|</pre><p class="open">Status: exact missing bridge, not proven.</p></div>
+      <div class="card"><h3>Target 5C - Structured Leftover Theorem</h3><pre>Any survivors left after top killer lanes
+must either keep diffusing
+or cluster in a controlled residue family
+that still cannot persist forever.</pre><p class="open">Status: next theorem-facing target.</p></div>
+      <div class="card"><h3>No-Escape Hotel Theorem</h3><pre>For all C > 1, exists g such that:
+Prime(C-g) = 1
+and
+Prime(C+g) = 1</pre><p class="open">Status: final target theorem, still open.</p></div>
+      <div class="card"><h3>Failure Case</h3><pre>If Goldbach fails at C:
+for all valid g, BOTH_C(g) = 0</pre><p class="danger">Meaning: full blocker coverage.</p></div>
+      <div class="card"><h3>Simple Picture</h3><pre>bad gap:
+composite   C   prime
+prime       C   composite
+composite   C   composite
+
+escape gap:
+prime       C   prime</pre><p>No-Escape means the row cannot stay bad forever.</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="blockers">
+    <div class="section-head">
+      <h2>Blocker Flow</h2>
+      <span class="tag">what is happening</span>
+    </div>
+    <div class="timeline">
+      <div class="line-item"><b>Valid rooms</b><div>Start with parity-valid gaps in the selected window <code>W</code>. These are the rooms that can possibly rescue the center.</div></div>
+      <div class="line-item"><b>Small-prime kill</b><div>A small prime <code>p</code> blocks a room when <code>C-g == 0 mod p</code> or <code>C+g == 0 mod p</code>.</div></div>
+      <div class="line-item"><b>Survivors</b><div>Rooms not killed by the selected small-prime filter become survivors. Survivor mass is pressure left in the system.</div></div>
+      <div class="line-item"><b>Large-prime lanes</b><div>A larger prime <code>p</code> can kill the left side on <code>g = C mod p</code> and the right side on <code>g = -C mod p</code>. Full failure needs these lanes to cover every survivor.</div></div>
+      <div class="line-item"><b>Large-prime close</b><div>A survivor can still be composite because of a larger factor. The open problem is proving large blockers cannot close every survivor forever.</div></div>
+      <div class="line-item"><b>Rescue</b><div>If any survivor has both sides prime, <code>BOTH_C(g)=1</code>. The center is rescued and Goldbach holds for that <code>E</code>.</div></div>
+      <div class="line-item"><b>Full coverage</b><div>If no rescue exists, every valid room is blocked. That exact full-coverage shape is what the proof path must rule out.</div></div>
+    </div>
+  </section>
+
+  <section class="section" id="engines">
+    <div class="section-head">
+      <h2>Engine Report Rule</h2>
+      <span class="tag">required output</span>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <h3>Required Question</h3>
+        <pre>Did blockers fully cover all survivor rooms?</pre>
+      </div>
+      <div class="card">
+        <h3>Required Fields</h3>
+        <pre>center C
+even number E = 2C
+window W
+total parity-valid rooms
+small-prime killed rooms
+survivor rooms
+both-prime rescue found
+firstBothG
+trueK
+P29 survivors
+tail1
+tail2
+tail4
+fullCoverageBeforeRescue
+verdict</pre>
+      </div>
+    </div>
+    <div class="verdicts" style="margin-top:12px;">
+      <div class="verdict"><code>RESCUED</code><span>At least one both-prime room was found.</span></div>
+      <div class="verdict"><code>FULL_COVERAGE_FOUND</code><span>Every survivor room was blocked before rescue.</span></div>
+      <div class="verdict"><code>PRESSURE_HELD</code><span>No full coverage found in this finite test.</span></div>
+      <div class="verdict"><code>BOSS_ROW</code><span>High survivor mass plus late rescue.</span></div>
+      <div class="verdict"><code>WEAK_ROW</code><span>Low survivor mass or early rescue.</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="directions">
+    <div class="section-head">
+      <h2>Directions For The Next Test</h2>
+      <span class="tag">focus lock</span>
+    </div>
+    <div class="grid three">
+      <div class="card"><h3>1. Pick the center</h3><p>Record <code>C</code>, <code>E=2C</code>, the window <code>W</code>, and why this center is being tested.</p></div>
+      <div class="card"><h3>2. Count the rooms</h3><p>Count all parity-valid mirror rooms before any blocker filter.</p></div>
+      <div class="card"><h3>3. Apply blockers</h3><p>Separate small-prime killed rooms from survivor rooms, then audit what closes each survivor.</p></div>
+      <div class="card"><h3>4. Report rescue</h3><p>State whether a both-prime rescue happened. If yes, report <code>firstBothG</code> and <code>trueK</code>.</p></div>
+      <div class="card"><h3>5. Report coverage</h3><p>If no rescue happened in the window, identify whether coverage was complete and which blockers did it.</p></div>
+      <div class="card"><h3>6. Say what it means</h3><p>End with what the row says about No-Escape: pressure held, full coverage found, boss row, or weak row.</p></div>
+    </div>
+    <pre>Allowed now:
+boss row blocker audit
+survivor mass audit
+tail pressure audit
+large-prime killer audit
+full coverage search
+same-state DMV comparison
+boss vs non-boss split test
+
+Current proof path:
+find what full failure would have to look like,
+then prove that shape cannot exist.</pre>
+  </section>
+</main>
+</body>
+</html>

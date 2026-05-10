@@ -1,0 +1,1080 @@
+{
+  "suiteName": "GOLDBACH_GREEDY_LANE_DECAY_CURVE",
+  "source": "evidence/GOLDBACH_3H_8CORE_NO_ESCAPE_PROOF_ASSAULT.json",
+  "runtimeSeconds": 1.288,
+  "rowsRequested": [
+    "boss row",
+    "hot row 1",
+    "hot row 2",
+    "hostile visitor",
+    "raw max S29 row"
+  ],
+  "rowsAnalyzed": 5,
+  "thresholds": [
+    10,
+    20,
+    50,
+    100,
+    200,
+    291
+  ],
+  "finalVerdict": "FINITE_DIFFUSE_KILLER_NET_DECAY_CONFIRMED",
+  "analyses": [
+    {
+      "label": "boss row",
+      "C": "3889129261038184",
+      "sourceReason": "boss-net-anchor:boss",
+      "sourceLane": "lane1:Boss Perfect Net Audit",
+      "firstBothG": 17307,
+      "trueK": 13.4309400510447,
+      "sourceTrueK": 13.4309400510447,
+      "S29": 582,
+      "sourceS29": 582,
+      "DMV": "L|L/D24/P29_BOSS/TAIL_STRONG/K13",
+      "states": {
+        "FOE": 394,
+        "HALF_L": 96,
+        "HALF_R": 92,
+        "BOTH_BEFORE": 0
+      },
+      "uniqueKillerLanes": 591,
+      "greedyLaneCount": 291,
+      "uncoveredAfterGreedy": 0,
+      "curve": [
+        {
+          "topLanes": 10,
+          "lanesAvailable": 291,
+          "lanesUsed": 10,
+          "covered": 139,
+          "total": 582,
+          "coveragePct": 0.23883161512027493,
+          "uncovered": 443
+        },
+        {
+          "topLanes": 20,
+          "lanesAvailable": 291,
+          "lanesUsed": 20,
+          "covered": 213,
+          "total": 582,
+          "coveragePct": 0.36597938144329895,
+          "uncovered": 369
+        },
+        {
+          "topLanes": 50,
+          "lanesAvailable": 291,
+          "lanesUsed": 50,
+          "covered": 323,
+          "total": 582,
+          "coveragePct": 0.5549828178694158,
+          "uncovered": 259
+        },
+        {
+          "topLanes": 100,
+          "lanesAvailable": 291,
+          "lanesUsed": 100,
+          "covered": 391,
+          "total": 582,
+          "coveragePct": 0.6718213058419243,
+          "uncovered": 191
+        },
+        {
+          "topLanes": 200,
+          "lanesAvailable": 291,
+          "lanesUsed": 200,
+          "covered": 491,
+          "total": 582,
+          "coveragePct": 0.8436426116838488,
+          "uncovered": 91
+        },
+        {
+          "topLanes": 291,
+          "lanesAvailable": 291,
+          "lanesUsed": 291,
+          "covered": 582,
+          "total": 582,
+          "coveragePct": 1,
+          "uncovered": 0
+        }
+      ],
+      "compactness": "DIFFUSE",
+      "topKillerLanes": [
+        {
+          "key": "R:p31:g=1",
+          "count": 23
+        },
+        {
+          "key": "L:p31:g=30",
+          "count": 19
+        },
+        {
+          "key": "L:p41:g=31",
+          "count": 17
+        },
+        {
+          "key": "R:p37:g=13",
+          "count": 15
+        },
+        {
+          "key": "L:p37:g=24",
+          "count": 13
+        },
+        {
+          "key": "L:p43:g=31",
+          "count": 13
+        },
+        {
+          "key": "L:p47:g=38",
+          "count": 12
+        },
+        {
+          "key": "L:p53:g=50",
+          "count": 12
+        },
+        {
+          "key": "R:p41:g=10",
+          "count": 12
+        },
+        {
+          "key": "R:p43:g=12",
+          "count": 11
+        },
+        {
+          "key": "R:p47:g=9",
+          "count": 11
+        },
+        {
+          "key": "L:p59:g=6",
+          "count": 10
+        },
+        {
+          "key": "R:p61:g=25",
+          "count": 10
+        },
+        {
+          "key": "L:p61:g=36",
+          "count": 9
+        },
+        {
+          "key": "R:p53:g=3",
+          "count": 9
+        },
+        {
+          "key": "R:p59:g=53",
+          "count": 9
+        },
+        {
+          "key": "L:p107:g=21",
+          "count": 7
+        },
+        {
+          "key": "L:p67:g=41",
+          "count": 7
+        },
+        {
+          "key": "L:p83:g=68",
+          "count": 7
+        },
+        {
+          "key": "R:p127:g=31",
+          "count": 7
+        }
+      ],
+      "topKillerPrimes": [
+        {
+          "key": "31",
+          "count": 42
+        },
+        {
+          "key": "41",
+          "count": 29
+        },
+        {
+          "key": "37",
+          "count": 28
+        },
+        {
+          "key": "43",
+          "count": 24
+        },
+        {
+          "key": "47",
+          "count": 23
+        },
+        {
+          "key": "53",
+          "count": 21
+        },
+        {
+          "key": "59",
+          "count": 19
+        },
+        {
+          "key": "61",
+          "count": 19
+        },
+        {
+          "key": "73",
+          "count": 13
+        },
+        {
+          "key": "79",
+          "count": 13
+        },
+        {
+          "key": "67",
+          "count": 12
+        },
+        {
+          "key": "71",
+          "count": 11
+        }
+      ]
+    },
+    {
+      "label": "hot row 1",
+      "C": "3209851850270339",
+      "sourceReason": "one-sided-trap:hot",
+      "sourceLane": "lane4:One-Sided Trap Breaker",
+      "firstBothG": 16830,
+      "trueK": 13.201583059795238,
+      "sourceTrueK": 13.201583059795238,
+      "S29": 557,
+      "sourceS29": 557,
+      "DMV": "19|L/D0/P29_BOSS/TAIL_STRONG/K13",
+      "states": {
+        "FOE": 391,
+        "HALF_L": 76,
+        "HALF_R": 90,
+        "BOTH_BEFORE": 0
+      },
+      "uniqueKillerLanes": 583,
+      "greedyLaneCount": 276,
+      "uncoveredAfterGreedy": 0,
+      "curve": [
+        {
+          "topLanes": 10,
+          "lanesAvailable": 276,
+          "lanesUsed": 10,
+          "covered": 126,
+          "total": 557,
+          "coveragePct": 0.22621184919210055,
+          "uncovered": 431
+        },
+        {
+          "topLanes": 20,
+          "lanesAvailable": 276,
+          "lanesUsed": 20,
+          "covered": 192,
+          "total": 557,
+          "coveragePct": 0.34470377019748655,
+          "uncovered": 365
+        },
+        {
+          "topLanes": 50,
+          "lanesAvailable": 276,
+          "lanesUsed": 50,
+          "covered": 302,
+          "total": 557,
+          "coveragePct": 0.5421903052064632,
+          "uncovered": 255
+        },
+        {
+          "topLanes": 100,
+          "lanesAvailable": 276,
+          "lanesUsed": 100,
+          "covered": 381,
+          "total": 557,
+          "coveragePct": 0.6840215439856373,
+          "uncovered": 176
+        },
+        {
+          "topLanes": 200,
+          "lanesAvailable": 276,
+          "lanesUsed": 200,
+          "covered": 481,
+          "total": 557,
+          "coveragePct": 0.8635547576301615,
+          "uncovered": 76
+        },
+        {
+          "topLanes": 291,
+          "lanesAvailable": 276,
+          "lanesUsed": 276,
+          "covered": 557,
+          "total": 557,
+          "coveragePct": 1,
+          "uncovered": 0
+        }
+      ],
+      "compactness": "DIFFUSE",
+      "topKillerLanes": [
+        {
+          "key": "L:p31:g=23",
+          "count": 17
+        },
+        {
+          "key": "R:p31:g=8",
+          "count": 16
+        },
+        {
+          "key": "R:p37:g=31",
+          "count": 14
+        },
+        {
+          "key": "L:p37:g=6",
+          "count": 13
+        },
+        {
+          "key": "L:p41:g=31",
+          "count": 13
+        },
+        {
+          "key": "R:p43:g=25",
+          "count": 13
+        },
+        {
+          "key": "R:p47:g=7",
+          "count": 13
+        },
+        {
+          "key": "R:p41:g=10",
+          "count": 12
+        },
+        {
+          "key": "L:p43:g=18",
+          "count": 11
+        },
+        {
+          "key": "L:p73:g=37",
+          "count": 10
+        },
+        {
+          "key": "L:p59:g=48",
+          "count": 9
+        },
+        {
+          "key": "L:p79:g=30",
+          "count": 9
+        },
+        {
+          "key": "R:p61:g=41",
+          "count": 9
+        },
+        {
+          "key": "L:p53:g=49",
+          "count": 8
+        },
+        {
+          "key": "R:p53:g=4",
+          "count": 8
+        },
+        {
+          "key": "R:p67:g=61",
+          "count": 8
+        },
+        {
+          "key": "L:p47:g=40",
+          "count": 7
+        },
+        {
+          "key": "L:p89:g=2",
+          "count": 7
+        },
+        {
+          "key": "R:p59:g=11",
+          "count": 7
+        },
+        {
+          "key": "R:p71:g=65",
+          "count": 7
+        }
+      ],
+      "topKillerPrimes": [
+        {
+          "key": "31",
+          "count": 33
+        },
+        {
+          "key": "37",
+          "count": 27
+        },
+        {
+          "key": "41",
+          "count": 25
+        },
+        {
+          "key": "43",
+          "count": 24
+        },
+        {
+          "key": "47",
+          "count": 20
+        },
+        {
+          "key": "53",
+          "count": 16
+        },
+        {
+          "key": "59",
+          "count": 16
+        },
+        {
+          "key": "61",
+          "count": 15
+        },
+        {
+          "key": "73",
+          "count": 15
+        },
+        {
+          "key": "67",
+          "count": 14
+        },
+        {
+          "key": "79",
+          "count": 14
+        },
+        {
+          "key": "89",
+          "count": 12
+        }
+      ]
+    },
+    {
+      "label": "hot row 2",
+      "C": "3209851853146567",
+      "sourceReason": "one-sided-trap:hot",
+      "sourceLane": "lane4:One-Sided Trap Breaker",
+      "firstBothG": 14394,
+      "trueK": 11.290765689432854,
+      "sourceTrueK": 11.290765689432854,
+      "S29": 475,
+      "sourceS29": 475,
+      "DMV": "L|L/D18/P29_HOT/TAIL_STRONG/K10",
+      "states": {
+        "FOE": 334,
+        "HALF_L": 69,
+        "HALF_R": 72,
+        "BOTH_BEFORE": 0
+      },
+      "uniqueKillerLanes": 512,
+      "greedyLaneCount": 250,
+      "uncoveredAfterGreedy": 0,
+      "curve": [
+        {
+          "topLanes": 10,
+          "lanesAvailable": 250,
+          "lanesUsed": 10,
+          "covered": 112,
+          "total": 475,
+          "coveragePct": 0.23578947368421052,
+          "uncovered": 363
+        },
+        {
+          "topLanes": 20,
+          "lanesAvailable": 250,
+          "lanesUsed": 20,
+          "covered": 170,
+          "total": 475,
+          "coveragePct": 0.35789473684210527,
+          "uncovered": 305
+        },
+        {
+          "topLanes": 50,
+          "lanesAvailable": 250,
+          "lanesUsed": 50,
+          "covered": 262,
+          "total": 475,
+          "coveragePct": 0.5515789473684211,
+          "uncovered": 213
+        },
+        {
+          "topLanes": 100,
+          "lanesAvailable": 250,
+          "lanesUsed": 100,
+          "covered": 325,
+          "total": 475,
+          "coveragePct": 0.6842105263157895,
+          "uncovered": 150
+        },
+        {
+          "topLanes": 200,
+          "lanesAvailable": 250,
+          "lanesUsed": 200,
+          "covered": 425,
+          "total": 475,
+          "coveragePct": 0.8947368421052632,
+          "uncovered": 50
+        },
+        {
+          "topLanes": 291,
+          "lanesAvailable": 250,
+          "lanesUsed": 250,
+          "covered": 475,
+          "total": 475,
+          "coveragePct": 1,
+          "uncovered": 0
+        }
+      ],
+      "compactness": "DIFFUSE",
+      "topKillerLanes": [
+        {
+          "key": "R:p31:g=22",
+          "count": 17
+        },
+        {
+          "key": "L:p31:g=9",
+          "count": 16
+        },
+        {
+          "key": "L:p37:g=2",
+          "count": 15
+        },
+        {
+          "key": "R:p41:g=14",
+          "count": 12
+        },
+        {
+          "key": "L:p41:g=27",
+          "count": 11
+        },
+        {
+          "key": "L:p59:g=26",
+          "count": 10
+        },
+        {
+          "key": "R:p37:g=35",
+          "count": 10
+        },
+        {
+          "key": "R:p43:g=24",
+          "count": 10
+        },
+        {
+          "key": "L:p43:g=19",
+          "count": 9
+        },
+        {
+          "key": "L:p47:g=9",
+          "count": 9
+        },
+        {
+          "key": "R:p47:g=38",
+          "count": 9
+        },
+        {
+          "key": "R:p79:g=53",
+          "count": 9
+        },
+        {
+          "key": "L:p67:g=58",
+          "count": 8
+        },
+        {
+          "key": "L:p101:g=75",
+          "count": 7
+        },
+        {
+          "key": "R:p53:g=33",
+          "count": 7
+        },
+        {
+          "key": "R:p59:g=33",
+          "count": 7
+        },
+        {
+          "key": "L:p83:g=11",
+          "count": 6
+        },
+        {
+          "key": "R:p113:g=54",
+          "count": 6
+        },
+        {
+          "key": "R:p71:g=47",
+          "count": 6
+        },
+        {
+          "key": "R:p83:g=72",
+          "count": 6
+        }
+      ],
+      "topKillerPrimes": [
+        {
+          "key": "31",
+          "count": 33
+        },
+        {
+          "key": "37",
+          "count": 25
+        },
+        {
+          "key": "41",
+          "count": 23
+        },
+        {
+          "key": "43",
+          "count": 19
+        },
+        {
+          "key": "47",
+          "count": 18
+        },
+        {
+          "key": "59",
+          "count": 17
+        },
+        {
+          "key": "67",
+          "count": 13
+        },
+        {
+          "key": "53",
+          "count": 12
+        },
+        {
+          "key": "79",
+          "count": 12
+        },
+        {
+          "key": "83",
+          "count": 12
+        },
+        {
+          "key": "71",
+          "count": 11
+        },
+        {
+          "key": "101",
+          "count": 9
+        }
+      ]
+    },
+    {
+      "label": "hostile visitor",
+      "C": "59825417609829034",
+      "sourceReason": "hostile-crt:boss:m4",
+      "sourceLane": "lane2:Hostile CRT Net Builder",
+      "firstBothG": 19635,
+      "trueK": 13.157604706523053,
+      "sourceTrueK": 13.157604706523053,
+      "S29": 657,
+      "sourceS29": 657,
+      "DMV": "L|31/D0/P29_BOSS/TAIL_STRONG/K13",
+      "states": {
+        "FOE": 465,
+        "HALF_L": 115,
+        "HALF_R": 77,
+        "BOTH_BEFORE": 0
+      },
+      "uniqueKillerLanes": 664,
+      "greedyLaneCount": 313,
+      "uncoveredAfterGreedy": 0,
+      "curve": [
+        {
+          "topLanes": 10,
+          "lanesAvailable": 313,
+          "lanesUsed": 10,
+          "covered": 163,
+          "total": 657,
+          "coveragePct": 0.2480974124809741,
+          "uncovered": 494
+        },
+        {
+          "topLanes": 20,
+          "lanesAvailable": 313,
+          "lanesUsed": 20,
+          "covered": 239,
+          "total": 657,
+          "coveragePct": 0.3637747336377473,
+          "uncovered": 418
+        },
+        {
+          "topLanes": 50,
+          "lanesAvailable": 313,
+          "lanesUsed": 50,
+          "covered": 359,
+          "total": 657,
+          "coveragePct": 0.5464231354642314,
+          "uncovered": 298
+        },
+        {
+          "topLanes": 100,
+          "lanesAvailable": 313,
+          "lanesUsed": 100,
+          "covered": 444,
+          "total": 657,
+          "coveragePct": 0.6757990867579908,
+          "uncovered": 213
+        },
+        {
+          "topLanes": 200,
+          "lanesAvailable": 313,
+          "lanesUsed": 200,
+          "covered": 544,
+          "total": 657,
+          "coveragePct": 0.8280060882800608,
+          "uncovered": 113
+        },
+        {
+          "topLanes": 291,
+          "lanesAvailable": 313,
+          "lanesUsed": 291,
+          "covered": 635,
+          "total": 657,
+          "coveragePct": 0.9665144596651446,
+          "uncovered": 22
+        }
+      ],
+      "compactness": "DIFFUSE",
+      "topKillerLanes": [
+        {
+          "key": "R:p31:g=3",
+          "count": 22
+        },
+        {
+          "key": "L:p37:g=35",
+          "count": 20
+        },
+        {
+          "key": "L:p31:g=28",
+          "count": 19
+        },
+        {
+          "key": "R:p37:g=2",
+          "count": 19
+        },
+        {
+          "key": "L:p41:g=34",
+          "count": 16
+        },
+        {
+          "key": "L:p43:g=1",
+          "count": 16
+        },
+        {
+          "key": "R:p41:g=7",
+          "count": 16
+        },
+        {
+          "key": "R:p47:g=34",
+          "count": 16
+        },
+        {
+          "key": "R:p53:g=7",
+          "count": 13
+        },
+        {
+          "key": "R:p43:g=42",
+          "count": 12
+        },
+        {
+          "key": "L:p47:g=13",
+          "count": 11
+        },
+        {
+          "key": "L:p59:g=7",
+          "count": 11
+        },
+        {
+          "key": "R:p59:g=52",
+          "count": 11
+        },
+        {
+          "key": "L:p53:g=46",
+          "count": 10
+        },
+        {
+          "key": "R:p61:g=10",
+          "count": 9
+        },
+        {
+          "key": "R:p67:g=5",
+          "count": 9
+        },
+        {
+          "key": "R:p71:g=11",
+          "count": 9
+        },
+        {
+          "key": "L:p79:g=59",
+          "count": 8
+        },
+        {
+          "key": "L:p89:g=9",
+          "count": 8
+        },
+        {
+          "key": "R:p73:g=1",
+          "count": 8
+        }
+      ],
+      "topKillerPrimes": [
+        {
+          "key": "31",
+          "count": 41
+        },
+        {
+          "key": "37",
+          "count": 39
+        },
+        {
+          "key": "41",
+          "count": 32
+        },
+        {
+          "key": "43",
+          "count": 28
+        },
+        {
+          "key": "47",
+          "count": 27
+        },
+        {
+          "key": "53",
+          "count": 23
+        },
+        {
+          "key": "59",
+          "count": 22
+        },
+        {
+          "key": "61",
+          "count": 16
+        },
+        {
+          "key": "79",
+          "count": 16
+        },
+        {
+          "key": "67",
+          "count": 15
+        },
+        {
+          "key": "71",
+          "count": 14
+        },
+        {
+          "key": "73",
+          "count": 14
+        }
+      ]
+    },
+    {
+      "label": "raw max S29 row",
+      "C": "3268329311518612504",
+      "sourceReason": "hostile-crt:boss:m5",
+      "sourceLane": "lane2:Hostile CRT Net Builder",
+      "firstBothG": 21153,
+      "trueK": 11.639244409992209,
+      "sourceTrueK": 11.639244409992209,
+      "S29": 706,
+      "sourceS29": 706,
+      "DMV": "L|L/D6/P29_BOSS/TAIL_STRONG/K10",
+      "states": {
+        "FOE": 510,
+        "HALF_L": 92,
+        "HALF_R": 104,
+        "BOTH_BEFORE": 0
+      },
+      "uniqueKillerLanes": 725,
+      "greedyLaneCount": 343,
+      "uncoveredAfterGreedy": 0,
+      "curve": [
+        {
+          "topLanes": 10,
+          "lanesAvailable": 343,
+          "lanesUsed": 10,
+          "covered": 158,
+          "total": 706,
+          "coveragePct": 0.2237960339943343,
+          "uncovered": 548
+        },
+        {
+          "topLanes": 20,
+          "lanesAvailable": 343,
+          "lanesUsed": 20,
+          "covered": 239,
+          "total": 706,
+          "coveragePct": 0.3385269121813031,
+          "uncovered": 467
+        },
+        {
+          "topLanes": 50,
+          "lanesAvailable": 343,
+          "lanesUsed": 50,
+          "covered": 368,
+          "total": 706,
+          "coveragePct": 0.5212464589235127,
+          "uncovered": 338
+        },
+        {
+          "topLanes": 100,
+          "lanesAvailable": 343,
+          "lanesUsed": 100,
+          "covered": 463,
+          "total": 706,
+          "coveragePct": 0.6558073654390935,
+          "uncovered": 243
+        },
+        {
+          "topLanes": 200,
+          "lanesAvailable": 343,
+          "lanesUsed": 200,
+          "covered": 563,
+          "total": 706,
+          "coveragePct": 0.7974504249291785,
+          "uncovered": 143
+        },
+        {
+          "topLanes": 291,
+          "lanesAvailable": 343,
+          "lanesUsed": 291,
+          "covered": 654,
+          "total": 706,
+          "coveragePct": 0.9263456090651558,
+          "uncovered": 52
+        }
+      ],
+      "compactness": "VERY_DIFFUSE",
+      "topKillerLanes": [
+        {
+          "key": "L:p31:g=0",
+          "count": 20
+        },
+        {
+          "key": "L:p37:g=29",
+          "count": 20
+        },
+        {
+          "key": "R:p31:g=0",
+          "count": 20
+        },
+        {
+          "key": "R:p41:g=30",
+          "count": 19
+        },
+        {
+          "key": "L:p41:g=11",
+          "count": 17
+        },
+        {
+          "key": "L:p53:g=13",
+          "count": 16
+        },
+        {
+          "key": "R:p37:g=8",
+          "count": 16
+        },
+        {
+          "key": "L:p43:g=5",
+          "count": 15
+        },
+        {
+          "key": "R:p43:g=38",
+          "count": 15
+        },
+        {
+          "key": "L:p47:g=22",
+          "count": 14
+        },
+        {
+          "key": "R:p47:g=25",
+          "count": 14
+        },
+        {
+          "key": "L:p61:g=35",
+          "count": 12
+        },
+        {
+          "key": "R:p61:g=26",
+          "count": 11
+        },
+        {
+          "key": "L:p67:g=38",
+          "count": 10
+        },
+        {
+          "key": "L:p71:g=4",
+          "count": 10
+        },
+        {
+          "key": "L:p73:g=62",
+          "count": 10
+        },
+        {
+          "key": "R:p53:g=40",
+          "count": 10
+        },
+        {
+          "key": "L:p79:g=2",
+          "count": 9
+        },
+        {
+          "key": "R:p67:g=29",
+          "count": 9
+        },
+        {
+          "key": "R:p83:g=47",
+          "count": 9
+        }
+      ],
+      "topKillerPrimes": [
+        {
+          "key": "31",
+          "count": 40
+        },
+        {
+          "key": "37",
+          "count": 36
+        },
+        {
+          "key": "41",
+          "count": 36
+        },
+        {
+          "key": "43",
+          "count": 30
+        },
+        {
+          "key": "47",
+          "count": 28
+        },
+        {
+          "key": "53",
+          "count": 26
+        },
+        {
+          "key": "61",
+          "count": 23
+        },
+        {
+          "key": "67",
+          "count": 19
+        },
+        {
+          "key": "73",
+          "count": 18
+        },
+        {
+          "key": "71",
+          "count": 17
+        },
+        {
+          "key": "79",
+          "count": 17
+        },
+        {
+          "key": "59",
+          "count": 15
+        }
+      ]
+    }
+  ],
+  "next3": [
+    "Formalize each killer lane as one periodic residue class on survivor gaps.",
+    "Prove a coverage-cost lower bound: many lanes are required to cover high-pressure rows.",
+    "Prove an overlap-loss bound: adding more periodic lanes loses efficiency and cannot persist as a perfect net."
+  ],
+  "warning": "FINITE EVIDENCE ONLY.\nUNIVERSAL GOLDBACH PROOF REMAINS OPEN.\nA GREEDY COVER CURVE IS A DIAGNOSTIC, NOT A PROOF."
+}

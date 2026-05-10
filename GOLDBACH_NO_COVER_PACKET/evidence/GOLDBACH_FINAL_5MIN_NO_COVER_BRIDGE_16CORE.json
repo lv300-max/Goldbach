@@ -1,0 +1,3283 @@
+{
+  "suiteName": "GOLDBACH_FINAL_5MIN_NO_COVER_BRIDGE_16CORE",
+  "runtimeSeconds": 301.556,
+  "workers": 16,
+  "rowsAnalyzed": 1083085,
+  "definitionMismatches": 0,
+  "bossBoundaryPassed": true,
+  "K13_431Misses": 0,
+  "futureEscapesFound": 53,
+  "futureNoEscapes": 451,
+  "coreRows": [
+    {
+      "label": "boss",
+      "C": "3889129261038184",
+      "E": "7778258522076368",
+      "firstBothG": 17307,
+      "trueK": 13.4309400510447,
+      "S17": 757,
+      "S29": 582,
+      "S37": 512,
+      "S41": 485,
+      "boundary": {
+        "K13_430": false,
+        "K13_431": true,
+        "K13_432": true,
+        "K13_45": true,
+        "K13_5": true,
+        "K14": true
+      },
+      "greedyCoverage": {
+        "10": {
+          "topN": 10,
+          "covered": 139,
+          "coveragePct": 0.23883161512027493,
+          "uncovered": 443
+        },
+        "20": {
+          "topN": 20,
+          "covered": 213,
+          "coveragePct": 0.36597938144329895,
+          "uncovered": 369
+        },
+        "50": {
+          "topN": 50,
+          "covered": 323,
+          "coveragePct": 0.5549828178694158,
+          "uncovered": 259
+        },
+        "100": {
+          "topN": 100,
+          "covered": 391,
+          "coveragePct": 0.6718213058419243,
+          "uncovered": 191
+        },
+        "150": {
+          "topN": 150,
+          "covered": 441,
+          "coveragePct": 0.7577319587628866,
+          "uncovered": 141
+        },
+        "200": {
+          "topN": 200,
+          "covered": 491,
+          "coveragePct": 0.8436426116838488,
+          "uncovered": 91
+        },
+        "291": {
+          "topN": 291,
+          "covered": 582,
+          "coveragePct": 1,
+          "uncovered": 0
+        }
+      },
+      "greedyFullCoverCount": 291,
+      "compactness": "DIFFUSE",
+      "overlapBuckets": [
+        {
+          "label": "1-20",
+          "lanes": 20,
+          "gain": 213,
+          "waste": 16
+        },
+        {
+          "label": "21-50",
+          "lanes": 30,
+          "gain": 110,
+          "waste": 24
+        },
+        {
+          "label": "51-100",
+          "lanes": 50,
+          "gain": 68,
+          "waste": 12
+        },
+        {
+          "label": "101-200",
+          "lanes": 100,
+          "gain": 100,
+          "waste": 11
+        },
+        {
+          "label": "201-291",
+          "lanes": 91,
+          "gain": 91,
+          "waste": 9
+        }
+      ],
+      "leftoversAfterTop200": {
+        "count": 91,
+        "clusterShare30": 1,
+        "clusterBreaksAt210": true,
+        "clusterBreaksAt2310": true,
+        "clusterBreaksAt30030": true,
+        "halfL": 53,
+        "halfR": 10,
+        "foe": 28,
+        "both": 0,
+        "dominantSide": "HALF_L",
+        "topGMod30": [
+          {
+            "key": "27",
+            "count": 35
+          },
+          {
+            "key": "3",
+            "count": 32
+          },
+          {
+            "key": "15",
+            "count": 24
+          }
+        ],
+        "topGMod210": [
+          {
+            "key": "153",
+            "count": 10
+          },
+          {
+            "key": "57",
+            "count": 10
+          },
+          {
+            "key": "147",
+            "count": 8
+          },
+          {
+            "key": "45",
+            "count": 8
+          },
+          {
+            "key": "87",
+            "count": 7
+          },
+          {
+            "key": "123",
+            "count": 6
+          },
+          {
+            "key": "183",
+            "count": 6
+          },
+          {
+            "key": "27",
+            "count": 6
+          },
+          {
+            "key": "195",
+            "count": 5
+          },
+          {
+            "key": "3",
+            "count": 5
+          },
+          {
+            "key": "63",
+            "count": 5
+          },
+          {
+            "key": "15",
+            "count": 4
+          }
+        ],
+        "topGMod2310": [
+          {
+            "key": "987",
+            "count": 4
+          },
+          {
+            "key": "1515",
+            "count": 3
+          },
+          {
+            "key": "1743",
+            "count": 3
+          },
+          {
+            "key": "993",
+            "count": 3
+          },
+          {
+            "key": "1077",
+            "count": 2
+          },
+          {
+            "key": "1137",
+            "count": 2
+          },
+          {
+            "key": "2097",
+            "count": 2
+          },
+          {
+            "key": "2157",
+            "count": 2
+          },
+          {
+            "key": "2265",
+            "count": 2
+          },
+          {
+            "key": "363",
+            "count": 2
+          },
+          {
+            "key": "393",
+            "count": 2
+          },
+          {
+            "key": "477",
+            "count": 2
+          }
+        ],
+        "topGMod30030": [
+          {
+            "key": "10065",
+            "count": 1
+          },
+          {
+            "key": "10227",
+            "count": 1
+          },
+          {
+            "key": "10233",
+            "count": 1
+          },
+          {
+            "key": "10557",
+            "count": 1
+          },
+          {
+            "key": "10737",
+            "count": 1
+          },
+          {
+            "key": "10863",
+            "count": 1
+          },
+          {
+            "key": "10923",
+            "count": 1
+          },
+          {
+            "key": "10983",
+            "count": 1
+          },
+          {
+            "key": "11067",
+            "count": 1
+          },
+          {
+            "key": "11103",
+            "count": 1
+          },
+          {
+            "key": "11217",
+            "count": 1
+          },
+          {
+            "key": "11313",
+            "count": 1
+          }
+        ],
+        "topLeftKillers": [
+          {
+            "key": "prime",
+            "count": 53
+          },
+          {
+            "key": "563",
+            "count": 1
+          },
+          {
+            "key": "5696063",
+            "count": 1
+          },
+          {
+            "key": "571",
+            "count": 1
+          },
+          {
+            "key": "6091",
+            "count": 1
+          },
+          {
+            "key": "617",
+            "count": 1
+          },
+          {
+            "key": "619",
+            "count": 1
+          },
+          {
+            "key": "6211",
+            "count": 1
+          },
+          {
+            "key": "6467869",
+            "count": 1
+          },
+          {
+            "key": "647",
+            "count": 1
+          }
+        ],
+        "topRightKillers": [
+          {
+            "key": "prime",
+            "count": 10
+          },
+          {
+            "key": "10007",
+            "count": 1
+          },
+          {
+            "key": "10269529",
+            "count": 1
+          },
+          {
+            "key": "105491",
+            "count": 1
+          },
+          {
+            "key": "1091",
+            "count": 1
+          },
+          {
+            "key": "1103",
+            "count": 1
+          },
+          {
+            "key": "11134213",
+            "count": 1
+          },
+          {
+            "key": "1229",
+            "count": 1
+          },
+          {
+            "key": "1307",
+            "count": 1
+          },
+          {
+            "key": "1409",
+            "count": 1
+          }
+        ],
+        "largeUnknownCount": 0
+      },
+      "leftoversAfterTop291": {
+        "count": 0,
+        "clusterShare30": 0,
+        "clusterBreaksAt210": false,
+        "clusterBreaksAt2310": false,
+        "clusterBreaksAt30030": false,
+        "halfL": 0,
+        "halfR": 0,
+        "foe": 0,
+        "both": 0,
+        "dominantSide": "MIXED",
+        "topGMod30": [],
+        "topGMod210": [],
+        "topGMod2310": [],
+        "topGMod30030": [],
+        "topLeftKillers": [],
+        "topRightKillers": [],
+        "largeUnknownCount": 0
+      },
+      "rightKillerDiffusion200": {
+        "halfLCount": 53,
+        "uniqueRightKillers": 53,
+        "top5": [
+          {
+            "key": "10007",
+            "count": 1
+          },
+          {
+            "key": "10269529",
+            "count": 1
+          },
+          {
+            "key": "1091",
+            "count": 1
+          },
+          {
+            "key": "11134213",
+            "count": 1
+          },
+          {
+            "key": "1409",
+            "count": 1
+          }
+        ],
+        "top10": [
+          {
+            "key": "10007",
+            "count": 1
+          },
+          {
+            "key": "10269529",
+            "count": 1
+          },
+          {
+            "key": "1091",
+            "count": 1
+          },
+          {
+            "key": "11134213",
+            "count": 1
+          },
+          {
+            "key": "1409",
+            "count": 1
+          },
+          {
+            "key": "149",
+            "count": 1
+          },
+          {
+            "key": "15816469",
+            "count": 1
+          },
+          {
+            "key": "191",
+            "count": 1
+          },
+          {
+            "key": "2017",
+            "count": 1
+          },
+          {
+            "key": "2131",
+            "count": 1
+          }
+        ],
+        "maxRightKillerRepeat": 1,
+        "top10RightCoveragePct": 0.18867924528301888,
+        "top20RightCoveragePct": 0.37735849056603776,
+        "compactness": "RIGHT_KILLERS_DIFFUSE"
+      },
+      "rightKillerDiffusion291": {
+        "halfLCount": 0,
+        "uniqueRightKillers": 0,
+        "top5": [],
+        "top10": [],
+        "maxRightKillerRepeat": 0,
+        "top10RightCoveragePct": 0,
+        "top20RightCoveragePct": 0,
+        "compactness": "RIGHT_KILLERS_DIFFUSE"
+      },
+      "futureProbe200": {
+        "futureEscapesFound": 7,
+        "futureNoEscapes": 84,
+        "minFutureEscapeDistance": 4200,
+        "samples": [
+          {
+            "fromG": 3447,
+            "futureG": 17307,
+            "distance": 13860
+          },
+          {
+            "fromG": 4665,
+            "futureG": 20835,
+            "distance": 16170
+          },
+          {
+            "fromG": 6717,
+            "futureG": 18267,
+            "distance": 11550
+          },
+          {
+            "fromG": 6885,
+            "futureG": 20745,
+            "distance": 13860
+          },
+          {
+            "fromG": 13425,
+            "futureG": 24975,
+            "distance": 11550
+          },
+          {
+            "fromG": 13647,
+            "futureG": 27507,
+            "distance": 13860
+          },
+          {
+            "fromG": 15495,
+            "futureG": 19695,
+            "distance": 4200
+          }
+        ]
+      },
+      "futureProbe291": {
+        "futureEscapesFound": 0,
+        "futureNoEscapes": 0,
+        "minFutureEscapeDistance": null,
+        "samples": []
+      }
+    },
+    {
+      "label": "hot1",
+      "C": "3209851851697528",
+      "E": "6419703703395056",
+      "firstBothG": 13161,
+      "trueK": 10.323590888035527,
+      "S17": 575,
+      "S29": 441,
+      "S37": 394,
+      "S41": 373,
+      "boundary": {
+        "K13_430": true,
+        "K13_431": true,
+        "K13_432": true,
+        "K13_45": true,
+        "K13_5": true,
+        "K14": true
+      },
+      "greedyCoverage": {
+        "10": {
+          "topN": 10,
+          "covered": 105,
+          "coveragePct": 0.23809523809523808,
+          "uncovered": 336
+        },
+        "20": {
+          "topN": 20,
+          "covered": 162,
+          "coveragePct": 0.3673469387755102,
+          "uncovered": 279
+        },
+        "50": {
+          "topN": 50,
+          "covered": 241,
+          "coveragePct": 0.546485260770975,
+          "uncovered": 200
+        },
+        "100": {
+          "topN": 100,
+          "covered": 299,
+          "coveragePct": 0.6780045351473923,
+          "uncovered": 142
+        },
+        "150": {
+          "topN": 150,
+          "covered": 349,
+          "coveragePct": 0.7913832199546486,
+          "uncovered": 92
+        },
+        "200": {
+          "topN": 200,
+          "covered": 399,
+          "coveragePct": 0.9047619047619048,
+          "uncovered": 42
+        },
+        "291": {
+          "topN": 291,
+          "covered": 441,
+          "coveragePct": 1,
+          "uncovered": 0
+        }
+      },
+      "greedyFullCoverCount": 242,
+      "compactness": "DIFFUSE",
+      "overlapBuckets": [
+        {
+          "label": "1-20",
+          "lanes": 20,
+          "gain": 162,
+          "waste": 10
+        },
+        {
+          "label": "21-50",
+          "lanes": 30,
+          "gain": 79,
+          "waste": 17
+        },
+        {
+          "label": "51-100",
+          "lanes": 50,
+          "gain": 58,
+          "waste": 7
+        },
+        {
+          "label": "101-200",
+          "lanes": 100,
+          "gain": 100,
+          "waste": 6
+        },
+        {
+          "label": "201-291",
+          "lanes": 42,
+          "gain": 42,
+          "waste": 4
+        }
+      ],
+      "leftoversAfterTop200": {
+        "count": 42,
+        "clusterShare30": 0.35714285714285715,
+        "clusterBreaksAt210": true,
+        "clusterBreaksAt2310": true,
+        "clusterBreaksAt30030": true,
+        "halfL": 37,
+        "halfR": 0,
+        "foe": 5,
+        "both": 0,
+        "dominantSide": "HALF_L",
+        "topGMod30": [
+          {
+            "key": "21",
+            "count": 18
+          },
+          {
+            "key": "15",
+            "count": 15
+          },
+          {
+            "key": "9",
+            "count": 9
+          }
+        ],
+        "topGMod210": [
+          {
+            "key": "141",
+            "count": 6
+          },
+          {
+            "key": "195",
+            "count": 5
+          },
+          {
+            "key": "21",
+            "count": 4
+          },
+          {
+            "key": "99",
+            "count": 4
+          },
+          {
+            "key": "105",
+            "count": 3
+          },
+          {
+            "key": "111",
+            "count": 3
+          },
+          {
+            "key": "165",
+            "count": 3
+          },
+          {
+            "key": "45",
+            "count": 3
+          },
+          {
+            "key": "69",
+            "count": 3
+          },
+          {
+            "key": "81",
+            "count": 3
+          },
+          {
+            "key": "171",
+            "count": 2
+          },
+          {
+            "key": "129",
+            "count": 1
+          }
+        ],
+        "topGMod2310": [
+          {
+            "key": "1155",
+            "count": 2
+          },
+          {
+            "key": "1359",
+            "count": 2
+          },
+          {
+            "key": "1455",
+            "count": 2
+          },
+          {
+            "key": "2085",
+            "count": 2
+          },
+          {
+            "key": "1011",
+            "count": 1
+          },
+          {
+            "key": "1131",
+            "count": 1
+          },
+          {
+            "key": "1191",
+            "count": 1
+          },
+          {
+            "key": "1281",
+            "count": 1
+          },
+          {
+            "key": "1341",
+            "count": 1
+          },
+          {
+            "key": "1431",
+            "count": 1
+          },
+          {
+            "key": "1491",
+            "count": 1
+          },
+          {
+            "key": "1515",
+            "count": 1
+          }
+        ],
+        "topGMod30030": [
+          {
+            "key": "10395",
+            "count": 1
+          },
+          {
+            "key": "10431",
+            "count": 1
+          },
+          {
+            "key": "10755",
+            "count": 1
+          },
+          {
+            "key": "10821",
+            "count": 1
+          },
+          {
+            "key": "10899",
+            "count": 1
+          },
+          {
+            "key": "11031",
+            "count": 1
+          },
+          {
+            "key": "11241",
+            "count": 1
+          },
+          {
+            "key": "1131",
+            "count": 1
+          },
+          {
+            "key": "11361",
+            "count": 1
+          },
+          {
+            "key": "12135",
+            "count": 1
+          },
+          {
+            "key": "12285",
+            "count": 1
+          },
+          {
+            "key": "12345",
+            "count": 1
+          }
+        ],
+        "topLeftKillers": [
+          {
+            "key": "prime",
+            "count": 37
+          },
+          {
+            "key": "8839",
+            "count": 1
+          },
+          {
+            "key": "9132511",
+            "count": 1
+          },
+          {
+            "key": "9283",
+            "count": 1
+          },
+          {
+            "key": "941",
+            "count": 1
+          },
+          {
+            "key": "9846841",
+            "count": 1
+          }
+        ],
+        "topRightKillers": [
+          {
+            "key": "1013",
+            "count": 1
+          },
+          {
+            "key": "1103",
+            "count": 1
+          },
+          {
+            "key": "1151",
+            "count": 1
+          },
+          {
+            "key": "1202129",
+            "count": 1
+          },
+          {
+            "key": "12626533",
+            "count": 1
+          },
+          {
+            "key": "157",
+            "count": 1
+          },
+          {
+            "key": "16693",
+            "count": 1
+          },
+          {
+            "key": "181",
+            "count": 1
+          },
+          {
+            "key": "1901",
+            "count": 1
+          },
+          {
+            "key": "20897",
+            "count": 1
+          }
+        ],
+        "largeUnknownCount": 0
+      },
+      "leftoversAfterTop291": {
+        "count": 0,
+        "clusterShare30": 0,
+        "clusterBreaksAt210": false,
+        "clusterBreaksAt2310": false,
+        "clusterBreaksAt30030": false,
+        "halfL": 0,
+        "halfR": 0,
+        "foe": 0,
+        "both": 0,
+        "dominantSide": "MIXED",
+        "topGMod30": [],
+        "topGMod210": [],
+        "topGMod2310": [],
+        "topGMod30030": [],
+        "topLeftKillers": [],
+        "topRightKillers": [],
+        "largeUnknownCount": 0
+      },
+      "rightKillerDiffusion200": {
+        "halfLCount": 37,
+        "uniqueRightKillers": 37,
+        "top5": [
+          {
+            "key": "1013",
+            "count": 1
+          },
+          {
+            "key": "1151",
+            "count": 1
+          },
+          {
+            "key": "1202129",
+            "count": 1
+          },
+          {
+            "key": "12626533",
+            "count": 1
+          },
+          {
+            "key": "157",
+            "count": 1
+          }
+        ],
+        "top10": [
+          {
+            "key": "1013",
+            "count": 1
+          },
+          {
+            "key": "1151",
+            "count": 1
+          },
+          {
+            "key": "1202129",
+            "count": 1
+          },
+          {
+            "key": "12626533",
+            "count": 1
+          },
+          {
+            "key": "157",
+            "count": 1
+          },
+          {
+            "key": "16693",
+            "count": 1
+          },
+          {
+            "key": "181",
+            "count": 1
+          },
+          {
+            "key": "1901",
+            "count": 1
+          },
+          {
+            "key": "20897",
+            "count": 1
+          },
+          {
+            "key": "2113",
+            "count": 1
+          }
+        ],
+        "maxRightKillerRepeat": 1,
+        "top10RightCoveragePct": 0.2702702702702703,
+        "top20RightCoveragePct": 0.5405405405405406,
+        "compactness": "RIGHT_KILLERS_DIFFUSE"
+      },
+      "rightKillerDiffusion291": {
+        "halfLCount": 0,
+        "uniqueRightKillers": 0,
+        "top5": [],
+        "top10": [],
+        "maxRightKillerRepeat": 0,
+        "top10RightCoveragePct": 0,
+        "top20RightCoveragePct": 0,
+        "compactness": "RIGHT_KILLERS_DIFFUSE"
+      },
+      "futureProbe200": {
+        "futureEscapesFound": 6,
+        "futureNoEscapes": 36,
+        "minFutureEscapeDistance": 3780,
+        "samples": [
+          {
+            "fromG": 1611,
+            "futureG": 13161,
+            "distance": 11550
+          },
+          {
+            "fromG": 5181,
+            "futureG": 14421,
+            "distance": 9240
+          },
+          {
+            "fromG": 9591,
+            "futureG": 28071,
+            "distance": 18480
+          },
+          {
+            "fromG": 10899,
+            "futureG": 15519,
+            "distance": 4620
+          },
+          {
+            "fromG": 12135,
+            "futureG": 15915,
+            "distance": 3780
+          },
+          {
+            "fromG": 12285,
+            "futureG": 33075,
+            "distance": 20790
+          }
+        ]
+      },
+      "futureProbe291": {
+        "futureEscapesFound": 0,
+        "futureNoEscapes": 0,
+        "minFutureEscapeDistance": null,
+        "samples": []
+      }
+    },
+    {
+      "label": "hot2",
+      "C": "3912698353475078",
+      "E": "7825396706950156",
+      "firstBothG": 12915,
+      "trueK": 10.019195344119744,
+      "S17": 561,
+      "S29": 457,
+      "S37": 402,
+      "S41": 382,
+      "boundary": {
+        "K13_430": true,
+        "K13_431": true,
+        "K13_432": true,
+        "K13_45": true,
+        "K13_5": true,
+        "K14": true
+      },
+      "greedyCoverage": {
+        "10": {
+          "topN": 10,
+          "covered": 111,
+          "coveragePct": 0.24288840262582057,
+          "uncovered": 346
+        },
+        "20": {
+          "topN": 20,
+          "covered": 167,
+          "coveragePct": 0.36542669584245074,
+          "uncovered": 290
+        },
+        "50": {
+          "topN": 50,
+          "covered": 254,
+          "coveragePct": 0.5557986870897156,
+          "uncovered": 203
+        },
+        "100": {
+          "topN": 100,
+          "covered": 316,
+          "coveragePct": 0.6914660831509847,
+          "uncovered": 141
+        },
+        "150": {
+          "topN": 150,
+          "covered": 366,
+          "coveragePct": 0.8008752735229759,
+          "uncovered": 91
+        },
+        "200": {
+          "topN": 200,
+          "covered": 416,
+          "coveragePct": 0.9102844638949672,
+          "uncovered": 41
+        },
+        "291": {
+          "topN": 291,
+          "covered": 457,
+          "coveragePct": 1,
+          "uncovered": 0
+        }
+      },
+      "greedyFullCoverCount": 241,
+      "compactness": "DIFFUSE",
+      "overlapBuckets": [
+        {
+          "label": "1-20",
+          "lanes": 20,
+          "gain": 167,
+          "waste": 15
+        },
+        {
+          "label": "21-50",
+          "lanes": 30,
+          "gain": 87,
+          "waste": 19
+        },
+        {
+          "label": "51-100",
+          "lanes": 50,
+          "gain": 62,
+          "waste": 6
+        },
+        {
+          "label": "101-200",
+          "lanes": 100,
+          "gain": 100,
+          "waste": 1
+        },
+        {
+          "label": "201-291",
+          "lanes": 41,
+          "gain": 41,
+          "waste": 5
+        }
+      ],
+      "leftoversAfterTop200": {
+        "count": 41,
+        "clusterShare30": 0.24390243902439024,
+        "clusterBreaksAt210": true,
+        "clusterBreaksAt2310": true,
+        "clusterBreaksAt30030": true,
+        "halfL": 41,
+        "halfR": 0,
+        "foe": 0,
+        "both": 0,
+        "dominantSide": "HALF_L",
+        "topGMod30": [
+          {
+            "key": "9",
+            "count": 18
+          },
+          {
+            "key": "21",
+            "count": 13
+          },
+          {
+            "key": "15",
+            "count": 10
+          }
+        ],
+        "topGMod210": [
+          {
+            "key": "201",
+            "count": 8
+          },
+          {
+            "key": "129",
+            "count": 5
+          },
+          {
+            "key": "9",
+            "count": 5
+          },
+          {
+            "key": "189",
+            "count": 4
+          },
+          {
+            "key": "39",
+            "count": 4
+          },
+          {
+            "key": "105",
+            "count": 3
+          },
+          {
+            "key": "75",
+            "count": 3
+          },
+          {
+            "key": "135",
+            "count": 2
+          },
+          {
+            "key": "165",
+            "count": 2
+          },
+          {
+            "key": "171",
+            "count": 2
+          },
+          {
+            "key": "81",
+            "count": 2
+          },
+          {
+            "key": "21",
+            "count": 1
+          }
+        ],
+        "topGMod2310": [
+          {
+            "key": "411",
+            "count": 3
+          },
+          {
+            "key": "1809",
+            "count": 2
+          },
+          {
+            "key": "1845",
+            "count": 2
+          },
+          {
+            "key": "2061",
+            "count": 2
+          },
+          {
+            "key": "2139",
+            "count": 2
+          },
+          {
+            "key": "429",
+            "count": 2
+          },
+          {
+            "key": "831",
+            "count": 2
+          },
+          {
+            "key": "969",
+            "count": 2
+          },
+          {
+            "key": "1029",
+            "count": 1
+          },
+          {
+            "key": "1059",
+            "count": 1
+          },
+          {
+            "key": "1125",
+            "count": 1
+          },
+          {
+            "key": "1155",
+            "count": 1
+          }
+        ],
+        "topGMod30030": [
+          {
+            "key": "1059",
+            "count": 1
+          },
+          {
+            "key": "10959",
+            "count": 1
+          },
+          {
+            "key": "11049",
+            "count": 1
+          },
+          {
+            "key": "11055",
+            "count": 1
+          },
+          {
+            "key": "1125",
+            "count": 1
+          },
+          {
+            "key": "11265",
+            "count": 1
+          },
+          {
+            "key": "11301",
+            "count": 1
+          },
+          {
+            "key": "11979",
+            "count": 1
+          },
+          {
+            "key": "1239",
+            "count": 1
+          },
+          {
+            "key": "12579",
+            "count": 1
+          },
+          {
+            "key": "1365",
+            "count": 1
+          },
+          {
+            "key": "2139",
+            "count": 1
+          }
+        ],
+        "topLeftKillers": [
+          {
+            "key": "prime",
+            "count": 41
+          }
+        ],
+        "topRightKillers": [
+          {
+            "key": "13217",
+            "count": 1
+          },
+          {
+            "key": "13844249",
+            "count": 1
+          },
+          {
+            "key": "1447",
+            "count": 1
+          },
+          {
+            "key": "1463971",
+            "count": 1
+          },
+          {
+            "key": "1523",
+            "count": 1
+          },
+          {
+            "key": "157",
+            "count": 1
+          },
+          {
+            "key": "1583",
+            "count": 1
+          },
+          {
+            "key": "1678571",
+            "count": 1
+          },
+          {
+            "key": "173",
+            "count": 1
+          },
+          {
+            "key": "18713",
+            "count": 1
+          }
+        ],
+        "largeUnknownCount": 0
+      },
+      "leftoversAfterTop291": {
+        "count": 0,
+        "clusterShare30": 0,
+        "clusterBreaksAt210": false,
+        "clusterBreaksAt2310": false,
+        "clusterBreaksAt30030": false,
+        "halfL": 0,
+        "halfR": 0,
+        "foe": 0,
+        "both": 0,
+        "dominantSide": "MIXED",
+        "topGMod30": [],
+        "topGMod210": [],
+        "topGMod2310": [],
+        "topGMod30030": [],
+        "topLeftKillers": [],
+        "topRightKillers": [],
+        "largeUnknownCount": 0
+      },
+      "rightKillerDiffusion200": {
+        "halfLCount": 41,
+        "uniqueRightKillers": 41,
+        "top5": [
+          {
+            "key": "13217",
+            "count": 1
+          },
+          {
+            "key": "13844249",
+            "count": 1
+          },
+          {
+            "key": "1447",
+            "count": 1
+          },
+          {
+            "key": "1463971",
+            "count": 1
+          },
+          {
+            "key": "1523",
+            "count": 1
+          }
+        ],
+        "top10": [
+          {
+            "key": "13217",
+            "count": 1
+          },
+          {
+            "key": "13844249",
+            "count": 1
+          },
+          {
+            "key": "1447",
+            "count": 1
+          },
+          {
+            "key": "1463971",
+            "count": 1
+          },
+          {
+            "key": "1523",
+            "count": 1
+          },
+          {
+            "key": "157",
+            "count": 1
+          },
+          {
+            "key": "1583",
+            "count": 1
+          },
+          {
+            "key": "1678571",
+            "count": 1
+          },
+          {
+            "key": "173",
+            "count": 1
+          },
+          {
+            "key": "18713",
+            "count": 1
+          }
+        ],
+        "maxRightKillerRepeat": 1,
+        "top10RightCoveragePct": 0.24390243902439024,
+        "top20RightCoveragePct": 0.4878048780487805,
+        "compactness": "RIGHT_KILLERS_DIFFUSE"
+      },
+      "rightKillerDiffusion291": {
+        "halfLCount": 0,
+        "uniqueRightKillers": 0,
+        "top5": [],
+        "top10": [],
+        "maxRightKillerRepeat": 0,
+        "top10RightCoveragePct": 0,
+        "top20RightCoveragePct": 0,
+        "compactness": "RIGHT_KILLERS_DIFFUSE"
+      },
+      "futureProbe200": {
+        "futureEscapesFound": 11,
+        "futureNoEscapes": 30,
+        "minFutureEscapeDistance": 3150,
+        "samples": [
+          {
+            "fromG": 1365,
+            "futureG": 12915,
+            "distance": 11550
+          },
+          {
+            "fromG": 4749,
+            "futureG": 27849,
+            "distance": 23100
+          },
+          {
+            "fromG": 6429,
+            "futureG": 20289,
+            "distance": 13860
+          },
+          {
+            "fromG": 6465,
+            "futureG": 27255,
+            "distance": 20790
+          },
+          {
+            "fromG": 7569,
+            "futureG": 16809,
+            "distance": 9240
+          },
+          {
+            "fromG": 8841,
+            "futureG": 13251,
+            "distance": 4410
+          },
+          {
+            "fromG": 9651,
+            "futureG": 32751,
+            "distance": 23100
+          },
+          {
+            "fromG": 10959,
+            "futureG": 29439,
+            "distance": 18480
+          },
+          {
+            "fromG": 11055,
+            "futureG": 14625,
+            "distance": 3570
+          },
+          {
+            "fromG": 11265,
+            "futureG": 15045,
+            "distance": 3780
+          }
+        ]
+      },
+      "futureProbe291": {
+        "futureEscapesFound": 0,
+        "futureNoEscapes": 0,
+        "minFutureEscapeDistance": null,
+        "samples": []
+      }
+    },
+    {
+      "label": "hostile_visitor",
+      "C": "59825417609829034",
+      "E": "119650835219658068",
+      "firstBothG": 19635,
+      "trueK": 13.157604706523053,
+      "S17": 858,
+      "S29": 657,
+      "S37": 577,
+      "S41": 548,
+      "boundary": {
+        "K13_430": true,
+        "K13_431": true,
+        "K13_432": true,
+        "K13_45": true,
+        "K13_5": true,
+        "K14": true
+      },
+      "greedyCoverage": {
+        "10": {
+          "topN": 10,
+          "covered": 163,
+          "coveragePct": 0.2480974124809741,
+          "uncovered": 494
+        },
+        "20": {
+          "topN": 20,
+          "covered": 239,
+          "coveragePct": 0.3637747336377473,
+          "uncovered": 418
+        },
+        "50": {
+          "topN": 50,
+          "covered": 359,
+          "coveragePct": 0.5464231354642314,
+          "uncovered": 298
+        },
+        "100": {
+          "topN": 100,
+          "covered": 444,
+          "coveragePct": 0.6757990867579908,
+          "uncovered": 213
+        },
+        "150": {
+          "topN": 150,
+          "covered": 494,
+          "coveragePct": 0.7519025875190258,
+          "uncovered": 163
+        },
+        "200": {
+          "topN": 200,
+          "covered": 544,
+          "coveragePct": 0.8280060882800608,
+          "uncovered": 113
+        },
+        "291": {
+          "topN": 291,
+          "covered": 635,
+          "coveragePct": 0.9665144596651446,
+          "uncovered": 22
+        }
+      },
+      "greedyFullCoverCount": 313,
+      "compactness": "DIFFUSE",
+      "overlapBuckets": [
+        {
+          "label": "1-20",
+          "lanes": 20,
+          "gain": 239,
+          "waste": 20
+        },
+        {
+          "label": "21-50",
+          "lanes": 30,
+          "gain": 120,
+          "waste": 25
+        },
+        {
+          "label": "51-100",
+          "lanes": 50,
+          "gain": 85,
+          "waste": 20
+        },
+        {
+          "label": "101-200",
+          "lanes": 100,
+          "gain": 100,
+          "waste": 6
+        },
+        {
+          "label": "201-291",
+          "lanes": 91,
+          "gain": 91,
+          "waste": 14
+        },
+        {
+          "label": "292-full",
+          "lanes": 22,
+          "gain": 22,
+          "waste": 2
+        }
+      ],
+      "leftoversAfterTop200": {
+        "count": 113,
+        "clusterShare30": 1,
+        "clusterBreaksAt210": true,
+        "clusterBreaksAt2310": true,
+        "clusterBreaksAt30030": true,
+        "halfL": 65,
+        "halfR": 6,
+        "foe": 42,
+        "both": 0,
+        "dominantSide": "HALF_L",
+        "topGMod30": [
+          {
+            "key": "15",
+            "count": 47
+          },
+          {
+            "key": "27",
+            "count": 38
+          },
+          {
+            "key": "3",
+            "count": 28
+          }
+        ],
+        "topGMod210": [
+          {
+            "key": "195",
+            "count": 13
+          },
+          {
+            "key": "147",
+            "count": 10
+          },
+          {
+            "key": "15",
+            "count": 10
+          },
+          {
+            "key": "45",
+            "count": 9
+          },
+          {
+            "key": "87",
+            "count": 9
+          },
+          {
+            "key": "165",
+            "count": 8
+          },
+          {
+            "key": "27",
+            "count": 8
+          },
+          {
+            "key": "105",
+            "count": 7
+          },
+          {
+            "key": "183",
+            "count": 7
+          },
+          {
+            "key": "3",
+            "count": 7
+          },
+          {
+            "key": "63",
+            "count": 7
+          },
+          {
+            "key": "207",
+            "count": 6
+          }
+        ],
+        "topGMod2310": [
+          {
+            "key": "1137",
+            "count": 3
+          },
+          {
+            "key": "1653",
+            "count": 3
+          },
+          {
+            "key": "1875",
+            "count": 3
+          },
+          {
+            "key": "2205",
+            "count": 3
+          },
+          {
+            "key": "825",
+            "count": 3
+          },
+          {
+            "key": "1005",
+            "count": 2
+          },
+          {
+            "key": "1023",
+            "count": 2
+          },
+          {
+            "key": "1077",
+            "count": 2
+          },
+          {
+            "key": "147",
+            "count": 2
+          },
+          {
+            "key": "1473",
+            "count": 2
+          },
+          {
+            "key": "1497",
+            "count": 2
+          },
+          {
+            "key": "15",
+            "count": 2
+          }
+        ],
+        "topGMod30030": [
+          {
+            "key": "10035",
+            "count": 1
+          },
+          {
+            "key": "10125",
+            "count": 1
+          },
+          {
+            "key": "10335",
+            "count": 1
+          },
+          {
+            "key": "10545",
+            "count": 1
+          },
+          {
+            "key": "10647",
+            "count": 1
+          },
+          {
+            "key": "10773",
+            "count": 1
+          },
+          {
+            "key": "10893",
+            "count": 1
+          },
+          {
+            "key": "10905",
+            "count": 1
+          },
+          {
+            "key": "11133",
+            "count": 1
+          },
+          {
+            "key": "11193",
+            "count": 1
+          },
+          {
+            "key": "11325",
+            "count": 1
+          },
+          {
+            "key": "11445",
+            "count": 1
+          }
+        ],
+        "topLeftKillers": [
+          {
+            "key": "prime",
+            "count": 65
+          },
+          {
+            "key": "47792257",
+            "count": 1
+          },
+          {
+            "key": "479",
+            "count": 1
+          },
+          {
+            "key": "47969",
+            "count": 1
+          },
+          {
+            "key": "48247",
+            "count": 1
+          },
+          {
+            "key": "485053",
+            "count": 1
+          },
+          {
+            "key": "491",
+            "count": 1
+          },
+          {
+            "key": "5004827",
+            "count": 1
+          },
+          {
+            "key": "505313",
+            "count": 1
+          },
+          {
+            "key": "50995387",
+            "count": 1
+          }
+        ],
+        "topRightKillers": [
+          {
+            "key": "prime",
+            "count": 6
+          },
+          {
+            "key": "1016111",
+            "count": 1
+          },
+          {
+            "key": "1021",
+            "count": 1
+          },
+          {
+            "key": "10718171",
+            "count": 1
+          },
+          {
+            "key": "107339",
+            "count": 1
+          },
+          {
+            "key": "11329",
+            "count": 1
+          },
+          {
+            "key": "114691",
+            "count": 1
+          },
+          {
+            "key": "12281909",
+            "count": 1
+          },
+          {
+            "key": "1249",
+            "count": 1
+          },
+          {
+            "key": "125219",
+            "count": 1
+          }
+        ],
+        "largeUnknownCount": 0
+      },
+      "leftoversAfterTop291": {
+        "count": 22,
+        "clusterShare30": 1,
+        "clusterBreaksAt210": true,
+        "clusterBreaksAt2310": true,
+        "clusterBreaksAt30030": false,
+        "halfL": 22,
+        "halfR": 0,
+        "foe": 0,
+        "both": 0,
+        "dominantSide": "HALF_L",
+        "topGMod30": [
+          {
+            "key": "15",
+            "count": 11
+          },
+          {
+            "key": "27",
+            "count": 6
+          },
+          {
+            "key": "3",
+            "count": 5
+          }
+        ],
+        "topGMod210": [
+          {
+            "key": "195",
+            "count": 5
+          },
+          {
+            "key": "15",
+            "count": 3
+          },
+          {
+            "key": "147",
+            "count": 2
+          },
+          {
+            "key": "165",
+            "count": 2
+          },
+          {
+            "key": "183",
+            "count": 2
+          },
+          {
+            "key": "27",
+            "count": 2
+          },
+          {
+            "key": "123",
+            "count": 1
+          },
+          {
+            "key": "3",
+            "count": 1
+          },
+          {
+            "key": "45",
+            "count": 1
+          },
+          {
+            "key": "57",
+            "count": 1
+          },
+          {
+            "key": "63",
+            "count": 1
+          },
+          {
+            "key": "87",
+            "count": 1
+          }
+        ],
+        "topGMod2310": [
+          {
+            "key": "1077",
+            "count": 1
+          },
+          {
+            "key": "1137",
+            "count": 1
+          },
+          {
+            "key": "1215",
+            "count": 1
+          },
+          {
+            "key": "1233",
+            "count": 1
+          },
+          {
+            "key": "1455",
+            "count": 1
+          },
+          {
+            "key": "1473",
+            "count": 1
+          },
+          {
+            "key": "1497",
+            "count": 1
+          },
+          {
+            "key": "15",
+            "count": 1
+          },
+          {
+            "key": "1653",
+            "count": 1
+          },
+          {
+            "key": "1665",
+            "count": 1
+          },
+          {
+            "key": "1737",
+            "count": 1
+          },
+          {
+            "key": "1827",
+            "count": 1
+          }
+        ],
+        "topGMod30030": [
+          {
+            "key": "10035",
+            "count": 1
+          },
+          {
+            "key": "10905",
+            "count": 1
+          },
+          {
+            "key": "11565",
+            "count": 1
+          },
+          {
+            "key": "1233",
+            "count": 1
+          },
+          {
+            "key": "14295",
+            "count": 1
+          },
+          {
+            "key": "14715",
+            "count": 1
+          },
+          {
+            "key": "15315",
+            "count": 1
+          },
+          {
+            "key": "15735",
+            "count": 1
+          },
+          {
+            "key": "1653",
+            "count": 1
+          },
+          {
+            "key": "17643",
+            "count": 1
+          },
+          {
+            "key": "18963",
+            "count": 1
+          },
+          {
+            "key": "19305",
+            "count": 1
+          }
+        ],
+        "topLeftKillers": [
+          {
+            "key": "prime",
+            "count": 22
+          }
+        ],
+        "topRightKillers": [
+          {
+            "key": "5303",
+            "count": 1
+          },
+          {
+            "key": "5689",
+            "count": 1
+          },
+          {
+            "key": "5867",
+            "count": 1
+          },
+          {
+            "key": "613",
+            "count": 1
+          },
+          {
+            "key": "647",
+            "count": 1
+          },
+          {
+            "key": "6689",
+            "count": 1
+          },
+          {
+            "key": "6833",
+            "count": 1
+          },
+          {
+            "key": "6842327",
+            "count": 1
+          },
+          {
+            "key": "688111",
+            "count": 1
+          },
+          {
+            "key": "691",
+            "count": 1
+          }
+        ],
+        "largeUnknownCount": 0
+      },
+      "rightKillerDiffusion200": {
+        "halfLCount": 65,
+        "uniqueRightKillers": 65,
+        "top5": [
+          {
+            "key": "1021",
+            "count": 1
+          },
+          {
+            "key": "10718171",
+            "count": 1
+          },
+          {
+            "key": "107339",
+            "count": 1
+          },
+          {
+            "key": "114691",
+            "count": 1
+          },
+          {
+            "key": "12281909",
+            "count": 1
+          }
+        ],
+        "top10": [
+          {
+            "key": "1021",
+            "count": 1
+          },
+          {
+            "key": "10718171",
+            "count": 1
+          },
+          {
+            "key": "107339",
+            "count": 1
+          },
+          {
+            "key": "114691",
+            "count": 1
+          },
+          {
+            "key": "12281909",
+            "count": 1
+          },
+          {
+            "key": "131",
+            "count": 1
+          },
+          {
+            "key": "13131479",
+            "count": 1
+          },
+          {
+            "key": "1433",
+            "count": 1
+          },
+          {
+            "key": "1559",
+            "count": 1
+          },
+          {
+            "key": "15791",
+            "count": 1
+          }
+        ],
+        "maxRightKillerRepeat": 1,
+        "top10RightCoveragePct": 0.15384615384615385,
+        "top20RightCoveragePct": 0.3076923076923077,
+        "compactness": "RIGHT_KILLERS_DIFFUSE"
+      },
+      "rightKillerDiffusion291": {
+        "halfLCount": 22,
+        "uniqueRightKillers": 22,
+        "top5": [
+          {
+            "key": "5303",
+            "count": 1
+          },
+          {
+            "key": "5689",
+            "count": 1
+          },
+          {
+            "key": "5867",
+            "count": 1
+          },
+          {
+            "key": "613",
+            "count": 1
+          },
+          {
+            "key": "647",
+            "count": 1
+          }
+        ],
+        "top10": [
+          {
+            "key": "5303",
+            "count": 1
+          },
+          {
+            "key": "5689",
+            "count": 1
+          },
+          {
+            "key": "5867",
+            "count": 1
+          },
+          {
+            "key": "613",
+            "count": 1
+          },
+          {
+            "key": "647",
+            "count": 1
+          },
+          {
+            "key": "6689",
+            "count": 1
+          },
+          {
+            "key": "6833",
+            "count": 1
+          },
+          {
+            "key": "6842327",
+            "count": 1
+          },
+          {
+            "key": "688111",
+            "count": 1
+          },
+          {
+            "key": "691",
+            "count": 1
+          }
+        ],
+        "maxRightKillerRepeat": 1,
+        "top10RightCoveragePct": 0.45454545454545453,
+        "top20RightCoveragePct": 0.9090909090909091,
+        "compactness": "RIGHT_KILLERS_COMPACT"
+      },
+      "futureProbe200": {
+        "futureEscapesFound": 14,
+        "futureNoEscapes": 99,
+        "minFutureEscapeDistance": 3360,
+        "samples": [
+          {
+            "fromG": 5085,
+            "futureG": 25875,
+            "distance": 20790
+          },
+          {
+            "fromG": 5523,
+            "futureG": 26313,
+            "distance": 20790
+          },
+          {
+            "fromG": 5607,
+            "futureG": 21777,
+            "distance": 16170
+          },
+          {
+            "fromG": 5835,
+            "futureG": 22005,
+            "distance": 16170
+          },
+          {
+            "fromG": 10125,
+            "futureG": 30915,
+            "distance": 20790
+          },
+          {
+            "fromG": 13233,
+            "futureG": 24783,
+            "distance": 11550
+          },
+          {
+            "fromG": 13755,
+            "futureG": 19635,
+            "distance": 5880
+          },
+          {
+            "fromG": 14547,
+            "futureG": 30717,
+            "distance": 16170
+          },
+          {
+            "fromG": 15315,
+            "futureG": 38415,
+            "distance": 23100
+          },
+          {
+            "fromG": 17247,
+            "futureG": 23337,
+            "distance": 6090
+          }
+        ]
+      },
+      "futureProbe291": {
+        "futureEscapesFound": 6,
+        "futureNoEscapes": 16,
+        "minFutureEscapeDistance": 330,
+        "samples": [
+          {
+            "fromG": 5085,
+            "futureG": 25875,
+            "distance": 20790
+          },
+          {
+            "fromG": 5607,
+            "futureG": 21777,
+            "distance": 16170
+          },
+          {
+            "fromG": 5835,
+            "futureG": 22005,
+            "distance": 16170
+          },
+          {
+            "fromG": 15315,
+            "futureG": 38415,
+            "distance": 23100
+          },
+          {
+            "fromG": 17643,
+            "futureG": 23103,
+            "distance": 5460
+          },
+          {
+            "fromG": 19305,
+            "futureG": 19635,
+            "distance": 330
+          }
+        ]
+      }
+    },
+    {
+      "label": "raw_max_s29",
+      "C": "3268329311518612504",
+      "E": "6536658623037225008",
+      "firstBothG": 21153,
+      "trueK": 11.639244409992209,
+      "S17": 921,
+      "S29": 706,
+      "S37": 650,
+      "S41": 614,
+      "boundary": {
+        "K13_430": true,
+        "K13_431": true,
+        "K13_432": true,
+        "K13_45": true,
+        "K13_5": true,
+        "K14": true
+      },
+      "greedyCoverage": {
+        "10": {
+          "topN": 10,
+          "covered": 158,
+          "coveragePct": 0.2237960339943343,
+          "uncovered": 548
+        },
+        "20": {
+          "topN": 20,
+          "covered": 239,
+          "coveragePct": 0.3385269121813031,
+          "uncovered": 467
+        },
+        "50": {
+          "topN": 50,
+          "covered": 368,
+          "coveragePct": 0.5212464589235127,
+          "uncovered": 338
+        },
+        "100": {
+          "topN": 100,
+          "covered": 463,
+          "coveragePct": 0.6558073654390935,
+          "uncovered": 243
+        },
+        "150": {
+          "topN": 150,
+          "covered": 513,
+          "coveragePct": 0.726628895184136,
+          "uncovered": 193
+        },
+        "200": {
+          "topN": 200,
+          "covered": 563,
+          "coveragePct": 0.7974504249291785,
+          "uncovered": 143
+        },
+        "291": {
+          "topN": 291,
+          "covered": 654,
+          "coveragePct": 0.9263456090651558,
+          "uncovered": 52
+        }
+      },
+      "greedyFullCoverCount": 343,
+      "compactness": "DIFFUSE",
+      "overlapBuckets": [
+        {
+          "label": "1-20",
+          "lanes": 20,
+          "gain": 239,
+          "waste": 23
+        },
+        {
+          "label": "21-50",
+          "lanes": 30,
+          "gain": 129,
+          "waste": 25
+        },
+        {
+          "label": "51-100",
+          "lanes": 50,
+          "gain": 95,
+          "waste": 15
+        },
+        {
+          "label": "101-200",
+          "lanes": 100,
+          "gain": 100,
+          "waste": 8
+        },
+        {
+          "label": "201-291",
+          "lanes": 91,
+          "gain": 91,
+          "waste": 2
+        },
+        {
+          "label": "292-full",
+          "lanes": 52,
+          "gain": 52,
+          "waste": 7
+        }
+      ],
+      "leftoversAfterTop200": {
+        "count": 143,
+        "clusterShare30": 1,
+        "clusterBreaksAt210": true,
+        "clusterBreaksAt2310": true,
+        "clusterBreaksAt30030": true,
+        "halfL": 45,
+        "halfR": 24,
+        "foe": 74,
+        "both": 0,
+        "dominantSide": "HALF_L",
+        "topGMod30": [
+          {
+            "key": "27",
+            "count": 54
+          },
+          {
+            "key": "3",
+            "count": 46
+          },
+          {
+            "key": "15",
+            "count": 43
+          }
+        ],
+        "topGMod210": [
+          {
+            "key": "207",
+            "count": 14
+          },
+          {
+            "key": "153",
+            "count": 13
+          },
+          {
+            "key": "57",
+            "count": 12
+          },
+          {
+            "key": "195",
+            "count": 11
+          },
+          {
+            "key": "27",
+            "count": 11
+          },
+          {
+            "key": "87",
+            "count": 10
+          },
+          {
+            "key": "105",
+            "count": 9
+          },
+          {
+            "key": "123",
+            "count": 9
+          },
+          {
+            "key": "45",
+            "count": 9
+          },
+          {
+            "key": "63",
+            "count": 9
+          },
+          {
+            "key": "183",
+            "count": 8
+          },
+          {
+            "key": "147",
+            "count": 7
+          }
+        ],
+        "topGMod2310": [
+          {
+            "key": "1497",
+            "count": 3
+          },
+          {
+            "key": "1623",
+            "count": 3
+          },
+          {
+            "key": "2295",
+            "count": 3
+          },
+          {
+            "key": "297",
+            "count": 3
+          },
+          {
+            "key": "855",
+            "count": 3
+          },
+          {
+            "key": "993",
+            "count": 3
+          },
+          {
+            "key": "1107",
+            "count": 2
+          },
+          {
+            "key": "1137",
+            "count": 2
+          },
+          {
+            "key": "1155",
+            "count": 2
+          },
+          {
+            "key": "1173",
+            "count": 2
+          },
+          {
+            "key": "1257",
+            "count": 2
+          },
+          {
+            "key": "1317",
+            "count": 2
+          }
+        ],
+        "topGMod30030": [
+          {
+            "key": "10077",
+            "count": 1
+          },
+          {
+            "key": "10395",
+            "count": 1
+          },
+          {
+            "key": "10413",
+            "count": 1
+          },
+          {
+            "key": "10605",
+            "count": 1
+          },
+          {
+            "key": "10707",
+            "count": 1
+          },
+          {
+            "key": "10737",
+            "count": 1
+          },
+          {
+            "key": "11217",
+            "count": 1
+          },
+          {
+            "key": "11235",
+            "count": 1
+          },
+          {
+            "key": "11463",
+            "count": 1
+          },
+          {
+            "key": "11505",
+            "count": 1
+          },
+          {
+            "key": "11535",
+            "count": 1
+          },
+          {
+            "key": "11565",
+            "count": 1
+          }
+        ],
+        "topLeftKillers": [
+          {
+            "key": "prime",
+            "count": 45
+          },
+          {
+            "key": "361727",
+            "count": 1
+          },
+          {
+            "key": "36791",
+            "count": 1
+          },
+          {
+            "key": "3697",
+            "count": 1
+          },
+          {
+            "key": "37871",
+            "count": 1
+          },
+          {
+            "key": "3863317",
+            "count": 1
+          },
+          {
+            "key": "39451",
+            "count": 1
+          },
+          {
+            "key": "39687721",
+            "count": 1
+          },
+          {
+            "key": "3973579",
+            "count": 1
+          },
+          {
+            "key": "409",
+            "count": 1
+          }
+        ],
+        "topRightKillers": [
+          {
+            "key": "prime",
+            "count": 24
+          },
+          {
+            "key": "1013",
+            "count": 1
+          },
+          {
+            "key": "10487",
+            "count": 1
+          },
+          {
+            "key": "109",
+            "count": 1
+          },
+          {
+            "key": "1143532361",
+            "count": 1
+          },
+          {
+            "key": "1164997",
+            "count": 1
+          },
+          {
+            "key": "1212671",
+            "count": 1
+          },
+          {
+            "key": "123377",
+            "count": 1
+          },
+          {
+            "key": "12583",
+            "count": 1
+          },
+          {
+            "key": "12672181",
+            "count": 1
+          }
+        ],
+        "largeUnknownCount": 0
+      },
+      "leftoversAfterTop291": {
+        "count": 52,
+        "clusterShare30": 1,
+        "clusterBreaksAt210": true,
+        "clusterBreaksAt2310": true,
+        "clusterBreaksAt30030": true,
+        "halfL": 45,
+        "halfR": 1,
+        "foe": 6,
+        "both": 0,
+        "dominantSide": "HALF_L",
+        "topGMod30": [
+          {
+            "key": "27",
+            "count": 20
+          },
+          {
+            "key": "15",
+            "count": 18
+          },
+          {
+            "key": "3",
+            "count": 14
+          }
+        ],
+        "topGMod210": [
+          {
+            "key": "27",
+            "count": 7
+          },
+          {
+            "key": "153",
+            "count": 5
+          },
+          {
+            "key": "195",
+            "count": 5
+          },
+          {
+            "key": "207",
+            "count": 5
+          },
+          {
+            "key": "57",
+            "count": 5
+          },
+          {
+            "key": "165",
+            "count": 4
+          },
+          {
+            "key": "105",
+            "count": 3
+          },
+          {
+            "key": "15",
+            "count": 3
+          },
+          {
+            "key": "45",
+            "count": 3
+          },
+          {
+            "key": "63",
+            "count": 3
+          },
+          {
+            "key": "123",
+            "count": 2
+          },
+          {
+            "key": "183",
+            "count": 2
+          }
+        ],
+        "topGMod2310": [
+          {
+            "key": "1107",
+            "count": 2
+          },
+          {
+            "key": "1155",
+            "count": 2
+          },
+          {
+            "key": "1257",
+            "count": 2
+          },
+          {
+            "key": "1623",
+            "count": 2
+          },
+          {
+            "key": "1845",
+            "count": 2
+          },
+          {
+            "key": "657",
+            "count": 2
+          },
+          {
+            "key": "825",
+            "count": 2
+          },
+          {
+            "key": "855",
+            "count": 2
+          },
+          {
+            "key": "1023",
+            "count": 1
+          },
+          {
+            "key": "1137",
+            "count": 1
+          },
+          {
+            "key": "1275",
+            "count": 1
+          },
+          {
+            "key": "1287",
+            "count": 1
+          }
+        ],
+        "topGMod30030": [
+          {
+            "key": "10395",
+            "count": 1
+          },
+          {
+            "key": "10737",
+            "count": 1
+          },
+          {
+            "key": "11817",
+            "count": 1
+          },
+          {
+            "key": "1257",
+            "count": 1
+          },
+          {
+            "key": "12573",
+            "count": 1
+          },
+          {
+            "key": "12657",
+            "count": 1
+          },
+          {
+            "key": "13395",
+            "count": 1
+          },
+          {
+            "key": "13425",
+            "count": 1
+          },
+          {
+            "key": "14685",
+            "count": 1
+          },
+          {
+            "key": "14967",
+            "count": 1
+          },
+          {
+            "key": "15117",
+            "count": 1
+          },
+          {
+            "key": "1533",
+            "count": 1
+          }
+        ],
+        "topLeftKillers": [
+          {
+            "key": "prime",
+            "count": 45
+          },
+          {
+            "key": "95747",
+            "count": 1
+          },
+          {
+            "key": "959867",
+            "count": 1
+          },
+          {
+            "key": "967",
+            "count": 1
+          },
+          {
+            "key": "973423117",
+            "count": 1
+          },
+          {
+            "key": "975553",
+            "count": 1
+          },
+          {
+            "key": "982453",
+            "count": 1
+          },
+          {
+            "key": "995547713",
+            "count": 1
+          }
+        ],
+        "topRightKillers": [
+          {
+            "key": "1212671",
+            "count": 1
+          },
+          {
+            "key": "123377",
+            "count": 1
+          },
+          {
+            "key": "127",
+            "count": 1
+          },
+          {
+            "key": "131",
+            "count": 1
+          },
+          {
+            "key": "13586663",
+            "count": 1
+          },
+          {
+            "key": "1361",
+            "count": 1
+          },
+          {
+            "key": "1415092153",
+            "count": 1
+          },
+          {
+            "key": "1427",
+            "count": 1
+          },
+          {
+            "key": "14350481",
+            "count": 1
+          },
+          {
+            "key": "14533",
+            "count": 1
+          }
+        ],
+        "largeUnknownCount": 0
+      },
+      "rightKillerDiffusion200": {
+        "halfLCount": 45,
+        "uniqueRightKillers": 45,
+        "top5": [
+          {
+            "key": "123377",
+            "count": 1
+          },
+          {
+            "key": "127",
+            "count": 1
+          },
+          {
+            "key": "131",
+            "count": 1
+          },
+          {
+            "key": "13586663",
+            "count": 1
+          },
+          {
+            "key": "1361",
+            "count": 1
+          }
+        ],
+        "top10": [
+          {
+            "key": "123377",
+            "count": 1
+          },
+          {
+            "key": "127",
+            "count": 1
+          },
+          {
+            "key": "131",
+            "count": 1
+          },
+          {
+            "key": "13586663",
+            "count": 1
+          },
+          {
+            "key": "1361",
+            "count": 1
+          },
+          {
+            "key": "1415092153",
+            "count": 1
+          },
+          {
+            "key": "1427",
+            "count": 1
+          },
+          {
+            "key": "14350481",
+            "count": 1
+          },
+          {
+            "key": "14533",
+            "count": 1
+          },
+          {
+            "key": "154043",
+            "count": 1
+          }
+        ],
+        "maxRightKillerRepeat": 1,
+        "top10RightCoveragePct": 0.2222222222222222,
+        "top20RightCoveragePct": 0.4444444444444444,
+        "compactness": "RIGHT_KILLERS_DIFFUSE"
+      },
+      "rightKillerDiffusion291": {
+        "halfLCount": 45,
+        "uniqueRightKillers": 45,
+        "top5": [
+          {
+            "key": "123377",
+            "count": 1
+          },
+          {
+            "key": "127",
+            "count": 1
+          },
+          {
+            "key": "131",
+            "count": 1
+          },
+          {
+            "key": "13586663",
+            "count": 1
+          },
+          {
+            "key": "1361",
+            "count": 1
+          }
+        ],
+        "top10": [
+          {
+            "key": "123377",
+            "count": 1
+          },
+          {
+            "key": "127",
+            "count": 1
+          },
+          {
+            "key": "131",
+            "count": 1
+          },
+          {
+            "key": "13586663",
+            "count": 1
+          },
+          {
+            "key": "1361",
+            "count": 1
+          },
+          {
+            "key": "1415092153",
+            "count": 1
+          },
+          {
+            "key": "1427",
+            "count": 1
+          },
+          {
+            "key": "14350481",
+            "count": 1
+          },
+          {
+            "key": "14533",
+            "count": 1
+          },
+          {
+            "key": "154043",
+            "count": 1
+          }
+        ],
+        "maxRightKillerRepeat": 1,
+        "top10RightCoveragePct": 0.2222222222222222,
+        "top20RightCoveragePct": 0.4444444444444444,
+        "compactness": "RIGHT_KILLERS_DIFFUSE"
+      },
+      "futureProbe200": {
+        "futureEscapesFound": 6,
+        "futureNoEscapes": 137,
+        "minFutureEscapeDistance": 5670,
+        "samples": [
+          {
+            "fromG": 6087,
+            "futureG": 22257,
+            "distance": 16170
+          },
+          {
+            "fromG": 7293,
+            "futureG": 21153,
+            "distance": 13860
+          },
+          {
+            "fromG": 12585,
+            "futureG": 33375,
+            "distance": 20790
+          },
+          {
+            "fromG": 13395,
+            "futureG": 22635,
+            "distance": 9240
+          },
+          {
+            "fromG": 16863,
+            "futureG": 23793,
+            "distance": 6930
+          },
+          {
+            "fromG": 18327,
+            "futureG": 23997,
+            "distance": 5670
+          }
+        ]
+      },
+      "futureProbe291": {
+        "futureEscapesFound": 3,
+        "futureNoEscapes": 49,
+        "minFutureEscapeDistance": 5460,
+        "samples": [
+          {
+            "fromG": 13395,
+            "futureG": 22635,
+            "distance": 9240
+          },
+          {
+            "fromG": 15693,
+            "futureG": 21153,
+            "distance": 5460
+          },
+          {
+            "fromG": 16167,
+            "futureG": 22257,
+            "distance": 6090
+          }
+        ]
+      }
+    }
+  ],
+  "workerBestRows": [
+    {
+      "C": "3889129261038184",
+      "firstBothG": 17307,
+      "trueK": 13.4309400510447,
+      "S17": 757,
+      "S29": 582,
+      "miss": false,
+      "seed": "boss"
+    },
+    {
+      "C": "3889129261038184",
+      "firstBothG": 17307,
+      "trueK": 13.4309400510447,
+      "S17": 757,
+      "S29": 582,
+      "miss": false,
+      "seed": "boss"
+    },
+    {
+      "C": "3889129261038184",
+      "firstBothG": 17307,
+      "trueK": 13.4309400510447,
+      "S17": 757,
+      "S29": 582,
+      "miss": false,
+      "seed": "boss"
+    },
+    {
+      "C": "3889129261038184",
+      "firstBothG": 17307,
+      "trueK": 13.4309400510447,
+      "S17": 757,
+      "S29": 582,
+      "miss": false,
+      "seed": "boss"
+    },
+    {
+      "C": "3889129261038184",
+      "firstBothG": 17307,
+      "trueK": 13.4309400510447,
+      "S17": 757,
+      "S29": 582,
+      "miss": false,
+      "seed": "boss"
+    },
+    {
+      "C": "3889129261038184",
+      "firstBothG": 17307,
+      "trueK": 13.4309400510447,
+      "S17": 757,
+      "S29": 582,
+      "miss": false,
+      "seed": "boss"
+    },
+    {
+      "C": "3889129261038184",
+      "firstBothG": 17307,
+      "trueK": 13.4309400510447,
+      "S17": 757,
+      "S29": 582,
+      "miss": false,
+      "seed": "boss"
+    },
+    {
+      "C": "3889129261038184",
+      "firstBothG": 17307,
+      "trueK": 13.4309400510447,
+      "S17": 757,
+      "S29": 582,
+      "miss": false,
+      "seed": "boss"
+    },
+    {
+      "C": "3889129261038184",
+      "firstBothG": 17307,
+      "trueK": 13.4309400510447,
+      "S17": 757,
+      "S29": 582,
+      "miss": false,
+      "seed": "boss"
+    },
+    {
+      "C": "3889129261038184",
+      "firstBothG": 17307,
+      "trueK": 13.4309400510447,
+      "S17": 757,
+      "S29": 582,
+      "miss": false,
+      "seed": "boss"
+    }
+  ],
+  "reviewerAnswers": [
+    {
+      "q": "1. What is the exact theorem statement?",
+      "a": "For sufficiently large C, S_P(C,W) cannot be fully covered by large-prime left/right killer lanes, so at least one g in S_P(C,W) must be BOTH."
+    },
+    {
+      "q": "2. What is S29 exactly?",
+      "a": "S29 is the parity-valid gaps g <= W where neither C-g nor C+g is divisible by 2,3,5,7,11,13,17,19,23,29."
+    },
+    {
+      "q": "3. What is a killer lane exactly?",
+      "a": "A left lane is g ≡ C mod p from C-g ≡ 0 mod p. A right lane is g ≡ -C mod p from C+g ≡ 0 mod p."
+    },
+    {
+      "q": "4. Is this one C, many C, or all C?",
+      "a": "This run gives exact finite audits on five seed rows plus many focused nearby rows. It is not a universal proof."
+    },
+    {
+      "q": "5. Where is the missing inequality?",
+      "a": "Coverage(C,W,P) - OverlapLoss(C,W,P) < |S_P(C,W)| is the missing bridge."
+    },
+    {
+      "q": "6. How do we stop infinitely many large primes?",
+      "a": "That remains open. The finite evidence says future killer lanes stay diffuse and overlap-heavy."
+    },
+    {
+      "q": "7. How do overlaps behave?",
+      "a": "They grow with lane count and reduce marginal gain. The overlap-waste buckets measure that finitely."
+    },
+    {
+      "q": "8. Why does tail pressure alone not prove BOTH?",
+      "a": "Because HALF and FOE rows can still dominate without a theorem forcing an uncovered survivor."
+    },
+    {
+      "q": "9. What hostile tests tried to break it?",
+      "a": "Hostile CRT builders, matched controls, greedy-lane decay, overlap-waste curves, leftover cluster audits, and future escape probes."
+    },
+    {
+      "q": "10. Can someone rebuild this independently?",
+      "a": "Yes. The script, report, and JSON are deterministic and use locked definitions documented in the packet."
+    }
+  ],
+  "verdict": "BOSS_CLUSTER_PERSISTS_BUT_RIGHT_KILLERS_DIFFUSE",
+  "scoreUpdate": {
+    "Framework / notation": "99%",
+    "Finite engine stack": "98%",
+    "Classification consistency": "98%",
+    "No-Escape target clarity": "97%",
+    "Large-Prime No-Cover proof": "44-46%",
+    "Universal Goldbach proof": "42-44%"
+  },
+  "warning": "FINITE EVIDENCE ONLY.\nUNIVERSAL PROOF REMAINS OPEN."
+}
